@@ -2,3 +2,5 @@
 .DS_Store
 .sass-cache/
 initializers.rb
+.rvmrc
+.rspec
