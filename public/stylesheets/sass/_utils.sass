@@ -1,0 +1,16 @@
+/*
+ *  All of my 'utility' css will go here.
+ *  Functions, clears, etc.
+ */
+
+.group:before, .group:after
+  content: "\0020"
+  display: block
+  height: 0
+  visibility: hidden
+
+.group:after
+  clear: both
+
+.group
+  zoom: 1

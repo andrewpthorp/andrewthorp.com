@@ -1,0 +1,94 @@
+@mixin masthead-colors($bg, $h1)
+  background: $bg
+  border-bottom: 3px solid darken($bg, 25%)
+  h1
+    color: $h1
+
+.blog #masthead
+  @include masthead-colors(#70b7ba, rgb(56, 91, 93))
+.portfolio #masthead
+  @include masthead-colors(#a9cf53, rgb(99, 105, 62))
+.resume #masthead
+  @include masthead-colors(#fcc32a, rgb(164, 126, 27))
+.about #masthead
+  @include masthead-colors(#f1433f, rgb(120, 33, 31))
+
+#masthead
+  @include masthead-colors(#f7e967, rgba(0, 0, 0, 0.5))
+  @include transition(all 0.25s ease-in-out)
+  padding-top: 15px
+
+  &.blog
+    @include masthead-colors(#70b7ba, rgb(56, 91, 93))
+  &.portfolio
+    @include masthead-colors(#a9cf53, rgb(99, 105, 62))
+  &.resume
+    @include masthead-colors(#fcc32a, rgb(164, 126, 27))
+  &.about
+    @include masthead-colors(#f1433f, rgb(120, 33, 31))
+
+  ul, ul li
+    margin-bottom: 0px
+
+  img
+    float: left
+    width: 160px
+
+  // Main Nav
+  ul li
+    display: inline-block
+    margin-left: 10px
+    float: right
+
+    a
+      text-decoration: none
+      display: inline-block
+      padding: 10px
+      background: rgba(100, 100, 100, 0.5)
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      font-size: 18px
+      color: #fff
+      @include transition(all 0.25s ease-in-out)
+      border-radius: 2px
+
+      &:hover
+        background: rgba(25, 25, 25, 0.5)
+
+    &.current a
+      background: #efefe4
+      color: #222
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8)
+
+    &:last-child
+      margin: 0px
+
+  // Tagline (A Created Man)
+  h1
+    @include transition(all 0.25s ease-in-out)
+    @extend .league_gothic
+    font-size: 110px
+    font-size: 11.0rem
+    line-height: 1.2em
+    color: rgba(0, 0, 0, 0.5)
+    text-align: right
+    text-transform: uppercase
+    margin-bottom: -7px
+
+#site-footer
+  border-top: 1px solid #444
+  border-top: 1px solid rgba(0, 0, 0, 0.25)
+  padding: 20px
+
+  p, ul
+    margin: 0px
+
+  p
+    text-align: right
+
+  ul li
+    float: left
+    margin-right: 15px
+    margin-bottom: 0px
+
+    &:last-child
+      margin: 0px

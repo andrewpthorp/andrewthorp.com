@@ -1,0 +1,37 @@
+.project
+  margin: 50px auto 60px
+
+  .image
+    float: left
+
+  .description
+    float: right
+
+    h2
+      font-size: 45px
+      font-size: 4.5rem
+      margin-bottom: 15px
+
+.project-separator
+  display: block
+  height: 5px
+  background: transparent url('/assets/stripe.png') repeat-x
+
+  &::before
+    font-size: 20px
+    float: left
+    content: "\00AB"
+    position: relative
+    top: -10px
+    left: -20px
+    color: rgb(145, 167, 89)
+
+  &::after
+    font-size: 20px
+    position: relative
+    top: -10px
+    right: -20px
+    float: right
+    content: "\00BB"
+    color: rgb(145, 167, 89)
+

@@ -1,0 +1,36 @@
+@import "bourbon"
+@import "webfonts"
+@import "utils"
+@import "masthead"
+@import "social"
+@import "coderay"
+@import "posts"
+@import "projects"
+@import "pages"
+
+body
+  background: #efefe4
+  font-family: 'Bitter', 'Georgia', serif
+  font-size: 16px
+  font-size: 1.6rem
+  line-height: 21px
+  color: #5B5B57
+
+  a
+    @include transition(color 0.25s linear)
+    color: #5B5B57
+    text-decoration: underline
+
+  p
+    font-size: 15px
+    font-size: 1.5rem
+    line-height: 1.25
+
+.heading-font
+  @extend .league_gothic
+
+.main-row
+  margin-top: 50px
+  margin-bottom: 50px
+
+@import "mobile"

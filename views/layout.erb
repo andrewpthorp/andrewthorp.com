@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Andrew Thorp</title>
+
+    <%= stylesheet_link_tag "foundation.css", "application.css" %>
+    <%= javascript_include_tag "jquery.min.js", "jquery.timeago.js", "handlebars.js", "partymode.js", "view.js" %>
+    <%= javascript_include_tag "application.js", "instagram.js", "twitter.js", "shortcuts.js" %>
+
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400italic,400,700|PT+Sans:700' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+		  <link rel="stylesheet" href="stylesheets/ie.css">
+	  <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="<%= action %>">
+
+    <header id="masthead" class="container centered">
+      <div class="row">
+        <div class="three columns">
+          <%= image_tag "headshot-circle.png", :id => "headshot-circle" %>
+        </div>
+
+        <div class="nine columns group hide-on-phones">
+          <ul class="group" id="global-nav">
+            <li class="<%= action == 'resume' ? 'current' : '' %>" data-masthead="resume"><a href="/resume">Resume</a></li>
+            <li class="<%= action == 'blog' ? 'current' : '' %>" data-masthead="blog"><a href="/blog">Blog</a></li>
+            <li class="<%= action == 'portfolio' ? 'current' : '' %>" data-masthead="portfolio"><a href="/portfolio">Portfolio</a></li>
+            <li class="<%= action == 'about' ? 'current' : '' %>" data-masthead="about"><a href="/about">About</a></li>
+          </ul>
+          <h1><%= title %></h1>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <ul id="mobile-nav" class="show-on-phones">
+      <li><%= link_to "About", "/about" %></li>
+      <li><%= link_to "Portfolio", "/portfolio" %></li>
+      <li><%= link_to "Blog", "/blog" %></li>
+      <li><%= link_to "Resume", "/resume" %></li>
+    </ul>
+
+    <footer id="site-footer" class="container centered">
+      <div class="row">
+        <div class="six columns">
+           <ul class="group">
+            <li><%= link_to "Twitter", "https://twitter.com/#!/andrewpthorp", :target => "_blank" %></li>
+            <li><%= link_to "GitHub", "https://github.com/andrewpthorp", :target => "_blank" %></li>
+            <li><%= link_to "Tumblr", "http://andrewpthorp.tumblr.com", :target => "_blank" %></li>
+            <li><%= link_to "Google+", "https://plus.google.com/110421148869322996098/posts", :target => "_blank" %></li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <p>Copyright &copy; Andrew Thorp 2009-2012</p>
+        </div>
+      </div>
+    </footer>
+
+    <script id="tweet-template" type="text/x-handlebars-template">
+      <li>
+        <p>
+          <span class="tweet_text">{{{text}}}</span>
+          <span class="time">{{time}}</span>
+        </p>
+      </li>
+    </script>
+
+    <script id="tweet-error-template" type="text/x-handlebars-template">
+      <li class="error">
+        <%= image_tag "twitter_bird_small.png" %>
+        <span>Couldn&rsquo;t load tweets.</span>
+      </li>
+    </script>
+
+    <script id="instagram-template" type="text/x-handlebars-template">
+      {{#each this}}
+        <div class="instagram-placeholder">
+          <a href="{{link}}" target="_blank">
+            <img class="instagram-image" src="{{image}}" />
+          </a>
+        </div>
+      {{/each}}
+    </script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23021210-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

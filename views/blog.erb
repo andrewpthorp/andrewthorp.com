@@ -1,0 +1,19 @@
+<div class="row main-row">
+  <div class="three columns hide-on-phones">
+    <%= link_to image_tag("thechangelog.png"), "http://thechangelog.com", :class => "thechangelog", :target => "_blank" %>
+    <div class="twitter-timeline group">
+      <ul class="tweet-list hidden">
+      </ul>
+    </div>
+    <div class="instagram group">
+    </div>
+  </div>
+  <div class="nine columns">
+    <ul id="posts-list">
+      <% posts.each do |p| %>
+        <%= tumblr_list_view(p) %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+

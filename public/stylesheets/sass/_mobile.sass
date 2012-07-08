@@ -1,0 +1,91 @@
+#mobile-nav
+  margin: 0px
+  border-top: 1px solid #444
+  border-top: 1px solid rgba(0, 0, 0, 0.25)
+
+  li
+    margin: 0px
+
+    a
+      @include transition(all 0.25s ease-in-out)
+      background: #eee
+      border-bottom: 1px solid #444
+      border-top: 1px solid #fff
+
+      background: rgba(255, 255, 255, 0.5)
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+      padding: 10px 25px
+      margin: 0px
+      display: block
+      text-decoration: none
+
+      &:hover
+        color: inherit
+        background: #e4efe4
+
+    &:last-child a
+      border-bottom: 0px none
+
+
+@media only screen and (max-width: 767px)
+
+  #masthead
+    .three.columns
+      text-align: center
+
+      img
+        display: inline-block
+        margin: 0px 0px 15px
+        float: none
+
+  #site-footer
+    margin: 0px
+    border-bottom: 0px none
+
+    p
+      text-align: left
+      margin-top: 15px
+
+  .main-row
+    margin-top: 0px
+    margin-bottom: 10px
+
+  .header-image
+    img
+      width: 100%
+      @include box-shadow(0px 0px 0px transparent)
+
+
+  #posts-list
+    margin-top: 15px
+
+    li
+      padding: 0px 25px
+      margin: 0px 0px 10px
+      border: 0px none
+
+      a
+        display: block
+        padding: 10px 0px 20px
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+
+      &:last-child a
+        border: 0px none
+
+      span
+        display: none
+
+  .pages
+    .header-image img
+      border: 0px none
+      padding: 0px
+
+  .project-separator
+    width: 100%
+
+    &::before, &::after
+      content: ""
+
+  #resume
+    border: 0px none
+    background: transparent
