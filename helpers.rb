@@ -16,4 +16,24 @@ module TumblrHelpers
   end
 end
 
-helpers TumblrHelpers
+module NavigationHelpers
+  def desktop_navigation(action)
+    elems = []
+    elems << content_tag(:li, link_to("Resume", "/resume"), :class => action == 'resume' ? 'current' : '')
+    elems << content_tag(:li, link_to("Blog", "/blog"), :class => action == 'blog' ? 'current' : '')
+    elems << content_tag(:li, link_to("Portfolio", "/portfolio"), :class => action == 'portfolio' ? 'current': '')
+    elems << content_tag(:li, link_to("About", "/about"), :class => action == 'about' ? 'current' : '')
+    content_tag :ul, elems.join, :id => "global-nav", :class => "group"
+  end
+
+  def mobile_navigation(action)
+    elems = []
+    elems << content_tag(:li, link_to("About", "/about"))
+    elems << content_tag(:li, link_to("Portfolio", "/portfolio"))
+    elems << content_tag(:li, link_to("Blog", "/blog"))
+    elems << content_tag(:li, link_to("Resume", "/resume"))
+    content_tag :ul, elems.join, :id => "mobile-nav", :class => "show-on-phones"
+  end
+end
+
+helpers TumblrHelpers, NavigationHelpers

@@ -30,12 +30,7 @@
         </div>
 
         <div class="nine columns group hide-on-phones">
-          <ul class="group" id="global-nav">
-            <li class="<%= action == 'resume' ? 'current' : '' %>" data-masthead="resume"><a href="/resume">Resume</a></li>
-            <li class="<%= action == 'blog' ? 'current' : '' %>" data-masthead="blog"><a href="/blog">Blog</a></li>
-            <li class="<%= action == 'portfolio' ? 'current' : '' %>" data-masthead="portfolio"><a href="/portfolio">Portfolio</a></li>
-            <li class="<%= action == 'about' ? 'current' : '' %>" data-masthead="about"><a href="/about">About</a></li>
-          </ul>
+          <%= desktop_navigation(action) %>
           <h1><%= title %></h1>
         </div>
       </div>
@@ -43,12 +38,7 @@
 
     <%= yield %>
 
-    <ul id="mobile-nav" class="show-on-phones">
-      <li><%= link_to "About", "/about" %></li>
-      <li><%= link_to "Portfolio", "/portfolio" %></li>
-      <li><%= link_to "Blog", "/blog" %></li>
-      <li><%= link_to "Resume", "/resume" %></li>
-    </ul>
+    <%= mobile_navigation(action) %>
 
     <footer id="site-footer" class="container centered">
       <div class="row">
