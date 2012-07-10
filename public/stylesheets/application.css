@@ -372,11 +372,25 @@ body {
   body p {
     font-size: 15px;
     font-size: 1.5rem;
-    line-height: 1.25; }
+    line-height: 1.6; }
 
 .main-row {
   margin-top: 50px;
   margin-bottom: 50px; }
+
+.tumblr-error {
+  border-left: 5px solid #385b5d;
+  padding: 5px 0px 5px 25px; }
+  .tumblr-error h1 {
+    font-size: 60px;
+    font-size: 6rem;
+    line-height: 1.1;
+    color: #222222;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #eeeeee, 2px 2px #777777; }
+  .tumblr-error p {
+    font-size: 16px;
+    font-size: 1.6rem; }
 
 #mobile-nav {
   margin: 0px;
@@ -455,4 +469,9 @@ body {
 
   #resume {
     border: 0px none;
-    background: transparent; } }
+    background: transparent; }
+
+  .tumblr-error {
+    border: 0px none;
+    background: transparent;
+    padding: 25px; } }

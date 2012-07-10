@@ -9,11 +9,20 @@
     </div>
   </div>
   <div class="nine columns">
-    <ul id="posts-list">
-      <% posts.each do |p| %>
-        <%= tumblr_list_view(p) %>
-      <% end %>
-    </ul>
+    <% if posts.any? %>
+      <ul id="posts-list">
+        <% posts.each do |p| %>
+          <%= tumblr_list_view(p) %>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="tumblr-error">
+        <h1 class="heading-font">Oops! Something exploded.</h1>
+        <p>There was a problem loading my Tumblr Blog. You can feel free to <%= link_to "go directly to the blog", "http://andrewpthorp.tumblr.com" %>, if you're feeling adventurous.</p>
+        <p>We're on the phone to fix it now.</p>
+        <%= image_tag "buck.gif" %>
+      </div>
+    <% end %>
   </div>
 </div>
 

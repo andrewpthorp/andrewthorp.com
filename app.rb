@@ -1,4 +1,3 @@
-require_relative 'initializers' if File.exists? './initializers.rb'
 require_relative 'helpers' if File.exists? './helpers.rb'
 
 get "/" do
@@ -14,8 +13,12 @@ get "/portfolio" do
 end
 
 get "/blog" do
-  posts = TumblRb.posts("andrewpthorp").posts
-  erb :blog, :locals => { action: "blog", title: "PIXEL LOG", posts: posts }
+  begin
+    posts = TumblRb.posts("andrewpthorp").posts
+    erb :blog, :locals => { action: "blog", title: "PIXEL LOG", posts: posts }
+  rescue
+    erb :blog, :locals => { action: "blog", title: "PIXEL LOG", posts: [] }
+  end
 end
 
 get "/resume" do
