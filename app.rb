@@ -1,5 +1,5 @@
-require_relative 'initializers'
-require_relative 'helpers'
+require_relative 'initializers' if File.exists? './initializers.rb'
+require_relative 'helpers' if File.exists? './helpers.rb'
 
 get "/" do
   redirect "/about"
