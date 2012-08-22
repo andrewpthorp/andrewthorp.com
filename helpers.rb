@@ -4,14 +4,19 @@ module TumblrHelpers
     case post.type
     when "link", "chat", "text"
       elems = []
-      elems << link_to(post.title, post.post_url)
+      elems << link_to(post.title, post.post_url, class: "title")
       elems << content_tag(:span, pretty_date)
-      content_tag :li, elems.join
+      content_tag :li, elems.join, class: "group"
     when "quote"
       elems = []
-      elems << link_to(post.text, post.source_url)
+      elems << link_to(post.text, post.source_url, class: "title")
       elems << content_tag(:span, pretty_date)
-      content_tag :li, elems.join
+      content_tag :li, elems.join, class: "group"
+    when "photo"
+      elems = []
+      elems << link_to(image_tag(post.photos[0].original_size.url), post.source_url, class: "image")
+      elems << content_tag(:span, post.caption, class: "caption")
+      content_tag :li, elems.join, class: "group"
     end
   end
 end

@@ -136,10 +136,10 @@
     color: #750b09; }
 
 .blog #masthead {
-  background: #fcc32a;
-  border-bottom: 3px solid #a47802; }
+  background: #d94c2e;
+  border-bottom: 3px solid #732515; }
   .blog #masthead h1 {
-    color: #725302; }
+    color: #47170d; }
 
 .resume #masthead {
   background: #70b7ba;
@@ -169,10 +169,10 @@
     #masthead.portfolio h1 {
       color: #750b09; }
   #masthead.blog {
-    background: #fcc32a;
-    border-bottom: 3px solid #a47802; }
+    background: #d94c2e;
+    border-bottom: 3px solid #732515; }
     #masthead.blog h1 {
-      color: #725302; }
+      color: #47170d; }
   #masthead.resume {
     background: #70b7ba;
     border-bottom: 3px solid #377173; }
@@ -348,8 +348,30 @@
     float: right;
     font-style: italic;
     color: #aaaaaa; }
-  #posts-list > li a {
-    text-decoration: none; }
+    #posts-list > li span.caption {
+      display: block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: right;
+      max-width: 60%;
+      margin-left: 2%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #e5836f;
+      color: #47170d; }
+      #posts-list > li span.caption a, #posts-list > li span.caption a:hover, #posts-list > li span.caption a:visited, #posts-list > li span.caption a:active {
+        color: #47170d; }
+  #posts-list > li a.title {
+    text-decoration: none;
+    padding: 5px;
+    color: #732515; }
+    #posts-list > li a.title:hover {
+      background: #e5836f; }
+  #posts-list > li img {
+    max-width: 35%;
+    float: left;
+    margin-bottom: 10px; }
 
 .project {
   margin: 50px auto 60px; }
@@ -462,7 +484,7 @@ body {
   margin-bottom: 50px; }
 
 .tumblr-error {
-  border-left: 5px solid #fcc32a;
+  border-left: 5px solid #d94c2e;
   padding: 5px 0px 5px 25px; }
   .tumblr-error h1 {
     font-size: 60px;
@@ -532,10 +554,17 @@ body {
       padding: 0px 25px;
       margin: 0px 0px 10px;
       border: 0px none; }
-      #posts-list li a {
+      #posts-list li a.title {
         display: block;
         padding: 10px 0px 20px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+      #posts-list li img {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 0px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+      #posts-list li span.caption {
+        display: none; }
       #posts-list li:last-child a {
         border: 0px none; }
       #posts-list li span {

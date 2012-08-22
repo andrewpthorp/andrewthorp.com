@@ -10,5 +10,29 @@
     font-style: italic
     color: #aaa
 
-  a
+    &.caption
+      display: block
+      @include box-sizing(border-box)
+      float: right
+      max-width: 60%
+      margin-left: 2%
+      margin-bottom: 10px
+      padding: 10px
+      background: lighten($blogColor, 15%)
+      color: darken($blogColor, 35%)
+
+      a, a:hover, a:visited, a:active
+        color: darken($blogColor, 35%)
+
+  a.title
     text-decoration: none
+    padding: 5px
+    color: darken($blogColor, 25%)
+
+    &:hover
+      background: lighten($blogColor, 15%)
+
+  img
+    max-width: 35%
+    float: left
+    margin-bottom: 10px
