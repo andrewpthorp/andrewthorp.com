@@ -124,10 +124,10 @@
     transform: rotate(0deg); } }
 
 .about #masthead {
-  background: #a9cf53;
-  border-bottom: 3px solid #637f23; }
+  background: #5ee3b7;
+  border-bottom: 3px solid #1da578; }
   .about #masthead h1 {
-    color: #445718; }
+    color: #157958; }
 
 .portfolio #masthead {
   background: #f1433f;
@@ -136,20 +136,20 @@
     color: #750b09; }
 
 .blog #masthead {
-  background: #d94c2e;
-  border-bottom: 3px solid #732515; }
+  background: #ec601c;
+  border-bottom: 3px solid #7e300b; }
   .blog #masthead h1 {
-    color: #47170d; }
+    color: #4f1e07; }
 
 .resume #masthead {
-  background: #70b7ba;
-  border-bottom: 3px solid #377173; }
+  background: #008fd5;
+  border-bottom: 3px solid #003956; }
   .resume #masthead h1 {
-    color: #274f51; }
+    color: #001723; }
 
 #masthead {
-  background: #a9cf53;
-  border-bottom: 3px solid #637f23;
+  background: #5ee3b7;
+  border-bottom: 3px solid #1da578;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -157,27 +157,27 @@
   transition: all 0.25s ease-in-out;
   padding-top: 15px; }
   #masthead h1 {
-    color: #445718; }
+    color: #157958; }
   #masthead.about {
-    background: #a9cf53;
-    border-bottom: 3px solid #637f23; }
+    background: #5ee3b7;
+    border-bottom: 3px solid #1da578; }
     #masthead.about h1 {
-      color: #445718; }
+      color: #157958; }
   #masthead.portfolio {
     background: #f1433f;
     border-bottom: 3px solid #a50f0c; }
     #masthead.portfolio h1 {
       color: #750b09; }
   #masthead.blog {
-    background: #d94c2e;
-    border-bottom: 3px solid #732515; }
+    background: #ec601c;
+    border-bottom: 3px solid #7e300b; }
     #masthead.blog h1 {
-      color: #47170d; }
+      color: #4f1e07; }
   #masthead.resume {
-    background: #70b7ba;
-    border-bottom: 3px solid #377173; }
+    background: #008fd5;
+    border-bottom: 3px solid #003956; }
     #masthead.resume h1 {
-      color: #274f51; }
+      color: #001723; }
   #masthead ul, #masthead ul li {
     margin-bottom: 0px; }
   #masthead img {
@@ -358,18 +358,18 @@
       margin-left: 2%;
       margin-bottom: 10px;
       padding: 10px;
-      background: #e5836f;
-      color: #47170d; }
+      background: #f29163;
+      color: #4f1e07; }
       #posts-list > li span.caption p {
         margin: 0px; }
       #posts-list > li span.caption a, #posts-list > li span.caption a:hover, #posts-list > li span.caption a:visited, #posts-list > li span.caption a:active {
-        color: #47170d; }
+        color: #4f1e07; }
   #posts-list > li a.title {
     text-decoration: none;
     padding: 5px;
-    color: #732515; }
+    color: #7e300b; }
     #posts-list > li a.title:hover {
-      background: #e5836f; }
+      background: #f29163; }
   #posts-list > li img {
     max-width: 35%;
     float: left;
@@ -486,7 +486,7 @@ body {
   margin-bottom: 50px; }
 
 .tumblr-error {
-  border-left: 5px solid #d94c2e;
+  border-left: 5px solid #ec601c;
   padding: 5px 0px 5px 25px; }
   .tumblr-error h1 {
     font-size: 60px;
