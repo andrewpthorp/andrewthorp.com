@@ -36,33 +36,120 @@
 .group {
   zoom: 1; }
 
-.blog #masthead {
-  background: #70b7ba;
-  border-bottom: 3px solid #377173; }
-  .blog #masthead h1 {
-    color: #385b5d; }
+@-webkit-keyframes shakeHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
 
-.portfolio #masthead {
-  background: #a9cf53;
-  border-bottom: 3px solid #637f23; }
-  .portfolio #masthead h1 {
-    color: #63693e; }
+  33% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg); }
 
-.resume #masthead {
-  background: #fcc32a;
-  border-bottom: 3px solid #a47802; }
-  .resume #masthead h1 {
-    color: #a47e1b; }
+  66% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@-moz-keyframes shakeHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  33% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg); }
+
+  66% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@keyframes shakeHead {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  33% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg); }
+
+  66% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg); }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); } }
 
 .about #masthead {
+  background: #a9cf53;
+  border-bottom: 3px solid #637f23; }
+  .about #masthead h1 {
+    color: #445718; }
+
+.portfolio #masthead {
   background: #f1433f;
   border-bottom: 3px solid #a50f0c; }
-  .about #masthead h1 {
-    color: #78211f; }
+  .portfolio #masthead h1 {
+    color: #750b09; }
+
+.blog #masthead {
+  background: #fcc32a;
+  border-bottom: 3px solid #a47802; }
+  .blog #masthead h1 {
+    color: #725302; }
+
+.resume #masthead {
+  background: #70b7ba;
+  border-bottom: 3px solid #377173; }
+  .resume #masthead h1 {
+    color: #274f51; }
 
 #masthead {
-  background: #f7e967;
-  border-bottom: 3px solid #d3c00b;
+  background: #a9cf53;
+  border-bottom: 3px solid #637f23;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -70,36 +157,45 @@
   transition: all 0.25s ease-in-out;
   padding-top: 15px; }
   #masthead h1 {
-    color: rgba(0, 0, 0, 0.5); }
-  #masthead.blog {
-    background: #70b7ba;
-    border-bottom: 3px solid #377173; }
-    #masthead.blog h1 {
-      color: #385b5d; }
-  #masthead.portfolio {
+    color: #445718; }
+  #masthead.about {
     background: #a9cf53;
     border-bottom: 3px solid #637f23; }
-    #masthead.portfolio h1 {
-      color: #63693e; }
-  #masthead.resume {
-    background: #fcc32a;
-    border-bottom: 3px solid #a47802; }
-    #masthead.resume h1 {
-      color: #a47e1b; }
-  #masthead.about {
+    #masthead.about h1 {
+      color: #445718; }
+  #masthead.portfolio {
     background: #f1433f;
     border-bottom: 3px solid #a50f0c; }
-    #masthead.about h1 {
-      color: #78211f; }
+    #masthead.portfolio h1 {
+      color: #750b09; }
+  #masthead.blog {
+    background: #fcc32a;
+    border-bottom: 3px solid #a47802; }
+    #masthead.blog h1 {
+      color: #725302; }
+  #masthead.resume {
+    background: #70b7ba;
+    border-bottom: 3px solid #377173; }
+    #masthead.resume h1 {
+      color: #274f51; }
   #masthead ul, #masthead ul li {
     margin-bottom: 0px; }
   #masthead img {
     float: left;
     width: 160px; }
+    #masthead img:hover {
+      -webkit-animation: shakeHead 0.5s ease-in-out;
+      -moz-animation: shakeHead 0.5s ease-in-out;
+      animation: shakeHead 0.5s ease-in-out; }
   #masthead ul li {
     display: inline-block;
     margin-left: 10px;
-    float: right; }
+    float: right;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear; }
     #masthead ul li a {
       text-decoration: none;
       display: inline-block;
@@ -122,6 +218,9 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
     #masthead ul li:last-child {
       margin: 0px; }
+    #masthead ul li:hover {
+      position: relative;
+      bottom: 5px; }
   #masthead h1 {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -266,23 +365,7 @@
 .project-separator {
   display: block;
   height: 5px;
-  background: transparent url("../images/stripe.png") repeat-x; }
-  .project-separator::before {
-    font-size: 20px;
-    float: left;
-    content: "\00AB";
-    position: relative;
-    top: -10px;
-    left: -20px;
-    color: #91a759; }
-  .project-separator::after {
-    font-size: 20px;
-    position: relative;
-    top: -10px;
-    right: -20px;
-    float: right;
-    content: "\00BB";
-    color: #91a759; }
+  background: #f1433f; }
 
 .header-image {
   margin-bottom: 25px; }
@@ -379,7 +462,7 @@ body {
   margin-bottom: 50px; }
 
 .tumblr-error {
-  border-left: 5px solid #385b5d;
+  border-left: 5px solid #fcc32a;
   padding: 5px 0px 5px 25px; }
   .tumblr-error h1 {
     font-size: 60px;

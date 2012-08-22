@@ -1,31 +1,61 @@
-@mixin masthead-colors($bg, $h1)
+@-webkit-keyframes shakeHead
+  0%
+    @include transform(rotate(0deg))
+  33%
+    @include transform(rotate(15deg))
+  66%
+    @include transform(rotate(-5deg))
+  100%
+    @include transform(rotate(0deg))
+
+@-moz-keyframes shakeHead
+  0%
+    @include transform(rotate(0deg))
+  33%
+    @include transform(rotate(15deg))
+  66%
+    @include transform(rotate(-5deg))
+  100%
+    @include transform(rotate(0deg))
+
+@keyframes shakeHead
+  0%
+    @include transform(rotate(0deg))
+  33%
+    @include transform(rotate(15deg))
+  66%
+    @include transform(rotate(-5deg))
+  100%
+    @include transform(rotate(0deg))
+
+@mixin masthead-colors($bg)
   background: $bg
   border-bottom: 3px solid darken($bg, 25%)
   h1
-    color: $h1
+    color: darken($bg, 35%)
 
-.blog #masthead
-  @include masthead-colors(#70b7ba, rgb(56, 91, 93))
-.portfolio #masthead
-  @include masthead-colors(#a9cf53, rgb(99, 105, 62))
-.resume #masthead
-  @include masthead-colors(#fcc32a, rgb(164, 126, 27))
 .about #masthead
-  @include masthead-colors(#f1433f, rgb(120, 33, 31))
+  @include masthead-colors($mainColor)
+.portfolio #masthead
+  @include masthead-colors($projectsColor)
+.blog #masthead
+  @include masthead-colors($blogColor)
+.resume #masthead
+  @include masthead-colors($resumeColor)
 
 #masthead
-  @include masthead-colors(#f7e967, rgba(0, 0, 0, 0.5))
+  @include masthead-colors($green)
   @include transition(all 0.25s ease-in-out)
   padding-top: 15px
 
-  &.blog
-    @include masthead-colors(#70b7ba, rgb(56, 91, 93))
-  &.portfolio
-    @include masthead-colors(#a9cf53, rgb(99, 105, 62))
-  &.resume
-    @include masthead-colors(#fcc32a, rgb(164, 126, 27))
   &.about
-    @include masthead-colors(#f1433f, rgb(120, 33, 31))
+    @include masthead-colors($mainColor)
+  &.portfolio
+    @include masthead-colors($projectsColor)
+  &.blog
+    @include masthead-colors($blogColor)
+  &.resume
+    @include masthead-colors($resumeColor)
 
   ul, ul li
     margin-bottom: 0px
@@ -34,11 +64,15 @@
     float: left
     width: 160px
 
+    &:hover
+      @include animation(shakeHead 0.5s ease-in-out)
+
   // Main Nav
   ul li
     display: inline-block
     margin-left: 10px
     float: right
+    @include transition(all 0.1s linear)
 
     a
       text-decoration: none
@@ -61,6 +95,10 @@
 
     &:last-child
       margin: 0px
+
+    &:hover
+      position: relative
+      bottom: 5px
 
   // Tagline (A Created Man)
   h1
