@@ -360,6 +360,8 @@
       padding: 10px;
       background: #e5836f;
       color: #47170d; }
+      #posts-list > li span.caption p {
+        margin: 0px; }
       #posts-list > li span.caption a, #posts-list > li span.caption a:hover, #posts-list > li span.caption a:visited, #posts-list > li span.caption a:active {
         color: #47170d; }
   #posts-list > li a.title {
