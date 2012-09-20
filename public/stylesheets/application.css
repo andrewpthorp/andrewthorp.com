@@ -461,6 +461,10 @@ h1.section-header {
   #resume .margin-bottom {
     margin-bottom: 15px; }
 
+.resume-pdf {
+  font-size: 14px;
+  line-height: 22px; }
+
 body {
   background: #efefe4;
   font-family: "Bitter", "Georgia", serif;
