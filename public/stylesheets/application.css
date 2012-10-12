@@ -127,25 +127,29 @@
   background: #5ee3b7;
   border-bottom: 3px solid #1da578; }
   .about #masthead h1 {
-    color: #157958; }
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
 
 .portfolio #masthead {
   background: #f1433f;
   border-bottom: 3px solid #a50f0c; }
   .portfolio #masthead h1 {
-    color: #750b09; }
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
 
 .blog #masthead {
-  background: #ec601c;
-  border-bottom: 3px solid #7e300b; }
+  background: #e35838;
+  border-bottom: 3px solid #882913; }
   .blog #masthead h1 {
-    color: #4f1e07; }
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
 
 .resume #masthead {
   background: #008fd5;
   border-bottom: 3px solid #003956; }
   .resume #masthead h1 {
-    color: #001723; }
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
 
 #masthead {
   background: #5ee3b7;
@@ -157,27 +161,32 @@
   transition: all 0.25s ease-in-out;
   padding-top: 15px; }
   #masthead h1 {
-    color: #157958; }
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
   #masthead.about {
     background: #5ee3b7;
     border-bottom: 3px solid #1da578; }
     #masthead.about h1 {
-      color: #157958; }
+      color: white;
+      text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
   #masthead.portfolio {
     background: #f1433f;
     border-bottom: 3px solid #a50f0c; }
     #masthead.portfolio h1 {
-      color: #750b09; }
+      color: white;
+      text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
   #masthead.blog {
-    background: #ec601c;
-    border-bottom: 3px solid #7e300b; }
+    background: #e35838;
+    border-bottom: 3px solid #882913; }
     #masthead.blog h1 {
-      color: #4f1e07; }
+      color: white;
+      text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
   #masthead.resume {
     background: #008fd5;
     border-bottom: 3px solid #003956; }
     #masthead.resume h1 {
-      color: #001723; }
+      color: white;
+      text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2); }
   #masthead ul, #masthead ul li {
     margin-bottom: 0px; }
   #masthead img {
@@ -358,18 +367,18 @@
       margin-left: 2%;
       margin-bottom: 10px;
       padding: 10px;
-      background: #f29163;
-      color: #4f1e07; }
+      background: #ec907b;
+      color: #5c1c0d; }
       #posts-list > li span.caption p {
         margin: 0px; }
       #posts-list > li span.caption a, #posts-list > li span.caption a:hover, #posts-list > li span.caption a:visited, #posts-list > li span.caption a:active {
-        color: #4f1e07; }
+        color: #5c1c0d; }
   #posts-list > li a.title {
     text-decoration: none;
     padding: 5px;
-    color: #7e300b; }
+    color: #882913; }
     #posts-list > li a.title:hover {
-      background: #f29163; }
+      background: #ec907b; }
   #posts-list > li img {
     max-width: 35%;
     float: left;
@@ -490,7 +499,7 @@ body {
   margin-bottom: 50px; }
 
 .tumblr-error {
-  border-left: 5px solid #ec601c;
+  border-left: 5px solid #e35838;
   padding: 5px 0px 5px 25px; }
   .tumblr-error h1 {
     font-size: 60px;
@@ -502,6 +511,19 @@ body {
   .tumblr-error p {
     font-size: 16px;
     font-size: 1.6rem; }
+
+.notice {
+  background: #47eb6f;
+  margin: -25px auto 25px;
+  border-bottom: 3px solid #14b83c; }
+  .notice p {
+    padding: 15px;
+    display: block;
+    text-align: center;
+    margin: 0px;
+    color: #222222;
+    font-weight: bold;
+    color: #0a5c1e; }
 
 #mobile-nav {
   margin: 0px;
