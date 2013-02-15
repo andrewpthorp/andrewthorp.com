@@ -4,10 +4,10 @@ gem 'sinatra'
 gem 'sinatra_more'
 gem 'bourbon'
 gem 'sass'
+gem 'haml'
 gem 'thin'
 gem 'heroku'
 gem 'pg'
-gem 'tumbl_rb'
 
 group :development, :test do
   gem 'taps'

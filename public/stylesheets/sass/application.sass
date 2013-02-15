@@ -1,77 +1,31 @@
 // Global Variables
-$blue: #008FD5
-$orange: #E35838
-$green: #5EE3B7
-$red: #F1433F
-$mainColor: $green
-$projectsColor: $red
-$blogColor: $orange
-$resumeColor: $blue
+$green: #6FB269
 
 // Imports
 @import "bourbon"
 @import "webfonts"
 @import "utils"
-@import "masthead"
-@import "social"
 @import "coderay"
-@import "posts"
-@import "projects"
-@import "pages"
 
 body
-  background: #efefe4
+  background: #fff
   font-family: 'Bitter', 'Georgia', serif
-  font-size: 16px
-  font-size: 1.6rem
-  line-height: 21px
-  color: #5B5B57
+  color: #444
 
   a
-    @include transition(color 0.25s linear)
-    color: #5B5B57
-    text-decoration: underline
-
-  p
-    font-size: 15px
-    font-size: 1.5rem
-    line-height: 1.6
-
-.heading-font
-  @extend .league_gothic
-
-.main-row
-  margin-top: 50px
-  margin-bottom: 50px
-
-.tumblr-error
-  border-left: 5px solid $blogColor
-  padding: 5px 0px 5px 25px
-
-  h1
-    font-size: 60px
-    font-size: 6rem
-    line-height: 1.1
-    color: #222
-    text-transform: uppercase
-    text-shadow: 1px 1px #eee, 2px 2px #777
+    color: #444
+    font-weight: bold
+    &:hover
+      color: #222
+      text-decoration: underline
 
   p
     font-size: 16px
     font-size: 1.6rem
+    line-height: 1.6
 
-.notice
-  background: #47eb6f
-  margin: -25px auto 25px
-  border-bottom: 3px solid darken(#47eb6f, 20%)
+  #main
+    margin-top: 50px
 
-  p
-    padding: 15px
-    display: block
-    text-align: center
-    margin: 0px
-    color: #222
-    font-weight: bold
-    color: darken(#47eb6f, 40%)
-
-@import "mobile"
+.heading-font
+  @extend .league_gothic
