@@ -382,31 +382,31 @@
 .icon-delicious:before {
   content: "\e048"; }
 
-#social-nav {
-  border-top: 1px solid #444444;
-  padding-top: 40px; }
-  #social-nav li {
-    display: inline; }
-    #social-nav li a {
-      font-family: 'icomoon';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      font-size: 45px;
-      font-size: 4.5rem;
-      margin-right: 35px; }
-      #social-nav li a:hover {
-        text-decoration: none; }
-      #social-nav li a.twitter:hover {
-        color: #2eb8e7; }
-      #social-nav li a.facebook:hover {
-        color: #5574ad; }
-      #social-nav li a.github:hover {
-        color: #286da3; }
-    #social-nav li:last-child a {
-      margin-right: 0px; }
+#social-nav li {
+  display: inline; }
+  #social-nav li a {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 45px;
+    font-size: 4.5rem;
+    margin-right: 35px; }
+    #social-nav li a:hover {
+      text-decoration: none; }
+    #social-nav li a.twitter:hover {
+      color: #2eb8e7; }
+    #social-nav li a.facebook:hover {
+      color: #5574ad; }
+    #social-nav li a.github:hover {
+      color: #286da3; }
+  #social-nav li:last-child a {
+    margin-right: 0px; }
+
+html, body {
+  height: 100%; }
 
 body {
   background: white;
@@ -422,5 +422,25 @@ body {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
+    body p.small {
+      font-size: 11px;
+      font-size: 1.1rem; }
+    body p.mute {
+      color: #777777; }
+      body p.mute a {
+        color: #777777; }
+      body p.mute .dark {
+        color: #444444; }
+    body p.dark {
+      color: #222222; }
   body #main {
-    margin-top: 100px; }
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 100px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -55px; }
+    body #main .footer_block {
+      height: 80px; }

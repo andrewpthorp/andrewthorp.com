@@ -14,3 +14,17 @@
   %body
     #main.container
       = yield
+      .footer_block.make-block
+
+    .container
+      .row
+        .nine.columns.centered
+          %footer.global-footer
+            %p.mute.small.align-center
+              Copyright &copy; 2013 Andrew Thorp.
+              %span.dark.make-inline-block.gutter-left-half.gutter-right-half &sect;
+              Design inspired by
+              = link_to "http://wynn.fm.", "http://wynn.fm", target: "_blank"
+              %span.dark.make-inline-block.gutter-left-half.gutter-right-half &sect;
+              Icon font by
+              = link_to "icomoon.", "http://icomoon.io", target: "_blank"
