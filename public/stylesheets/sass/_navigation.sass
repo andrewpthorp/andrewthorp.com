@@ -1,0 +1,26 @@
+#social-nav
+  border-top: 1px solid $gray
+  padding-top: 40px
+
+  li
+    display: inline
+    a
+      +icomoon
+      font-size: 45px
+      font-size: 4.5rem
+      margin-right: 35px
+      &:hover
+        text-decoration: none
+
+      &.twitter
+        &:hover
+          color: $twitter_blue
+      &.facebook
+        &:hover
+          color: $facebook_blue
+      &.github
+        &:hover
+          color: $github_blue
+
+    &:last-child a
+      margin-right: 0px
