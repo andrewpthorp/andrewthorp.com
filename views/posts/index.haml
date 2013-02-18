@@ -1,0 +1,7 @@
+.row
+  .nine.columns.centered
+    %h2.gutter-bottom
+      My Posts
+    %p
+      - @posts.each do |p|
+        = link_to p.title, "posts/#{p.slug}"

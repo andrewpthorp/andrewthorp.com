@@ -6,8 +6,18 @@ get "/about" do
   haml :about, layout: true
 end
 
-get "/blog" do
-  haml :blog, layout: true
+[ "/blog", "/posts" ].each do |path|
+  get path do
+    @posts = Post.all
+    haml :"posts/index", layout: true
+  end
+end
+
+[ "/blog/:slug", "/posts/:slug" ].each do |path|
+  get path do
+    @post = Post.first(slug: params[:slug])
+    haml :"posts/show", layout: true
+  end
 end
 
 get "/portfolio" do
