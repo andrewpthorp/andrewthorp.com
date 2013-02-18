@@ -8,6 +8,11 @@ gem 'haml'
 gem 'thin'
 gem 'heroku'
 gem 'pg'
+gem 'data_mapper'
+
+group :production do
+  gem 'dm-postgres-adapter'
+end
 
 group :development, :test do
   gem 'guard'
@@ -19,4 +24,5 @@ group :development, :test do
   gem 'rerun'
   gem 'tux'
   gem 'rb-fsevent', '~> 0.9.1'
+  gem 'dm-sqlite-adapter'
 end
