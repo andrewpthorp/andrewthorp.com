@@ -496,7 +496,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top: 100px;
+    padding-top: 75px;
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -511,4 +511,6 @@ body {
 
 @media only screen and (max-width: 767px) {
   body #main {
-    padding-top: 25px; } }
+    padding-top: 25px; }
+  body .robot-logo {
+    max-width: 300px; } }
