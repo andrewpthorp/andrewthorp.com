@@ -25,5 +25,3 @@ module AuthenticationHelpers
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [ENV["ADMIN_USERNAME"], ENV["ADMIN_PASSWORD"]]
   end
 end
-
-helpers NavigationHelpers, AuthenticationHelpers
