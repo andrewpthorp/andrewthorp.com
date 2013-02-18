@@ -12,11 +12,13 @@ get "/blog" do
 end
 
 get "/blog/new" do
+  protected!
   @post = Post.new
   haml :"posts/new", layout: true
 end
 
 post "/blog" do
+  protected!
   @post = Post.new(params[:post])
   if @post.save
     redirect "/blog"
@@ -26,11 +28,13 @@ post "/blog" do
 end
 
 get "/blog/:slug/edit" do
+  protected!
   @post = Post.first(slug: params[:slug])
   haml :"posts/edit", layout: true
 end
 
 put "/blog/:slug" do
+  protected!
   @post = Post.first(slug: params[:slug])
   if @post.update(params[:post])
     redirect "/blog/#{params[:slug]}"
