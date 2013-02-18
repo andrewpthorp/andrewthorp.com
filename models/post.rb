@@ -16,6 +16,6 @@ class Post
   end
 
   def pretty_body
-    RDiscount.new(self.body, :autolink).to_html
+    RDiscount.new(self.body, :autolink, :smart).to_html
   end
 end

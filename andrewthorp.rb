@@ -22,7 +22,7 @@ class AndrewThorp < Sinatra::Base
   get "/blog/new" do
     protected!
     @post = Post.new
-    haml :"posts/new", layout: true
+    erb :"posts/new", layout: true, layout_engine: :haml
   end
 
   post "/blog" do
@@ -31,14 +31,14 @@ class AndrewThorp < Sinatra::Base
     if @post.save
       redirect "/blog/#{@post.slug}"
     else
-      haml :"posts/new", layout: true
+      erb :"posts/new", layout: true, layout_engine: :haml
     end
   end
 
   get "/blog/:slug/edit" do
     protected!
     @post = Post.first(slug: params[:slug])
-    haml :"posts/edit", layout: true
+    erb :"posts/edit", layout: true, layout_engine: :haml
   end
 
   put "/blog/:slug" do
@@ -47,7 +47,7 @@ class AndrewThorp < Sinatra::Base
     if @post.update(params[:post])
       redirect "/blog/#{params[:slug]}"
     else
-      haml :"posts/edit", layout: true
+      erb :"posts/edit", layout: true, layout_engine: :haml
     end
   end
 

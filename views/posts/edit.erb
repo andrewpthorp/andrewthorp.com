@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="nine columns centered">
+    <div class="post show">
+      <h1 class="gutter-bottom title">
+        <%= link_to "&#xe04a;", "/blog/#{@post.slug}", class: "no-underline icomoon" %>
+        Edit Post
+      </h1>
+
+      <% form_for(@post, "/blog/#{@post.slug}", method: "put") do |f| %>
+        <p>
+          <%= f.text_field :title, class: "input_full", placeholder: "Title" %>
+        </p>
+
+        <p>
+          <%= f.text_area :body, class: "input_full", placeholder: "Body" %>
+        </p>
+
+        <p>
+          <%= f.submit "Save" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
