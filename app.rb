@@ -6,18 +6,34 @@ get "/about" do
   haml :about, layout: true
 end
 
-[ "/blog", "/posts" ].each do |path|
-  get path do
-    @posts = Post.all
-    haml :"posts/index", layout: true
+get "/blog" do
+  @posts = Post.all
+  haml :"posts/index", layout: true
+end
+
+get "/blog/new" do
+  @post = Post.new
+  haml :"posts/new", layout: true
+end
+
+post "/blog" do
+  @post = Post.new(params[:post])
+
+  # TODO: Move this into a DataMapper hook.
+  # They weren't being called during development,
+  # not sure why.
+  @post.set_slug(@post.title.to_slug)
+
+  if @post.save!
+    redirect "/blog"
+  else
+    haml :"posts/new", layout: true
   end
 end
 
-[ "/blog/:slug", "/posts/:slug" ].each do |path|
-  get path do
-    @post = Post.first(slug: params[:slug])
-    haml :"posts/show", layout: true
-  end
+get "/blog/:slug" do
+  @post = Post.first(slug: params[:slug])
+  haml :"posts/show", layout: true
 end
 
 get "/portfolio" do
