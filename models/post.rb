@@ -1,3 +1,5 @@
+require 'rdiscount'
+
 class Post
   include DataMapper::Resource
   is :sluggable
@@ -11,5 +13,9 @@ class Post
 
   before :create do
     set_slug(self.title.to_slug)
+  end
+
+  def pretty_body
+    RDiscount.new(self.body, :autolink).to_html
   end
 end

@@ -10,6 +10,7 @@ gem 'heroku'
 gem 'pg'
 gem 'data_mapper'
 gem 'dm-is-sluggable'
+gem 'rdiscount'
 
 group :production do
   gem 'dm-postgres-adapter'

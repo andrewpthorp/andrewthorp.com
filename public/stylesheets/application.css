@@ -434,13 +434,13 @@ textarea {
   #social-nav li:last-child a {
     margin-right: 0px; }
 
-.posts h1, .post h1 {
+.posts h1.title, .post h1.title {
   font-size: 34px;
   font-size: 3.4rem;
   border-bottom: 1px solid #999999;
   padding-bottom: 20px;
   color: #444444; }
-  .posts h1 a, .post h1 a {
+  .posts h1.title a, .post h1.title a {
     color: #999999; }
 .posts p span.date, .post p span.date {
   display: inline-block;

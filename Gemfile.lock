@@ -136,6 +136,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
+    rdiscount (2.0.7)
     rerun (0.8.0)
       listen
     rest-client (1.6.7)
@@ -204,6 +205,7 @@ DEPENDENCIES
   heroku
   pg
   rb-fsevent (~> 0.9.1)
+  rdiscount
   rerun
   sass
   sinatra

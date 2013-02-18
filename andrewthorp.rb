@@ -29,7 +29,7 @@ class AndrewThorp < Sinatra::Base
     protected!
     @post = Post.new(params[:post])
     if @post.save
-      redirect "/blog"
+      redirect "/blog/#{@post.slug}"
     else
       haml :"posts/new", layout: true
     end

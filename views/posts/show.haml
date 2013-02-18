@@ -1,10 +1,9 @@
 .row
   .nine.columns.centered
     .post.show
-      %h1.gutter-bottom
+      %h1.gutter-bottom.title
         = link_to "&#xe04a;", "/blog", class: "no-underline icomoon"
         = @post.title
 
-      %p
-        %span.date= @post.created_at.to_s(:pretty)
-        = @post.body
+      %span.date= @post.created_at.to_s(:pretty)
+      = @post.pretty_body

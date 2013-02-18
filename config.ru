@@ -5,6 +5,9 @@ require "data_mapper"
 require "dm-is-sluggable"
 require "haml"
 
+# Enable "_method" override hack in HTML forms.
+use Rack::MethodOverride
+
 # Require all lib
 Dir["./lib/*.rb"].each { |f| require f }
 
