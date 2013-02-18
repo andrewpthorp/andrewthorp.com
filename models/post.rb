@@ -8,4 +8,8 @@ class Post
   property :body, Text, required: true
   property :created_at, DateTime
   property :updated_at, DateTime
+
+  before :create do
+    set_slug(self.title.to_slug)
+  end
 end

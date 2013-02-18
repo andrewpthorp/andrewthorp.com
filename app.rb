@@ -18,13 +18,7 @@ end
 
 post "/blog" do
   @post = Post.new(params[:post])
-
-  # TODO: Move this into a DataMapper hook.
-  # They weren't being called during development,
-  # not sure why.
-  @post.set_slug(@post.title.to_slug)
-
-  if @post.save!
+  if @post.save
     redirect "/blog"
   else
     haml :"posts/new", layout: true
