@@ -9,9 +9,9 @@ $facebook_blue: #5574AD
 
 // Imports
 @import "bourbon/bourbon"
+@import "icomoon"
 @import "utils"
 @import "coderay"
-@import "icomoon"
 @import "navigation"
 @import "posts"
 
@@ -58,6 +58,14 @@ body
 
     .footer_block
       height: 80px
+
+  #global-footer
+    p
+      span.icomoon
+        position: relative
+        top: 1px
+        font-size: 13px
+        font-size: 1.3rem
 
 @media only screen and (max-width: 767px)
   body

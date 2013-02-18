@@ -1,159 +1,3 @@
-/*  All of my 'utility' css will go here.
- *  Functions, clears, etc.
- */
-.group:before, .group:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden; }
-
-.group:after {
-  clear: both; }
-
-.group {
-  zoom: 1; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
-/*  Display
- */
-.make-block {
-  display: block; }
-
-.make-inline {
-  display: inline; }
-
-.make-inline-block {
-  display: inline-block; }
-
-/*  Text alignment
- */
-.align-left {
-  text-align: left; }
-
-.align-center {
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/*  Gutters
- */
-.gutter-top {
-  margin-top: 20px; }
-
-.gutter-top-three-quarter {
-  margin-top: 15px; }
-
-.gutter-top-half {
-  margin-top: 10px; }
-
-.gutter-top-quarter {
-  margin-top: 5px; }
-
-.gutter-top-none {
-  margin-top: 0px; }
-
-.gutter-top-double {
-  margin-top: 40px; }
-
-.gutter-right {
-  margin-right: 20px; }
-
-.gutter-right-three-quarter {
-  margin-right: 15px; }
-
-.gutter-right-half {
-  margin-right: 10px; }
-
-.gutter-right-quarter {
-  margin-right: 5px; }
-
-.gutter-right-none {
-  margin-right: 0px; }
-
-.gutter-right-double {
-  margin-right: 40px; }
-
-.gutter-bottom {
-  margin-bottom: 20px; }
-
-.gutter-bottom-three-quarter {
-  margin-bottom: 15px; }
-
-.gutter-bottom-half {
-  margin-bottom: 10px; }
-
-.gutter-bottom-quarter {
-  margin-bottom: 5px; }
-
-.gutter-bottom-none {
-  margin-bottom: 0px; }
-
-.gutter-bottom-double {
-  margin-bottom: 40px; }
-
-.gutter-left {
-  margin-left: 20px; }
-
-.gutter-left-three-quarter {
-  margin-left: 15px; }
-
-.gutter-left-half {
-  margin-left: 10px; }
-
-.gutter-left-quarter {
-  margin-left: 5px; }
-
-.gutter-left-none {
-  margin-left: 0px; }
-
-.gutter-left-double {
-  margin-left: 40px; }
-
-.CodeRay {
-  margin: 0px 0px 18px;
-  display: block;
-  background: #050f23;
-  border: 1px solid #121212;
-  font-size: 13px;
-  font-size: 1.3rem; }
-  .CodeRay .code {
-    color: white; }
-    .CodeRay .code .class, .CodeRay .code .constant {
-      font-weight: bold; }
-    .CodeRay .code .keyword, .CodeRay .code .type {
-      font-weight: bold;
-      color: #b6db51; }
-    .CodeRay .code .global-variable {
-      color: #9cc371; }
-    .CodeRay .code .symbol, .CodeRay .code .key, .CodeRay .code .instance-variable {
-      color: #a8bfd6; }
-    .CodeRay .code .regexp, .CodeRay .code .string {
-      color: #b4c2d6; }
-      .CodeRay .code .regexp .delimiter, .CodeRay .code .string .delimiter {
-        color: #b4c2d6; }
-    .CodeRay .code .comment {
-      font-style: italic;
-      color: #5d5d5d; }
-    .CodeRay .code pre {
-      overflow: auto;
-      padding: 15px; }
-      .CodeRay .code pre::-webkit-scrollbar {
-        height: 12px; }
-      .CodeRay .code pre::-webkit-scrollbar-track-piece {
-        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px 1px inset;
-        background: rgba(0, 0, 0, 0.2); }
-      .CodeRay .code pre::-webkit-scrollbar-thumb {
-        background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) black;
-        -webkit-border-radius: 5px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 0 1px inset;
-        -webkit-background-clip: padding-box; }
-
 @font-face {
   font-family: 'icomoon';
   src: url("/fonts/icomoon.eot");
@@ -388,6 +232,170 @@
 .icon-delicious:before {
   content: "\e048"; }
 
+/*  All of my 'utility' css will go here.
+ *  Functions, clears, etc.
+ */
+.group:before, .group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.icomoon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/*  Display
+ */
+.make-block {
+  display: block; }
+
+.make-inline {
+  display: inline; }
+
+.make-inline-block {
+  display: inline-block; }
+
+/*  Text alignment
+ */
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+/*  Gutters
+ */
+.gutter-top {
+  margin-top: 20px; }
+
+.gutter-top-three-quarter {
+  margin-top: 15px; }
+
+.gutter-top-half {
+  margin-top: 10px; }
+
+.gutter-top-quarter {
+  margin-top: 5px; }
+
+.gutter-top-none {
+  margin-top: 0px; }
+
+.gutter-top-double {
+  margin-top: 40px; }
+
+.gutter-right {
+  margin-right: 20px; }
+
+.gutter-right-three-quarter {
+  margin-right: 15px; }
+
+.gutter-right-half {
+  margin-right: 10px; }
+
+.gutter-right-quarter {
+  margin-right: 5px; }
+
+.gutter-right-none {
+  margin-right: 0px; }
+
+.gutter-right-double {
+  margin-right: 40px; }
+
+.gutter-bottom {
+  margin-bottom: 20px; }
+
+.gutter-bottom-three-quarter {
+  margin-bottom: 15px; }
+
+.gutter-bottom-half {
+  margin-bottom: 10px; }
+
+.gutter-bottom-quarter {
+  margin-bottom: 5px; }
+
+.gutter-bottom-none {
+  margin-bottom: 0px; }
+
+.gutter-bottom-double {
+  margin-bottom: 40px; }
+
+.gutter-left {
+  margin-left: 20px; }
+
+.gutter-left-three-quarter {
+  margin-left: 15px; }
+
+.gutter-left-half {
+  margin-left: 10px; }
+
+.gutter-left-quarter {
+  margin-left: 5px; }
+
+.gutter-left-none {
+  margin-left: 0px; }
+
+.gutter-left-double {
+  margin-left: 40px; }
+
+.CodeRay {
+  margin: 0px 0px 18px;
+  display: block;
+  background: #050f23;
+  border: 1px solid #121212;
+  font-size: 13px;
+  font-size: 1.3rem; }
+  .CodeRay .code {
+    color: white; }
+    .CodeRay .code .class, .CodeRay .code .constant {
+      font-weight: bold; }
+    .CodeRay .code .keyword, .CodeRay .code .type {
+      font-weight: bold;
+      color: #b6db51; }
+    .CodeRay .code .global-variable {
+      color: #9cc371; }
+    .CodeRay .code .symbol, .CodeRay .code .key, .CodeRay .code .instance-variable {
+      color: #a8bfd6; }
+    .CodeRay .code .regexp, .CodeRay .code .string {
+      color: #b4c2d6; }
+      .CodeRay .code .regexp .delimiter, .CodeRay .code .string .delimiter {
+        color: #b4c2d6; }
+    .CodeRay .code .comment {
+      font-style: italic;
+      color: #5d5d5d; }
+    .CodeRay .code pre {
+      overflow: auto;
+      padding: 15px; }
+      .CodeRay .code pre::-webkit-scrollbar {
+        height: 12px; }
+      .CodeRay .code pre::-webkit-scrollbar-track-piece {
+        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px 1px inset;
+        background: rgba(0, 0, 0, 0.2); }
+      .CodeRay .code pre::-webkit-scrollbar-thumb {
+        background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) black;
+        -webkit-border-radius: 5px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 0 1px inset;
+        -webkit-background-clip: padding-box; }
+
 #social-nav li {
   display: inline; }
   #social-nav li a {
@@ -415,8 +423,10 @@
   font-size: 34px;
   font-size: 3.4rem;
   border-bottom: 1px solid #999999;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   color: #444444; }
+  .posts h1 a, .post h1 a {
+    color: #999999; }
 .posts p span.date, .post p span.date {
   display: inline-block;
   font-weight: bold;
@@ -478,6 +488,11 @@ body {
     margin-bottom: -55px; }
     body #main .footer_block {
       height: 80px; }
+  body #global-footer p span.icomoon {
+    position: relative;
+    top: 1px;
+    font-size: 13px;
+    font-size: 1.3rem; }
 
 @media only screen and (max-width: 767px) {
   body #main {
