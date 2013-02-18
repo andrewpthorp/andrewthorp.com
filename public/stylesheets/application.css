@@ -415,22 +415,27 @@
   font-size: 34px;
   font-size: 3.4rem;
   border-bottom: 1px solid #999999;
-  padding-bottom: 10px; }
-  .posts h1 span, .post h1 span {
-    color: #999999;
-    display: block;
-    font-size: 18px;
-    font-size: 1.8rem; }
+  padding-bottom: 10px;
+  color: #444444; }
+.posts p span.date, .post p span.date {
+  display: inline-block;
+  font-weight: bold;
+  color: #373737;
+  margin-right: 15px;
+  font-style: italic;
+  text-transform: uppercase; }
 
 .posts ul li {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 17px;
+  font-size: 1.7rem;
   line-height: 1.4;
   display: block;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
+  .posts ul li a {
+    font-weight: normal; }
 
 html, body {
   height: 100%; }
@@ -473,3 +478,7 @@ body {
     margin-bottom: -55px; }
     body #main .footer_block {
       height: 80px; }
+
+@media only screen and (max-width: 767px) {
+  body #main {
+    padding-top: 25px; } }

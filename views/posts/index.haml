@@ -2,7 +2,9 @@
   .nine.columns.centered
     .posts
       %h1.gutter-bottom
-        This is how I blog
+        = link_to "&larr;", "/", class: "no-underline"
+        The Enquirer
+
       %ul
         - @posts.each do |p|
           %li
