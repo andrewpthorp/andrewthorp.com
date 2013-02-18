@@ -1,17 +1,19 @@
 // Global Variables
 $green: #6FB269
 $gray: #444
+$light_gray: #999
 
 $twitter_blue: #2EB8E7
 $github_blue: #286DA3
 $facebook_blue: #5574AD
 
 // Imports
-@import "bourbon"
+@import "bourbon/bourbon"
 @import "utils"
 @import "coderay"
 @import "icomoon"
 @import "navigation"
+@import "posts"
 
 html, body
   height: 100%
@@ -27,6 +29,8 @@ body
     &:hover
       color: #222
       text-decoration: underline
+    &.no-underline:hover
+      text-decoration: none
 
   p
     font-size: 17px

@@ -13,6 +13,12 @@
 .group {
   zoom: 1; }
 
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
 /*  Display
  */
 .make-block {
@@ -405,6 +411,27 @@
   #social-nav li:last-child a {
     margin-right: 0px; }
 
+.posts h1, .post h1 {
+  font-size: 34px;
+  font-size: 3.4rem;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 10px; }
+  .posts h1 span, .post h1 span {
+    color: #999999;
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem; }
+
+.posts ul li {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 html, body {
   height: 100%; }
 
@@ -418,6 +445,8 @@ body {
     body a:hover {
       color: #222222;
       text-decoration: underline; }
+    body a.no-underline:hover {
+      text-decoration: none; }
   body p {
     font-size: 17px;
     font-size: 1.7rem;

@@ -1,5 +1,10 @@
 .row
   .nine.columns.centered
-    %h2.align-center= @post.title
-    %p.align-center
-      = @post.body
+    .post.show
+      %h1.gutter-bottom-double
+        = link_to "&larr;", "/blog", class: "no-underline"
+        = @post.title
+        %span.date.align-right.gutter-top-half= @post.created_at.to_s(:pretty)
+
+      %p
+        = @post.body
