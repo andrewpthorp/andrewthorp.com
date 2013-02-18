@@ -357,6 +357,21 @@
 .gutter-left-double {
   margin-left: 40px; }
 
+input[type="text"], input[type="passwprd"], textarea {
+  color: #444444;
+  padding: 15px;
+  border: 0px none; }
+  input[type="text"]:focus, input[type="passwprd"]:focus, textarea:focus {
+    background: #efefef;
+    border: 0px none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+textarea {
+  height: 215px; }
+
 .CodeRay {
   margin: 0px 0px 18px;
   display: block;

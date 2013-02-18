@@ -31,6 +31,20 @@ post "/blog" do
   end
 end
 
+get "/blog/:slug/edit" do
+  @post = Post.first(slug: params[:slug])
+  haml :"posts/edit", layout: true
+end
+
+put "/blog/:slug" do
+  @post = Post.first(slug: params[:slug])
+  if @post.update(params[:post])
+    redirect "/blog/#{params[:slug]}"
+  else
+    haml :"posts/edit", layout: true
+  end
+end
+
 get "/blog/:slug" do
   @post = Post.first(slug: params[:slug])
   haml :"posts/show", layout: true
