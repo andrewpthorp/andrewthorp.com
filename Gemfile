@@ -10,12 +10,13 @@ gem 'heroku'
 gem 'pg'
 
 group :development, :test do
-  gem 'taps'
   gem 'guard'
   gem 'guard-sass'
   gem 'guard-coffeescript'
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'guard-spork'
-  gem 'shotgun'
+  gem 'rerun'
+  gem 'tux'
+  gem 'rb-fsevent', '~> 0.9.1'
 end
