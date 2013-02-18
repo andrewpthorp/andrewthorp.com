@@ -9,6 +9,7 @@ gem 'thin'
 gem 'heroku'
 gem 'pg'
 gem 'data_mapper'
+gem 'dm-is-sluggable'
 
 group :production do
   gem 'dm-postgres-adapter'
