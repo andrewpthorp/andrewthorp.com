@@ -6,6 +6,16 @@ module NavigationHelpers
     elems << content_tag(:li, link_to("&#xe02b;", "http://www.github.com/andrewpthorp", class: "github", target: "_blank"))
     content_tag :ul, elems.join, id: "social-nav", class: "group #{opts[:class]}"
   end
+
+  def site_navigation(opts={})
+    elems = []
+    elems << content_tag(:li, link_to("", "/", class: "icon-home no-underline", title: "Home"))
+    elems << content_tag(:li, link_to("", "/about", class: "icon-about no-underline", title: "About Me"))
+    elems << content_tag(:li, link_to("", "/blog", class: "icon-blog no-underline", title: "Blog"))
+    elems << content_tag(:li, link_to("", "/portfolio", class: "icon-portfolio no-underline", title: "Portfolio"))
+    elems << content_tag(:li, link_to("", "/resume", class: "icon-resume no-underline", title: "Resume"), class: "gutter-bottom-none")
+    content_tag :ul, elems.join, id: "site-nav", class: "group #{opts[:class]}"
+  end
 end
 
 module AuthenticationHelpers

@@ -5,7 +5,14 @@
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
         The Enquirer
 
-      %ul
-        - @posts.each do |p|
-          %li
-            = link_to p.title, "blog/#{p.slug}"
+      - if @posts.any?
+        %ul
+          - @posts.each do |p|
+            %li
+              = link_to p.title, "blog/#{p.slug}"
+      - else
+        %p.mute.align-center.gutter-top-double.gutter-bottom-none
+          %strong
+            The Enquirer
+          has no gossip on this subject.
+          = link_to "Oh well, take me back.", "/"
