@@ -17,7 +17,7 @@ class AndrewThorp < Sinatra::Base
 
   get "/blog" do
     protected!("This feature is still in development")
-    @posts = Post.all
+    @posts = Post.published
     haml :"posts/index", layout: true
   end
 

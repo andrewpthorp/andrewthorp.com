@@ -8,6 +8,7 @@ class Post
   property :slug, String
   property :title, String, required: true, length: 255
   property :body, Text, required: true
+  property :published, Boolean, required: true, default: false
   property :created_at, DateTime
   property :updated_at, DateTime
 
@@ -17,5 +18,9 @@ class Post
 
   def pretty_body
     RDiscount.new(self.body, :autolink, :smart).to_html
+  end
+
+  def self.published
+    all(published: true)
   end
 end
