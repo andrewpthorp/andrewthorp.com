@@ -9,10 +9,10 @@ module NavigationHelpers
 end
 
 module AuthenticationHelpers
-  def protected!
+  def protected!(realm="Restricted Area")
     unless authorized?
-      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
-      throw(:halt, [401, "Not authorized\n"])
+      response['WWW-Authenticate'] = %(Basic realm="#{realm}")
+      throw(:halt, [401, "You are not allowed to see behind the curtain! - HTTP Not Authorized (401)\n"])
     end
   end
 

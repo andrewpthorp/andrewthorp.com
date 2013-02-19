@@ -11,10 +11,12 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/about" do
+    protected!("This feature is still in development")
     haml :about, layout: true
   end
 
   get "/blog" do
+    protected!("This feature is still in development")
     @posts = Post.all
     haml :"posts/index", layout: true
   end
@@ -52,15 +54,18 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/blog/:slug" do
+    protected!("This feature is still in development")
     @post = Post.first(slug: params[:slug])
     haml :"posts/show", layout: true
   end
 
   get "/portfolio" do
+    protected!("This feature is still in development")
     haml :portfolio, layout: true
   end
 
   get "/resume" do
+    protected!("This feature is still in development")
     haml :resume, layout: true
   end
 
