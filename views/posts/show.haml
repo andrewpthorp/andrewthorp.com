@@ -5,7 +5,8 @@
         = link_to "&#xe04a;", "/blog", class: "no-underline icomoon"
         = @post.title
 
-      = @post.pretty_body
+      .body
+        = @post.pretty_body
 
       %p.uppercase.mute.medium.bold
         POSTED #{@post.created_at.to_s(:pretty)}

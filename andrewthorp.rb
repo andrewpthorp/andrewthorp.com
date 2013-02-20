@@ -17,12 +17,11 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/blog" do
-    protected!("This feature is still in development")
-
-    if session[:admin]
-      @posts = Post.all
+    if params[:all]
+      protected!
+      @posts = Post.all(order: [ :created_at.desc ])
     else
-      @posts = Post.published
+      @posts = Post.published.all(order: [ :created_at.desc ])
     end
 
     haml :"posts/index", layout: true
@@ -71,7 +70,6 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/blog/:slug" do
-    protected!("This feature is still in development")
     @post = Post.first(slug: params[:slug])
     haml :"posts/show", layout: true
   end

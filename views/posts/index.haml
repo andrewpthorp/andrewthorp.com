@@ -16,3 +16,8 @@
             The Enquirer
           has no gossip on this subject.
           = link_to "Oh well, take me back.", "/"
+
+      - if session[:admin]
+        %footer.group
+          %ul#admin.align-right
+            %li= link_to "New Post", "/blog/new"

@@ -243,6 +243,7 @@ textarea {
     padding-bottom: 20px;
     color: #444444; }
     .posts h1.title a, .post h1.title a {
+      text-decoration: none;
       color: #999999; }
 .posts h2, .post h2 {
   font-size: 28px;
@@ -253,24 +254,24 @@ textarea {
 .posts footer, .post footer {
   border-top: 1px solid #999999;
   padding-top: 24px; }
-.posts ul, .post ul {
+.posts .body ul, .post .body ul {
   list-style-type: disc;
   list-style-position: inside; }
-  .posts ul li, .post ul li {
+  .posts .body ul li, .post .body ul li {
     margin-bottom: 14px;
     font-size: 17px;
     font-size: 1.7rem; }
-.posts ol, .post ol {
+.posts .body ol, .post .body ol {
   margin-left: 0px;
   list-style-position: inside; }
-  .posts ol li, .post ol li {
+  .posts .body ol li, .post .body ol li {
     margin-bottom: 14px;
     font-size: 17px;
     font-size: 1.7rem; }
-.posts em, .post em {
+.posts .body em, .post .body em {
   background: #ddffde;
   font-style: normal; }
-.posts a, .post a {
+.posts .body a, .post .body a {
   color: #999999;
   text-decoration: underline; }
 .posts ul#admin li, .post ul#admin li {
