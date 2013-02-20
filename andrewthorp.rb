@@ -50,6 +50,16 @@ class AndrewThorp < Sinatra::Base
     erb :"posts/edit", layout: true, layout_engine: :haml
   end
 
+  get "/blog/:slug/delete" do
+    protected!
+    @post = Post.first(slug: params[:slug])
+    if @post.destroy
+      redirect "/blog"
+    else
+      redirect "/blog/#{@post.slug}"
+    end
+  end
+
   put "/blog/:slug" do
     protected!
     @post = Post.first(slug: params[:slug])
