@@ -5,5 +5,13 @@
         = link_to "&#xe04a;", "/blog", class: "no-underline icomoon"
         = @post.title
 
-      %span.date= @post.created_at.to_s(:pretty)
       = @post.pretty_body
+
+      %p.uppercase.mute.medium.bold
+        POSTED #{@post.created_at.to_s(:pretty)}
+
+      - if session[:admin]
+        %footer.group
+          %ul#admin.align-right
+            %li= link_to "Edit", "/blog/#{@post.slug}/edit"
+            %li= link_to "Delete", "/blog/#{@post.slug}/delete"

@@ -38,6 +38,15 @@
 .make-inline-block {
   display: inline-block; }
 
+.width-25 {
+  width: 25%; }
+
+.width-50 {
+  width: 50%; }
+
+.width-75 {
+  width: 75%; }
+
 /*  Text alignment
  */
 .align-left {
@@ -234,13 +243,22 @@ textarea {
   color: #444444; }
   .posts h1.title a, .post h1.title a {
     color: #999999; }
-.posts p span.date, .post p span.date {
-  display: inline-block;
-  font-weight: bold;
-  color: #373737;
-  margin-right: 15px;
-  font-style: italic;
-  text-transform: uppercase; }
+.posts footer, .post footer {
+  border-top: 1px solid #999999;
+  padding-top: 25px; }
+.posts ul#admin li, .post ul#admin li {
+  display: inline-block; }
+  .posts ul#admin li a, .post ul#admin li a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    background: #eeeeee;
+    color: #999999; }
+    .posts ul#admin li a:hover, .post ul#admin li a:hover {
+      background: #999999;
+      color: white;
+      text-decoration: none; }
 
 .posts ul li {
   font-size: 17px;
@@ -273,6 +291,9 @@ body {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
+    body p.medium {
+      font-size: 14px;
+      font-size: 1.4rem; }
     body p.small {
       font-size: 11px;
       font-size: 1.1rem; }
@@ -284,6 +305,10 @@ body {
         color: #444444; }
     body p.dark {
       color: #222222; }
+    body p.bold {
+      font-weight: bold; }
+    body p.uppercase {
+      text-transform: uppercase; }
   body #main {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
