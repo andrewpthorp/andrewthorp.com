@@ -165,11 +165,10 @@
 
 input[type="text"], input[type="passwprd"], textarea {
   color: #444444;
-  padding: 15px;
-  border: 0px none; }
+  padding: 20px 15px;
+  border: 1px solid #999999; }
   input[type="text"]:focus, input[type="passwprd"]:focus, textarea:focus {
     background: #efefef;
-    border: 0px none;
     outline: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

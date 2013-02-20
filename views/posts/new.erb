@@ -15,6 +15,11 @@
           <%= f.text_area :body, class: "input_full", placeholder: "Body" %>
         </p>
 
+        <p class="group">
+          <%= f.check_box :published, class: "float-left gutter-right-half" %>
+          <%= f.label :published, class: "float-left", caption: "Publish Post?" %>
+        </p>
+
         <p>
           <%= f.submit "Save" %>
         </p>
