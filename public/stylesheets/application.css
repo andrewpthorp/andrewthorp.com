@@ -19,6 +19,8 @@
 .float-right {
   float: right; }
 
+/*  Font Stuff
+ */
 .icomoon {
   font-family: "icomoon";
   speak: none;
@@ -26,6 +28,35 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
+
+.medium {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+.small {
+  font-size: 11px;
+  font-size: 1.1rem; }
+
+.mute {
+  color: #777777; }
+  .mute a {
+    color: #777777; }
+  .mute .dark {
+    color: #444444; }
+
+.dark {
+  color: #222222; }
+
+.bold {
+  font-weight: bold; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.no-underline {
+  text-decoration: none; }
+  .no-underline:hover {
+    text-decoration: none; }
 
 /*  Display
  */
@@ -313,30 +344,10 @@ body {
     body a:hover {
       color: #222222;
       text-decoration: underline; }
-    body a.no-underline:hover {
-      text-decoration: none; }
   body p {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
-    body p.medium {
-      font-size: 14px;
-      font-size: 1.4rem; }
-    body p.small {
-      font-size: 11px;
-      font-size: 1.1rem; }
-    body p.mute {
-      color: #777777; }
-      body p.mute a {
-        color: #777777; }
-      body p.mute .dark {
-        color: #444444; }
-    body p.dark {
-      color: #222222; }
-    body p.bold {
-      font-weight: bold; }
-    body p.uppercase {
-      text-transform: uppercase; }
   body #main {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
