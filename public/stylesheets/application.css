@@ -235,17 +235,44 @@ textarea {
   #social-nav li:last-child a {
     margin-right: 0px; }
 
-.posts h1.title, .post h1.title {
+.posts h1, .post h1 {
   font-size: 34px;
-  font-size: 3.4rem;
-  border-bottom: 1px solid #999999;
-  padding-bottom: 20px;
-  color: #444444; }
-  .posts h1.title a, .post h1.title a {
-    color: #999999; }
+  font-size: 3.4rem; }
+  .posts h1.title, .post h1.title {
+    border-bottom: 1px solid #999999;
+    padding-bottom: 20px;
+    color: #444444; }
+    .posts h1.title a, .post h1.title a {
+      color: #999999; }
+.posts h2, .post h2 {
+  font-size: 28px;
+  font-size: 2.4rem; }
+.posts h3, .post h3 {
+  font-size: 22px;
+  font-size: 2.2rem; }
 .posts footer, .post footer {
   border-top: 1px solid #999999;
-  padding-top: 25px; }
+  padding-top: 24px; }
+.posts ul, .post ul {
+  list-style-type: disc;
+  list-style-position: inside; }
+  .posts ul li, .post ul li {
+    margin-bottom: 14px;
+    font-size: 17px;
+    font-size: 1.7rem; }
+.posts ol, .post ol {
+  margin-left: 0px;
+  list-style-position: inside; }
+  .posts ol li, .post ol li {
+    margin-bottom: 14px;
+    font-size: 17px;
+    font-size: 1.7rem; }
+.posts em, .post em {
+  background: #ddffde;
+  font-style: normal; }
+.posts a, .post a {
+  color: #999999;
+  text-decoration: underline; }
 .posts ul#admin li, .post ul#admin li {
   display: inline-block; }
   .posts ul#admin li a, .post ul#admin li a {

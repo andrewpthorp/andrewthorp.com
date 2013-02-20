@@ -1,15 +1,42 @@
 .posts, .post
-  h1.title
+  h1
     font-size: 34px
     font-size: 3.4rem
-    border-bottom: 1px solid $light_gray
-    padding-bottom: 20px
-    color: $gray
-    a
-      color: $light_gray
+    &.title
+      border-bottom: 1px solid $light_gray
+      padding-bottom: 20px
+      color: $gray
+      a
+        color: $light_gray
+  h2
+    font-size: 28px
+    font-size: 2.4rem
+  h3
+    font-size: 22px
+    font-size: 2.2rem
   footer
     border-top: 1px solid $light_gray
-    padding-top: 25px
+    padding-top: 24px
+  ul
+    list-style-type: disc
+    list-style-position: inside
+    li
+      margin-bottom: 14px
+      font-size: 17px
+      font-size: 1.7rem
+  ol
+    margin-left: 0px
+    list-style-position: inside
+    li
+      margin-bottom: 14px
+      font-size: 17px
+      font-size: 1.7rem
+  em
+    background: $green
+    font-style: normal
+  a
+    color: $light_gray
+    text-decoration: underline
   ul#admin
     li
       display: inline-block
