@@ -5,6 +5,7 @@ require "./lib/helpers"
 class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
   helpers NavigationHelpers, AuthenticationHelpers
+  enable :sessions
 
   get "/" do
     haml :index, layout: true
@@ -17,7 +18,13 @@ class AndrewThorp < Sinatra::Base
 
   get "/blog" do
     protected!("This feature is still in development")
-    @posts = Post.published
+
+    if session[:admin]
+      @posts = Post.all
+    else
+      @posts = Post.published
+    end
+
     haml :"posts/index", layout: true
   end
 

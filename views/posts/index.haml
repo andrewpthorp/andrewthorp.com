@@ -9,9 +9,9 @@
         %ul
           - @posts.each do |p|
             %li
-              = link_to p.title, "blog/#{p.slug}"
+              = link_to p.title, "/blog/#{p.slug}"
       - else
-        %p.mute.align-center.gutter-top-double.gutter-bottom-none
+        %p.mute.align-center.gutter-top-double.gutter-bottom-double
           %strong
             The Enquirer
           has no gossip on this subject.

@@ -20,7 +20,9 @@ end
 
 module AuthenticationHelpers
   def protected!(realm="Restricted Area")
-    unless authorized?
+    if authorized?
+      session[:admin] = true
+    else
       response['WWW-Authenticate'] = %(Basic realm="#{realm}")
       throw(:halt, [401, "You are not allowed to see behind the curtain! - HTTP Not Authorized (401)\n"])
     end
