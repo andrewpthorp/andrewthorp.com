@@ -175,7 +175,8 @@ input[type="text"], input[type="passwprd"], textarea {
     box-shadow: none; }
 
 textarea {
-  height: 450px; }
+  height: 450px;
+  height: 216px; }
 
 .CodeRay {
   margin: 0px 0px 18px;
@@ -267,7 +268,8 @@ textarea {
 
 .posts h1, .post h1 {
   font-size: 34px;
-  font-size: 3.4rem; }
+  font-size: 3.4rem;
+  margin-bottom: 14px; }
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
@@ -277,13 +279,17 @@ textarea {
       color: #999999; }
 .posts h2, .post h2 {
   font-size: 28px;
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  margin-bottom: 14px; }
 .posts h3, .post h3 {
   font-size: 22px;
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  margin-bottom: 14px; }
 .posts footer, .post footer {
   border-top: 1px solid #999999;
   padding-top: 24px; }
+.posts .body p, .post .body p {
+  margin-bottom: 14px; }
 .posts .body ul, .post .body ul {
   list-style-type: disc;
   list-style-position: inside; }
@@ -299,11 +305,15 @@ textarea {
     font-size: 17px;
     font-size: 1.7rem; }
 .posts .body em, .post .body em {
-  background: #ddffde;
-  font-style: normal; }
+  background: #cbf5e9;
+  font-style: normal;
+  padding-left: 5px;
+  padding-right: 5px; }
 .posts .body a, .post .body a {
-  color: #999999;
+  font-weight: normal;
   text-decoration: underline; }
+  .posts .body a:hover, .post .body a:hover {
+    color: #109b75; }
 .posts ul#admin li, .posts ul#tag-list li, .post ul#admin li, .post ul#tag-list li {
   display: inline-block; }
   .posts ul#admin li a, .posts ul#tag-list li a, .post ul#admin li a, .post ul#tag-list li a {
@@ -311,7 +321,7 @@ textarea {
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 5px 8px;
-    background: #eeeeee;
+    background: #efefef;
     color: #999999; }
     .posts ul#admin li a:hover, .posts ul#tag-list li a:hover, .post ul#admin li a:hover, .post ul#tag-list li a:hover {
       background: #999999;
@@ -329,11 +339,13 @@ textarea {
       font-size: 13px;
       font-size: 1.3rem; }
 .posts span.tag, .post span.tag {
-  display: inline-block; }
+  display: inline-block;
+  font-weight: normal; }
   .posts span.tag:first-child, .post span.tag:first-child {
     margin-left: 20px; }
   .posts span.tag a, .post span.tag a {
-    color: #aaaaaa; }
+    color: #999999;
+    font-weight: normal; }
     .posts span.tag a:hover, .post span.tag a:hover {
       color: #222222; }
     .posts span.tag a::before, .post span.tag a::before {
@@ -366,7 +378,7 @@ body {
     body a:hover {
       color: #222222;
       text-decoration: underline; }
-  body p {
+  body p, body ol li, body ul li {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
