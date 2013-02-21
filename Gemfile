@@ -12,6 +12,7 @@ gem 'pg'
 gem 'data_mapper'
 gem 'dm-is-sluggable'
 gem 'rdiscount'
+gem 'tux'
 
 group :production do
   gem 'dm-postgres-adapter'
@@ -25,7 +26,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rerun'
-  gem 'tux'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'dm-sqlite-adapter'
 end
