@@ -2,7 +2,7 @@
   .nine.columns.centered
     .post.show
       %h1.gutter-bottom.title
-        = link_to "&#xe04a;", "/posts/#{@post.slug}", class: "no-underline icomoon"
+        = link_to "&#xe04a;", "/posts", class: "no-underline icomoon"
         New Post
 
       - form_for(@post, "/posts", method: "post") do |f|
