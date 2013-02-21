@@ -27,6 +27,17 @@ class AndrewThorp < Sinatra::Base
     haml :"posts/index", layout: true
   end
 
+  get "/blog/tagged/:tag" do
+    if params[:all]
+      protected!
+      @posts = Post.tagged_with(params[:tag], order: [ :created_at.desc ])
+    else
+      @posts = Post.published.tagged_with(params[:tag], order: [ :created_at.desc ])
+    end
+
+    haml :"posts/index", layout: true
+  end
+
   get "/blog/new" do
     protected!
     @post = Post.new
