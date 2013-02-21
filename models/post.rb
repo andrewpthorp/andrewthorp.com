@@ -5,7 +5,7 @@ class Post
   is :sluggable
 
   property :id, Serial
-  property :slug, String
+  property :slug, String, length: 100
   property :title, String, required: true, length: 255
   property :body, Text, required: true
   property :published, Boolean, required: true, default: false
