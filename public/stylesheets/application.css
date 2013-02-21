@@ -328,6 +328,18 @@ textarea {
       padding-right: 5px;
       font-size: 13px;
       font-size: 1.3rem; }
+.posts span.tag, .post span.tag {
+  display: inline-block; }
+  .posts span.tag:first-child, .post span.tag:first-child {
+    margin-left: 20px; }
+  .posts span.tag a, .post span.tag a {
+    color: #aaaaaa; }
+    .posts span.tag a:hover, .post span.tag a:hover {
+      color: #222222; }
+    .posts span.tag a::before, .post span.tag a::before {
+      padding-right: 5px;
+      font-size: 10px;
+      font-size: 1rem; }
 
 .posts ul#post-list li {
   font-size: 17px;

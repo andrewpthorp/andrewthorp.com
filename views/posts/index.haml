@@ -24,6 +24,8 @@
 
       %footer.group
         %ul#tag-list.float-left
+          - all_tag_class = (@tag.nil? ? 'current' : '' )
+          %li= link_to "All", "/blog", class: "icon-tags make-inline-block #{all_tag_class}"
           - Tag.all.each do |tag|
             - tag_class = (@tag && @tag == tag.name) ? 'current' : ''
             %li= link_to tag.name, "/blog/tagged/#{tag.name}", class: "icon-tags make-inline-block #{tag_class}"

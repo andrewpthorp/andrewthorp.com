@@ -10,6 +10,8 @@
 
       %p.uppercase.mute.medium.bold
         POSTED #{@post.created_at.to_s(:pretty)}
+        - @post.tags.each do |t|
+          %span.tag.gutter-right-half= link_to t.name, "/blog/tagged/#{t.name}", class: "icon-tags no-underline"
 
       - if session[:admin]
         %footer.group
