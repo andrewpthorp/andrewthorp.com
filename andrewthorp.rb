@@ -11,6 +11,11 @@ class AndrewThorp < Sinatra::Base
     haml :index, layout: true
   end
 
+  get "/login" do
+    protected!
+    redirect "/"
+  end
+
   get "/about" do
     protected!("This feature is still in development")
     haml :about, layout: true
