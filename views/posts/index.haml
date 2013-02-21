@@ -8,7 +8,6 @@
           %ul#admin.align-right.width-25.float-right
             %li= link_to "New Post", "/blog/new", class: "make-inline-block"
 
-
       - if @posts.any?
         %ul#post-list
           - @posts.each do |p|

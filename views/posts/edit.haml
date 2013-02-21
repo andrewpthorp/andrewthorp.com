@@ -1,0 +1,23 @@
+.row
+  .nine.columns.centered
+    .post.show
+      %h1.gutter-bottom.title
+        = link_to "&#xe04a;", "/blog/#{@post.slug}", class: "no-underline icomoon"
+        Edit Post
+
+      - form_for(@post, "/blog/#{@post.slug}", method: "put") do |f|
+
+        %p
+          = f.text_field :title, class: "input_full", placeholder: "Title"
+
+        %p
+          = f.text_area :body, class: "input_full", placeholder: "Body", value: preserve(f.object.body)
+
+        %p
+          = f.text_field :tag_list, class: "input_full", placeholder: "Tags (Comma Separated)", value: f.object.tag_collection
+
+        %p.group
+          = f.check_box :published, class: "float-left gutter-right-half"
+          = f.label :published, class: "float-left", caption: "Publish Post?"
+        %p
+          = f.submit "Save"
