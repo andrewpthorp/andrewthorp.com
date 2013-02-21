@@ -2,10 +2,10 @@
   .nine.columns.centered
     .post.show
       %h1.gutter-bottom.title
-        = link_to "&#xe04a;", "/blog/#{@post.slug}", class: "no-underline icomoon"
+        = link_to "&#xe04a;", "/posts/#{@post.slug}", class: "no-underline icomoon"
         Edit Post
 
-      - form_for(@post, "/blog/#{@post.slug}", method: "put") do |f|
+      - form_for(@post, "/posts/#{@post.slug}", method: "put") do |f|
 
         %p
           = f.text_field :title, class: "input_full", placeholder: "Title"

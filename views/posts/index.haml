@@ -5,14 +5,14 @@
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
         The Enquirer
         - if session[:admin]
-          %ul#admin.align-right.width-25.float-right
-            %li= link_to "New Post", "/blog/new", class: "make-inline-block"
+          %ul#admin.align-right.width-25.float-right.hide-on-phones
+            %li= link_to "New Post", "/posts/new", class: "make-inline-block"
 
       - if @posts.any?
         %ul#post-list
           - @posts.each do |p|
             %li
-              = link_to p.title, "/blog/#{p.slug}"
+              = link_to p.title, "/posts/#{p.slug}"
       - else
         %p.mute.align-center.gutter-top-double.gutter-bottom-double
           %strong
@@ -24,7 +24,7 @@
       %footer.group
         %ul#tag-list.float-left
           - all_tag_class = (@tag.nil? ? 'current' : '' )
-          %li= link_to "All", "/blog", class: "icon-tags make-inline-block #{all_tag_class}"
+          %li= link_to "All", "/posts", class: "icon-tags make-inline-block #{all_tag_class}"
           - Tag.all.each do |tag|
             - tag_class = (@tag && @tag == tag.name) ? 'current' : ''
-            %li= link_to tag.name, "/blog/tagged/#{tag.name}", class: "icon-tags make-inline-block #{tag_class}"
+            %li= link_to tag.name, "/posts/tagged/#{tag.name}", class: "icon-tags make-inline-block #{tag_class}"

@@ -21,7 +21,7 @@ class AndrewThorp < Sinatra::Base
     haml :about, layout: true
   end
 
-  get "/blog" do
+  get "/posts" do
     if params[:all]
       protected!
       @posts = Post.all(order: [ :created_at.desc ])
@@ -32,7 +32,7 @@ class AndrewThorp < Sinatra::Base
     haml :"posts/index", layout: true
   end
 
-  get "/blog/tagged/:tag" do
+  get "/posts/tagged/:tag" do
     if params[:all]
       protected!
       @posts = Post.tagged_with(params[:tag], order: [ :created_at.desc ])
@@ -45,49 +45,49 @@ class AndrewThorp < Sinatra::Base
     haml :"posts/index", layout: true
   end
 
-  get "/blog/new" do
+  get "/posts/new" do
     protected!
     @post = Post.new
     haml :"posts/new", layout: true
   end
 
-  post "/blog" do
+  post "/posts" do
     protected!
     @post = Post.new(params[:post])
     if @post.save
-      redirect "/blog/#{@post.slug}"
+      redirect "/posts/#{@post.slug}"
     else
       haml :"posts/new", layout: true
     end
   end
 
-  get "/blog/:slug/edit" do
+  get "/posts/:slug/edit" do
     protected!
     @post = Post.first(slug: params[:slug])
     haml :"posts/edit", layout: true
   end
 
-  get "/blog/:slug/delete" do
+  get "/posts/:slug/delete" do
     protected!
     @post = Post.first(slug: params[:slug])
     if @post.destroy
-      redirect "/blog"
+      redirect "/posts"
     else
-      redirect "/blog/#{@post.slug}"
+      redirect "/posts/#{@post.slug}"
     end
   end
 
-  put "/blog/:slug" do
+  put "/posts/:slug" do
     protected!
     @post = Post.first(slug: params[:slug])
     if @post.update(params[:post])
-      redirect "/blog/#{params[:slug]}"
+      redirect "/posts/#{params[:slug]}"
     else
       haml :"posts/edit", layout: true
     end
   end
 
-  get "/blog/:slug" do
+  get "/posts/:slug" do
     @post = Post.first(slug: params[:slug])
     haml :"posts/show", layout: true
   end
