@@ -16,6 +16,11 @@ class AndrewThorp < Sinatra::Base
     redirect "/"
   end
 
+  get "/logout" do
+    session.delete(:admin)
+    redirect "/"
+  end
+
   get "/about" do
     protected!("This feature is still in development")
     haml :about, layout: true

@@ -25,7 +25,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-rocket:before, .icon-forward:before, .icon-reply:before, .icon-enter:before, .icon-exit:before, .icon-reply-2:before, .icon-forward-2:before, .icon-redo:before, .icon-undo:before, .icon-bolt:before, .icon-stack-overflow:before, .icon-skype:before, .icon-pinterest:before, .icon-linux:before, .icon-apple:before, .icon-wordpress:before, .icon-github:before, .icon-dribbble:before, .icon-flickr:before, .icon-rss:before, .icon-email:before, .icon-instagram:before, .icon-google-plus:before, .icon-vimeo:before, .icon-twitter:before, .icon-facebook:before, .icon-home:before, .icon-resume:before, .icon-portfolio:before, .icon-blog:before, .icon-about:before, .icon-tags:before {
+.icon-rocket:before, .icon-forward:before, .icon-reply:before, .icon-login:before, .icon-logout:before, .icon-reply-2:before, .icon-forward-2:before, .icon-redo:before, .icon-undo:before, .icon-bolt:before, .icon-stack-overflow:before, .icon-skype:before, .icon-pinterest:before, .icon-linux:before, .icon-apple:before, .icon-wordpress:before, .icon-github:before, .icon-dribbble:before, .icon-flickr:before, .icon-rss:before, .icon-email:before, .icon-instagram:before, .icon-google-plus:before, .icon-vimeo:before, .icon-twitter:before, .icon-facebook:before, .icon-home:before, .icon-resume:before, .icon-portfolio:before, .icon-blog:before, .icon-about:before, .icon-tags:before, .icon-plus:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -42,10 +42,10 @@ you can use the generic selector below, but it's slower:
 .icon-reply:before {
 	content: "\e04a";
 }
-.icon-enter:before {
+.icon-login:before {
 	content: "\e14c";
 }
-.icon-exit:before {
+.icon-logout:before {
 	content: "\e14d";
 }
 .icon-reply-2:before {
@@ -128,4 +128,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-tags:before {
 	content: "\e007";
+}
+.icon-plus:before {
+	content: "\e008";
 }

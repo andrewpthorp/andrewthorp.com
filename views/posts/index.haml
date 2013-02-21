@@ -4,9 +4,6 @@
       %h1.gutter-bottom.title
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
         The Enquirer
-        - if session[:admin]
-          %ul#admin.align-right.width-25.float-right.hide-on-phones
-            %li= link_to "New Post", "/posts/new", class: "make-inline-block"
 
       - if @posts.any?
         %ul#post-list
@@ -19,7 +16,6 @@
             The Enquirer
           has no gossip on this subject.
           = link_to "Oh well, take me back.", "/"
-
 
       %footer.group
         %ul#tag-list.float-left
