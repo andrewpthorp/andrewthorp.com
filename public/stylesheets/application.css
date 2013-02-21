@@ -304,21 +304,32 @@ textarea {
 .posts .body a, .post .body a {
   color: #999999;
   text-decoration: underline; }
-.posts ul#admin li, .post ul#admin li {
+.posts ul#admin li, .posts ul#tag-list li, .post ul#admin li, .post ul#tag-list li {
   display: inline-block; }
-  .posts ul#admin li a, .post ul#admin li a {
+  .posts ul#admin li a, .posts ul#tag-list li a, .post ul#admin li a, .post ul#tag-list li a {
     font-size: 15px;
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 5px 8px;
     background: #eeeeee;
     color: #999999; }
-    .posts ul#admin li a:hover, .post ul#admin li a:hover {
+    .posts ul#admin li a:hover, .posts ul#tag-list li a:hover, .post ul#admin li a:hover, .post ul#tag-list li a:hover {
       background: #999999;
       color: white;
       text-decoration: none; }
+    .posts ul#admin li a.current, .posts ul#tag-list li a.current, .post ul#admin li a.current, .post ul#tag-list li a.current {
+      background: #999999;
+      color: white; }
+.posts ul#tag-list li, .post ul#tag-list li {
+  margin-bottom: 0px; }
+  .posts ul#tag-list li a, .post ul#tag-list li a {
+    margin-bottom: 3px; }
+    .posts ul#tag-list li a::before, .post ul#tag-list li a::before {
+      padding-right: 5px;
+      font-size: 13px;
+      font-size: 1.3rem; }
 
-.posts ul li {
+.posts ul#post-list li {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 1.4;
@@ -327,7 +338,7 @@ textarea {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
-  .posts ul li a {
+  .posts ul#post-list li a {
     font-weight: normal; }
 
 html, body {

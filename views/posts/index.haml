@@ -4,9 +4,13 @@
       %h1.gutter-bottom.title
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
         The Enquirer
+        - if session[:admin]
+          %ul#admin.align-right.width-25.float-right
+            %li= link_to "New Post", "/blog/new", class: "make-inline-block"
+
 
       - if @posts.any?
-        %ul
+        %ul#post-list
           - @posts.each do |p|
             %li
               = link_to p.title, "/blog/#{p.slug}"
@@ -17,7 +21,9 @@
           has no gossip on this subject.
           = link_to "Oh well, take me back.", "/"
 
-      - if session[:admin]
-        %footer.group
-          %ul#admin.align-right
-            %li= link_to "New Post", "/blog/new"
+
+      %footer.group
+        %ul#tag-list.float-left
+          - Tag.all.each do |tag|
+            - tag_class = (@tag && @tag == tag.name) ? 'current' : ''
+            %li= link_to tag.name, "/blog/tagged/#{tag.name}", class: "icon-tags make-inline-block #{tag_class}"

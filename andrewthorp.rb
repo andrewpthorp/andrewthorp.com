@@ -35,6 +35,8 @@ class AndrewThorp < Sinatra::Base
       @posts = Post.published.tagged_with(params[:tag], order: [ :created_at.desc ])
     end
 
+    @tag = params[:tag]
+
     haml :"posts/index", layout: true
   end
 

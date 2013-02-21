@@ -39,7 +39,7 @@
     a
       color: $light_gray
       text-decoration: underline
-  ul#admin
+  ul#admin, ul#tag-list
     li
       display: inline-block
       a
@@ -53,8 +53,20 @@
           background: $light_gray
           color: #fff
           text-decoration: none
+        &.current
+          background: $light_gray
+          color: #fff
+  ul#tag-list
+    li
+      margin-bottom: 0px
+      a
+        margin-bottom: 3px
+        &::before
+          padding-right: 5px
+          font-size: 13px
+          font-size: 1.3rem
 .posts
-  ul
+  ul#post-list
     li
       font-size: 17px
       font-size: 1.7rem

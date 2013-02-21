@@ -25,7 +25,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-rocket:before, .icon-forward:before, .icon-reply:before, .icon-enter:before, .icon-exit:before, .icon-reply-2:before, .icon-forward-2:before, .icon-redo:before, .icon-undo:before, .icon-bolt:before, .icon-stack-overflow:before, .icon-skype:before, .icon-pinterest:before, .icon-linux:before, .icon-apple:before, .icon-wordpress:before, .icon-github:before, .icon-dribbble:before, .icon-flickr:before, .icon-rss:before, .icon-email:before, .icon-instagram:before, .icon-google-plus:before, .icon-vimeo:before, .icon-twitter:before, .icon-facebook:before, .icon-home:before, .icon-resume:before, .icon-portfolio:before, .icon-blog:before, .icon-about:before {
+.icon-rocket:before, .icon-forward:before, .icon-reply:before, .icon-enter:before, .icon-exit:before, .icon-reply-2:before, .icon-forward-2:before, .icon-redo:before, .icon-undo:before, .icon-bolt:before, .icon-stack-overflow:before, .icon-skype:before, .icon-pinterest:before, .icon-linux:before, .icon-apple:before, .icon-wordpress:before, .icon-github:before, .icon-dribbble:before, .icon-flickr:before, .icon-rss:before, .icon-email:before, .icon-instagram:before, .icon-google-plus:before, .icon-vimeo:before, .icon-twitter:before, .icon-facebook:before, .icon-home:before, .icon-resume:before, .icon-portfolio:before, .icon-blog:before, .icon-about:before, .icon-tags:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -125,4 +125,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-about:before {
 	content: "\e001";
+}
+.icon-tags:before {
+	content: "\e007";
 }
