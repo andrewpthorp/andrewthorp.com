@@ -283,6 +283,7 @@ textarea {
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
+    margin-bottom: 14px;
     color: #444444; }
     .posts h1.title a, .post h1.title a {
       text-decoration: none;
