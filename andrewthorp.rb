@@ -27,7 +27,7 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/logout" do
-    protected!
+    protected!("/")
     session.delete(:current_user)
     redirect "/"
   end

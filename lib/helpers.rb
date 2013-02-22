@@ -35,7 +35,7 @@ module AuthenticationHelpers
     !session[:current_user].nil?
   end
 
-  def protected!
-    redirect "/login" unless current_user
+  def protected!(failure_path="/login")
+    redirect failure_path unless current_user
   end
 end
