@@ -13,7 +13,7 @@
         - @post.tags.each do |t|
           %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
 
-      - if session[:admin]
+      - if current_user
         %footer.group
           %ul#admin.align-right
             %li= link_to "Edit", "/posts/#{@post.slug}/edit"
