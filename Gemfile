@@ -12,7 +12,9 @@ gem 'pg'
 gem 'data_mapper'
 gem 'dm-is-sluggable'
 gem 'rdiscount'
+gem 'json'
 gem 'tux'
+gem 'foreman'
 
 group :production do
   gem 'dm-postgres-adapter'

@@ -4,6 +4,7 @@ require "sinatra"
 require "data_mapper"
 require "dm-is-sluggable"
 require "haml"
+require "json"
 
 # Enable "_method" override hack in HTML forms.
 use Rack::MethodOverride

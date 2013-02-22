@@ -1,4 +1,4 @@
-input[type="text"], input[type="passwprd"], textarea
+input[type="text"], input[type="password"], textarea
   color: $gray
   padding: 20px 15px
   border: 1px solid $light_gray
@@ -13,3 +13,22 @@ textarea
   height: 450px
   height: 216px
 
+/*
+ * Login Form
+ */
+form#login
+  input[type="password"]
+    +transition(all 0.15s ease-in-out)
+    text-align: center
+    font-size: 40px
+    font-size: 4.0rem
+    &.error
+      color: $red
+      background: rgba($red, 0.25)
+      border-color: $red
+      +box-shadow(0px 0px 15px rgba($red, 0.5))
+    &.success
+      color: $green
+      background: rgba($green, 0.25)
+      border-color: $green
+      +box-shadow(0px 0px 15px rgba($green, 0.5))

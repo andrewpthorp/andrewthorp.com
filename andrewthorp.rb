@@ -12,17 +12,27 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/login" do
-    protected!
-    redirect "/"
+    haml :"sessions/new", layout: true
+  end
+
+  post "/sessions/create" do
+    content_type :json
+
+    if params[:password] == ENV["ADMIN_PASSWORD"]
+      session[:current_user] = ENV["ADMIN_USERNAME"]
+      { user: current_user, success: true }.to_json
+    else
+      { success: false }.to_json
+    end
   end
 
   get "/logout" do
-    session.delete(:admin)
+    protected!
+    session.delete(:current_user)
     redirect "/"
   end
 
   get "/about" do
-    protected!("This feature is still in development")
     haml :about, layout: true
   end
 
@@ -98,12 +108,10 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/portfolio" do
-    protected!("This feature is still in development")
     haml :portfolio, layout: true
   end
 
   get "/resume" do
-    protected!("This feature is still in development")
     haml :resume, layout: true
   end
 

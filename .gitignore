@@ -2,4 +2,5 @@
 .DS_Store
 .sass-cache/
 .rspec
+.env
 *.db

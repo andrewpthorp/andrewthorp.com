@@ -15,7 +15,7 @@ module NavigationHelpers
     elems << content_tag(:li, link_to("", "/portfolio", class: "icon-portfolio no-underline", title: "Portfolio"))
     elems << content_tag(:li, link_to("", "/resume", class: "icon-resume no-underline", title: "Resume"))
 
-    if session[:admin]
+    if current_user
       elems << content_tag(:li, link_to("", "/posts/new", class: "icon-plus no-underline", title: "New Post"))
       elems << content_tag(:li, link_to("", "/logout", class: "icon-logout no-underline", title: "Logout"), class: "gutter-bottom-none")
     else
@@ -27,21 +27,15 @@ module NavigationHelpers
 end
 
 module AuthenticationHelpers
-  def protected!(realm="Restricted Area")
-    if authorized?
-      session[:admin] = true
-    else
-      response['WWW-Authenticate'] = %(Basic realm="#{realm}")
-      throw(:halt, [401, "You are not allowed to see behind the curtain! - HTTP Not Authorized (401)\n"])
-    end
+  def current_user
+    session[:current_user]
   end
 
-  def authorized?
-    return true unless production?
+  def user_signed_in?
+    !session[:current_user].nil?
+  end
 
-    # Using HTTP Basic Auth for production
-    # TODO: Consider using another solution, not sure if this is secure enough.
-    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-    @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [ENV["ADMIN_USERNAME"], ENV["ADMIN_PASSWORD"]]
+  def protected!
+    redirect "/login" unless current_user
   end
 end

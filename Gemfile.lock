@@ -81,6 +81,8 @@ GEM
     extlib (0.9.16)
     fastercsv (1.5.5)
     ffi (1.4.0)
+    foreman (0.61.0)
+      thor (>= 0.13.6)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -116,6 +118,7 @@ GEM
       excon (~> 0.16.10)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
+    json (1.7.7)
     json_pure (1.7.7)
     launchy (2.2.0)
       addressable (~> 2.3)
@@ -195,6 +198,7 @@ DEPENDENCIES
   dm-is-sluggable
   dm-postgres-adapter
   dm-sqlite-adapter
+  foreman
   guard
   guard-coffeescript
   guard-livereload
@@ -203,6 +207,7 @@ DEPENDENCIES
   guard-spork
   haml
   heroku
+  json
   pg
   rb-fsevent (~> 0.9.1)
   rdiscount

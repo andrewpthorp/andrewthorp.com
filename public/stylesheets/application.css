@@ -29,6 +29,10 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
+.normal-size {
+  font-size: 17px;
+  font-size: 1.7rem; }
+
 .medium {
   font-size: 14px;
   font-size: 1.4rem; }
@@ -163,11 +167,11 @@
 .gutter-left-double {
   margin-left: 40px; }
 
-input[type="text"], input[type="passwprd"], textarea {
+input[type="text"], input[type="password"], textarea {
   color: #444444;
   padding: 20px 15px;
   border: 1px solid #999999; }
-  input[type="text"]:focus, input[type="passwprd"]:focus, textarea:focus {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     background: #efefef;
     outline: none;
     -webkit-box-shadow: none;
@@ -177,6 +181,30 @@ input[type="text"], input[type="passwprd"], textarea {
 textarea {
   height: 450px;
   height: 216px; }
+
+/* Login Form
+ */
+form#login input[type="password"] {
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  text-align: center;
+  font-size: 40px;
+  font-size: 4rem; }
+  form#login input[type="password"].error {
+    color: #de4744;
+    background: rgba(222, 71, 68, 0.25);
+    border-color: #de4744;
+    -webkit-box-shadow: 0px 0px 15px rgba(222, 71, 68, 0.5);
+    box-shadow: 0px 0px 15px rgba(222, 71, 68, 0.5); }
+  form#login input[type="password"].success {
+    color: #109b75;
+    background: rgba(16, 155, 117, 0.25);
+    border-color: #109b75;
+    -webkit-box-shadow: 0px 0px 15px rgba(16, 155, 117, 0.5);
+    box-shadow: 0px 0px 15px rgba(16, 155, 117, 0.5); }
 
 .CodeRay {
   margin: 0px 0px 18px;
