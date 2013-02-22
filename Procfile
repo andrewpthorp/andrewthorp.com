@@ -1,1 +1,1 @@
-web: rerun -p '**/*.{rb,ru}' rackup
+development_web: rerun -p '**/*.{rb,ru}' rackup
