@@ -20,7 +20,7 @@ class Post
   end
 
   before :destroy do
-    taggings.destroy
+    taggings.destroy unless !p.saved?
   end
 
   def self.published
