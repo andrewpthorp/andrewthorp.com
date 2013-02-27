@@ -139,7 +139,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
-    rdiscount (2.0.7)
+    redcarpet (2.2.2)
     rerun (0.8.0)
       listen
     rest-client (1.6.7)
@@ -194,6 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  coderay
   data_mapper
   dm-is-sluggable
   dm-postgres-adapter
@@ -210,7 +211,7 @@ DEPENDENCIES
   json
   pg
   rb-fsevent (~> 0.9.1)
-  rdiscount
+  redcarpet
   rerun
   sass
   sinatra

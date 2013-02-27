@@ -62,6 +62,20 @@
   .no-underline:hover {
     text-decoration: none; }
 
+/*  Borders
+ */
+.dark-border-bottom {
+  border-bottom: 1px solid #444444; }
+
+.light-border-bottom {
+  border-bottom: 1px solid #999999; }
+
+.dark-border-top {
+  border-top: 1px solid #444444; }
+
+.light-border-top {
+  border-top: 1px solid #999999; }
+
 /*  Display
  */
 .make-block {
@@ -206,45 +220,6 @@ form#login input[type="password"] {
     -webkit-box-shadow: 0px 0px 15px rgba(16, 155, 117, 0.5);
     box-shadow: 0px 0px 15px rgba(16, 155, 117, 0.5); }
 
-.CodeRay {
-  margin: 0px 0px 18px;
-  display: block;
-  background: #050f23;
-  border: 1px solid #121212;
-  font-size: 13px;
-  font-size: 1.3rem; }
-  .CodeRay .code {
-    color: white; }
-    .CodeRay .code .class, .CodeRay .code .constant {
-      font-weight: bold; }
-    .CodeRay .code .keyword, .CodeRay .code .type {
-      font-weight: bold;
-      color: #b6db51; }
-    .CodeRay .code .global-variable {
-      color: #9cc371; }
-    .CodeRay .code .symbol, .CodeRay .code .key, .CodeRay .code .instance-variable {
-      color: #a8bfd6; }
-    .CodeRay .code .regexp, .CodeRay .code .string {
-      color: #b4c2d6; }
-      .CodeRay .code .regexp .delimiter, .CodeRay .code .string .delimiter {
-        color: #b4c2d6; }
-    .CodeRay .code .comment {
-      font-style: italic;
-      color: #5d5d5d; }
-    .CodeRay .code pre {
-      overflow: auto;
-      padding: 15px; }
-      .CodeRay .code pre::-webkit-scrollbar {
-        height: 12px; }
-      .CodeRay .code pre::-webkit-scrollbar-track-piece {
-        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px 1px inset;
-        background: rgba(0, 0, 0, 0.2); }
-      .CodeRay .code pre::-webkit-scrollbar-thumb {
-        background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) black;
-        -webkit-border-radius: 5px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 0 1px inset;
-        -webkit-background-clip: padding-box; }
-
 #site-nav {
   position: absolute;
   right: 0px;
@@ -324,34 +299,33 @@ form#login input[type="password"] {
   font-size: 22px;
   font-size: 2.2rem;
   margin-bottom: 14px; }
-.posts footer, .post footer {
-  border-top: 1px solid #999999;
+.posts footer.padded-footer, .post footer.padded-footer {
   padding-top: 24px; }
-.posts .body p, .post .body p {
+.posts article p, .post article p {
   margin-bottom: 14px; }
-.posts .body ul, .post .body ul {
+.posts article ul, .post article ul {
   list-style-type: disc;
   list-style-position: inside; }
-  .posts .body ul li, .post .body ul li {
+  .posts article ul li, .post article ul li {
     margin-bottom: 14px;
     font-size: 17px;
     font-size: 1.7rem; }
-.posts .body ol, .post .body ol {
+.posts article ol, .post article ol {
   margin-left: 0px;
   list-style-position: inside; }
-  .posts .body ol li, .post .body ol li {
+  .posts article ol li, .post article ol li {
     margin-bottom: 14px;
     font-size: 17px;
     font-size: 1.7rem; }
-.posts .body em, .post .body em {
+.posts article em, .post article em {
   background: #cbf5e9;
   font-style: normal;
   padding-left: 5px;
   padding-right: 5px; }
-.posts .body a, .post .body a {
+.posts article a, .post article a {
   font-weight: normal;
   text-decoration: underline; }
-  .posts .body a:hover, .post .body a:hover {
+  .posts article a:hover, .post article a:hover {
     color: #109b75; }
 .posts ul#admin li, .posts ul#tag-list li, .post ul#admin li, .post ul#tag-list li {
   display: inline-block; }
@@ -377,17 +351,17 @@ form#login input[type="password"] {
       padding-right: 5px;
       font-size: 13px;
       font-size: 1.3rem; }
-.posts span.tag, .post span.tag {
+.posts footer span.tag, .post footer span.tag {
   display: inline-block;
   font-weight: normal; }
-  .posts span.tag:first-child, .post span.tag:first-child {
+  .posts footer span.tag:first-child, .post footer span.tag:first-child {
     margin-left: 20px; }
-  .posts span.tag a, .post span.tag a {
+  .posts footer span.tag a, .post footer span.tag a {
     color: #999999;
     font-weight: normal; }
-    .posts span.tag a:hover, .post span.tag a:hover {
+    .posts footer span.tag a:hover, .post footer span.tag a:hover {
       color: #222222; }
-    .posts span.tag a::before, .post span.tag a::before {
+    .posts footer span.tag a::before, .post footer span.tag a::before {
       padding-right: 5px;
       font-size: 10px;
       font-size: 1rem; }

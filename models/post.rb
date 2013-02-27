@@ -1,4 +1,11 @@
-require 'rdiscount'
+require 'redcarpet'
+require 'coderay'
+
+class MarkdownRenderer < Redcarpet::Render::HTML
+  def block_code(code, language)
+    CodeRay.highlight(code, language)
+  end
+end
 
 class Post
   include DataMapper::Resource
@@ -28,7 +35,7 @@ class Post
   end
 
   def self.tagged_with(string, options = {})
-    tag = Tag.first(:name => string)
+    tag = Tag.first(name: string)
     conditions = {
       'taggings.tag_id' => tag.kind_of?(Tag) ? tag.id : nil
     }
@@ -55,7 +62,17 @@ class Post
   end
 
   def pretty_body
-    RDiscount.new(self.body, :autolink, :smart).to_html
+    rndr = MarkdownRenderer.new(filter_html: true, hard_wrap: true)
+    options = {
+      fenced_code_blocks: true,
+      no_intra_emphasis: true,
+      autolink: true,
+      strikethrough: true,
+      lax_html_blocks: true,
+      superscript: true
+    }
+    markdown_to_html = Redcarpet::Markdown.new(rndr, options)
+    markdown_to_html.render(self.body)
   end
 end
 

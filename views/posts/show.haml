@@ -5,16 +5,17 @@
         = link_to "&#xe04a;", "/posts", class: "no-underline icomoon"
         = @post.title
 
-      .body
+      %article
         = @post.pretty_body
 
-      %p.uppercase.mute.medium
-        POSTED #{@post.created_at.to_s(:pretty)}
-        - @post.tags.each do |t|
-          %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
+      %footer
+        %p.uppercase.mute.medium
+          POSTED #{@post.created_at.to_s(:pretty)}
+          - @post.tags.each do |t|
+            %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
 
       - if current_user
-        %footer.group
+        %footer.padded-footer.group.light-border-top
           %ul#admin.align-right
             %li= link_to "Edit", "/posts/#{@post.slug}/edit"
             %li= link_to "Delete", "/posts/#{@post.slug}/delete"

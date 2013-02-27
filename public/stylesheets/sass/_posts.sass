@@ -19,10 +19,9 @@
     font-size: 22px
     font-size: 2.2rem
     margin-bottom: 14px
-  footer
-    border-top: 1px solid $light_gray
+  footer.padded-footer
     padding-top: 24px
-  .body
+  article
     p
       margin-bottom: 14px
     ul
@@ -75,20 +74,21 @@
           padding-right: 5px
           font-size: 13px
           font-size: 1.3rem
-  span.tag
-    display: inline-block
-    font-weight: normal
-    &:first-child
-      margin-left: 20px
-    a
-      color: $light_gray
+  footer
+    span.tag
+      display: inline-block
       font-weight: normal
-      &:hover
-        color: $black
-      &::before
-        padding-right: 5px
-        font-size: 10px
-        font-size: 1.0rem
+      &:first-child
+        margin-left: 20px
+      a
+        color: $light_gray
+        font-weight: normal
+        &:hover
+          color: $black
+        &::before
+          padding-right: 5px
+          font-size: 10px
+          font-size: 1.0rem
 .posts
   ul#post-list
     li
