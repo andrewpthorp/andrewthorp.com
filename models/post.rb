@@ -1,11 +1,5 @@
-require 'redcarpet'
-require 'coderay'
-
-class MarkdownRenderer < Redcarpet::Render::HTML
-  def block_code(code, language)
-    CodeRay.highlight(code, language)
-  end
-end
+require "redcarpet"
+require_relative "../lib/at_markdown_renderer"
 
 class Post
   include DataMapper::Resource
@@ -62,7 +56,7 @@ class Post
   end
 
   def pretty_body
-    rndr = MarkdownRenderer.new(filter_html: true, hard_wrap: true)
+    rndr = ATMarkdownRenderer.new(filter_html: true, hard_wrap: true)
     options = {
       fenced_code_blocks: true,
       no_intra_emphasis: true,
@@ -76,21 +70,3 @@ class Post
   end
 end
 
-class Tag
-  include DataMapper::Resource
-
-  property :id,   Serial
-  property :name, String, required: true
-
-  has n, :taggings
-  has n, :posts, :through => :taggings
-end
-
-class Tagging
-  include DataMapper::Resource
-
-  property :id, Serial
-
-  belongs_to :tag
-  belongs_to :post
-end
