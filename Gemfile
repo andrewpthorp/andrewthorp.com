@@ -31,4 +31,7 @@ group :development, :test do
   gem 'rerun'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'dm-sqlite-adapter'
+  gem 'turn'
+  gem 'minitest'
+  gem 'database_cleaner'
 end
