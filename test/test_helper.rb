@@ -13,7 +13,7 @@ require 'factory_girl'
 require_relative '../andrewthorp'
 
 # Setup sqlite3 database
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/andrewthorp-test.db")
+DataMapper::setup(:default, "sqlite3::memory:")
 
 # Require all models
 Dir["./models/*.rb"].each { |f| require f }
