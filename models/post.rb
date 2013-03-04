@@ -1,9 +1,11 @@
-require 'rdiscount'
+require "redcarpet"
+require_relative "../lib/at_markdown_renderer"
 
 class Post
   include DataMapper::Resource
   is :sluggable
 
+  # Properties
   property :id, Serial
   property :slug, String, length: 100
   property :title, String, required: true, length: 255
@@ -12,29 +14,33 @@ class Post
   property :created_at, DateTime
   property :updated_at, DateTime
 
+  # Associations
   has n, :taggings
   has n, :tags, :through => :taggings
 
+  # Hooks
   before :create do
     set_slug(self.title.to_slug)
   end
 
   before :destroy do
-    taggings.destroy
+    taggings.destroy unless !saved?
   end
 
+  # Scopes
   def self.published
     all(published: true)
   end
 
   def self.tagged_with(string, options = {})
-    tag = Tag.first(:name => string)
+    tag = Tag.first(name: string)
     conditions = {
       'taggings.tag_id' => tag.kind_of?(Tag) ? tag.id : nil
     }
     all(conditions.update(options))
   end
 
+  # Instance Methods
   def tag_list
     @tag_list ||= tags.map do |tag|
       tag.name
@@ -55,25 +61,17 @@ class Post
   end
 
   def pretty_body
-    RDiscount.new(self.body, :autolink, :smart).to_html
+    rndr = ATMarkdownRenderer.new(filter_html: true, hard_wrap: true)
+    options = {
+      fenced_code_blocks: true,
+      no_intra_emphasis: true,
+      autolink: true,
+      strikethrough: true,
+      lax_html_blocks: true,
+      superscript: true
+    }
+    markdown_to_html = Redcarpet::Markdown.new(rndr, options)
+    markdown_to_html.render(self.body)
   end
 end
 
-class Tag
-  include DataMapper::Resource
-
-  property :id,   Serial
-  property :name, String, required: true
-
-  has n, :taggings
-  has n, :posts, :through => :taggings
-end
-
-class Tagging
-  include DataMapper::Resource
-
-  property :id, Serial
-
-  belongs_to :tag
-  belongs_to :post
-end
