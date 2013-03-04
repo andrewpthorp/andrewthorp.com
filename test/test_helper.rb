@@ -1,6 +1,7 @@
 # test_helper.rb
 ENV['RACK_ENV'] = 'test'
 require 'minitest/autorun'
+require 'mocha/setup'
 require 'rack/test'
 require 'data_mapper'
 require 'dm-is-sluggable'
@@ -40,7 +41,7 @@ DatabaseCleaner.strategy = :transaction
 MiniTest::Unit::TestCase.add_setup_hook { DatabaseCleaner.start }
 MiniTest::Unit::TestCase.add_teardown_hook { DatabaseCleaner.clean }
 
-unless ENV["DISABLE_TURN"]
+if ENV["ENABLE_TURN"]
   require 'turn'
   Turn.config do |c|
    # use one of output formats:

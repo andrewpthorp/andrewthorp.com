@@ -5,6 +5,7 @@ class Post
   include DataMapper::Resource
   is :sluggable
 
+  # Properties
   property :id, Serial
   property :slug, String, length: 100
   property :title, String, required: true, length: 255
@@ -13,17 +14,20 @@ class Post
   property :created_at, DateTime
   property :updated_at, DateTime
 
+  # Associations
   has n, :taggings
   has n, :tags, :through => :taggings
 
+  # Hooks
   before :create do
     set_slug(self.title.to_slug)
   end
 
   before :destroy do
-    taggings.destroy unless !p.saved?
+    taggings.destroy unless !saved?
   end
 
+  # Scopes
   def self.published
     all(published: true)
   end
@@ -36,6 +40,7 @@ class Post
     all(conditions.update(options))
   end
 
+  # Instance Methods
   def tag_list
     @tag_list ||= tags.map do |tag|
       tag.name

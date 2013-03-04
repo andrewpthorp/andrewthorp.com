@@ -31,6 +31,7 @@ group :development, :test do
   gem 'dm-sqlite-adapter'
   gem 'turn'
   gem 'minitest'
+  gem 'mocha'
   gem 'database_cleaner'
   gem 'shoulda-context'
   gem 'factory_girl'
