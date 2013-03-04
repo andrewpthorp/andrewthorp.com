@@ -5,6 +5,29 @@ class PostTest < MiniTest::Unit::TestCase
     @post = build(:post)
   end
 
+  # TODO: Extract this into more useful method
+  def validate(obj, attr, val)
+    obj.send("#{attr}=", val)
+    obj.valid?
+  end
+
+  context "#validations" do
+    should "validate presence of title" do
+      validate(@post, :title, nil)
+      refute_nil @post.errors[:title]
+    end
+
+    should "validate presence of body" do
+      validate(@post, :body, nil)
+      refute_nil @post.errors[:body]
+    end
+
+    should "validate presence of published" do
+      validate(@post, :published, nil)
+      refute_nil @post.errors[:published]
+    end
+  end
+
   context ".methods" do
     context ".set_slug" do
       should "create a valid slug" do
