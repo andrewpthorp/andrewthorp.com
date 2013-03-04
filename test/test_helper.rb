@@ -9,6 +9,8 @@ require 'dm-is-sluggable'
 require 'database_cleaner'
 require 'shoulda-context'
 require 'factory_girl'
+require 'haml'
+require 'sass'
 
 require_relative '../andrewthorp'
 
