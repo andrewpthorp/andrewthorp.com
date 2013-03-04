@@ -2,30 +2,44 @@ require 'test_helper'
 
 class PostTest < MiniTest::Unit::TestCase
   def setup
-    @post = Post.new(title: "Foobar title", body: "Foobar body", published: true)
+    @post = build(:post)
   end
 
-  def test_pretty_body
-    @post.body = "**strong**"
-    assert_match @post.pretty_body, /<strong>/
+  context ".methods" do
+    context ".set_slug" do
+      should "create a valid slug" do
+        @post.save
+        assert_equal @post.slug, "foobar-title"
+      end
+
+      should "prevent duplicate slugs" do
+        @post.save
+        p = build(:post)
+        p.save
+        assert_equal p.slug, "foobar-title-2"
+      end
+    end
+
+    context ".pretty_body" do
+      should "render markdown" do
+        @post.body = "**strong**"
+        assert_match @post.pretty_body, /<strong>/
+      end
+    end
   end
 
-  def test_slug_creation
-    @post.title = "This is a Sluggable title"
-    @post.save
-    assert_equal @post.slug, "this-is-a-sluggable-title"
+  context "#methods" do
   end
 
-  def test_slug_creation_duplicates
-    p = Post.new(title: "Foobar title", body: "foobar body", published: true)
-    @post.save
-    p.save
-    assert_equal p.slug, "foobar-title-2"
+  context "#scopes" do
+    context "#published" do
+      should "return published posts" do
+        @post.save
+        p = build(:post, published: false)
+        p.save
+        assert Post.published == [@post], "published scope return unpublished Posts"
+      end
+    end
   end
 
-  def test_published_scope
-    @post.save
-    p = Post.create(title: "foobar", body: "foobar", published: false)
-    assert Post.published == [@post], "published scope return unpublished Posts"
-  end
 end
