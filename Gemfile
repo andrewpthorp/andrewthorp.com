@@ -26,8 +26,6 @@ group :development, :test do
   gem 'guard-sass'
   gem 'guard-coffeescript'
   gem 'guard-livereload'
-  gem 'guard-rspec'
-  gem 'guard-spork'
   gem 'rerun'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'dm-sqlite-adapter'
