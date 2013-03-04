@@ -301,6 +301,8 @@ form#login input[type="password"] {
   margin-bottom: 14px; }
 .posts footer.padded-footer, .post footer.padded-footer {
   padding-top: 24px; }
+.posts article h1, .posts article h2, .posts article h3, .post article h1, .post article h2, .post article h3 {
+  margin-top: 40px; }
 .posts article p, .post article p {
   margin-bottom: 14px; }
 .posts article ul, .post article ul {
