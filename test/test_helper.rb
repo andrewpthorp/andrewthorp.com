@@ -21,6 +21,9 @@ Dir["./models/*.rb"].each { |f| require f }
 # Require all factories
 Dir["./test/factories/*.rb"].each { |f| require f }
 
+# Require all test libs
+Dir["./test/lib/*.rb"].each { |f| require f }
+
 # Finalize DataMapper
 DataMapper.finalize
 
