@@ -28,6 +28,19 @@ class PostTest < MiniTest::Unit::TestCase
     end
   end
 
+  context "#associations" do
+    should "have n taggings" do
+      assert Post.relationships["taggings"].is_a? DataMapper::Associations::OneToMany::Relationship
+    end
+
+    should "have n tags through taggings" do
+      rel = Post.relationships["tags"]
+      assert rel.is_a? DataMapper::Associations::ManyToMany::Relationship
+      assert rel.through.is_a? DataMapper::Associations::OneToMany::Relationship
+      assert_equal rel.through.child_model_name, "Tagging"
+    end
+  end
+
   context "#hooks" do
     should "call set_slug before create" do
       post = build(:post)
