@@ -5,6 +5,8 @@ require 'rack/test'
 require 'data_mapper'
 require 'dm-is-sluggable'
 require 'database_cleaner'
+require 'shoulda-context'
+require 'factory_girl'
 
 require_relative '../andrewthorp'
 
@@ -14,6 +16,9 @@ DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/andrewthorp-test.db")
 # Require all models
 Dir["./models/*.rb"].each { |f| require f }
 
+# Require all factories
+Dir["./test/factories/*.rb"].each { |f| require f }
+
 # Finalize DataMapper
 DataMapper.finalize
 
@@ -21,7 +26,9 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 class MiniTest::Unit::TestCase
+  extend Shoulda::Context::ClassMethods
   include Rack::Test::Methods
+  include FactoryGirl::Syntax::Methods
 
   def app
     AndrewThorp
