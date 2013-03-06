@@ -3,16 +3,19 @@ require_relative "../lib/at_markdown_renderer"
 
 class Post
   include DataMapper::Resource
-  is :sluggable
+
+  # Class Variables
+  PER_PAGE = 10
 
   # Properties
   property :id, Serial
-  property :slug, String, length: 100
   property :title, String, required: true, length: 255
   property :body, Text, required: true
   property :published, Boolean, required: true, default: false
   property :created_at, DateTime
   property :updated_at, DateTime
+  property :slug, String, length: 100
+  is :sluggable
 
   # Associations
   has n, :taggings

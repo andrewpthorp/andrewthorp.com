@@ -5,6 +5,12 @@ class PostTest < MiniTest::Unit::TestCase
     @post = build(:post)
   end
 
+  context "::CLASS_VARS" do
+    should "set PER_PAGE as an Integer" do
+      assert Post::PER_PAGE.is_a?(Integer), "expected Post::PER_PAGE to be an Integer, but it was a #{Post::PER_PAGE.class.to_s}"
+    end
+  end
+
   # TODO: Extract this into more useful method
   def validate(obj, attr, val)
     obj.send("#{attr}=", val)
