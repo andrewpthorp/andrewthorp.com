@@ -44,10 +44,9 @@ class Post
   end
 
   # Class Methods
-  def self.pages
-    return 1 if count < PER_PAGE
-
-    (count / PER_PAGE)
+  def self.pages(per_page = PER_PAGE)
+    return 1 if count < per_page
+    (count / per_page)
   end
 
   # Instance Methods

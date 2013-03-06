@@ -94,6 +94,11 @@ class PostTest < MiniTest::Unit::TestCase
         Post.stubs(:count).returns(8)
         assert_equal 1, Post.pages
       end
+
+      should "allow me to pass per_page in" do
+        Post.stubs(:count).returns(10)
+        assert_equal 5, Post.pages(2)
+      end
     end
 
     context "#page" do
