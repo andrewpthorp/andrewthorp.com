@@ -45,16 +45,18 @@ class Post
 
   # Class Methods
   def self.pages
-    (count / PER_PAGE) + 1
+    return 1 if count < PER_PAGE
+
+    (count / PER_PAGE)
   end
 
   # Instance Methods
-  def self.page(page=1)
+  def self.page(page = 1, per_page = PER_PAGE)
     page = 1 if page.nil?
     page = page.to_i unless page.is_a? Integer
 
-    offset = (page - 1) * PER_PAGE
-    all[offset, PER_PAGE]
+    offset = (page - 1) * per_page
+    all[offset, per_page]
   end
 
   def tag_list

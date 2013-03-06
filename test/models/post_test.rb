@@ -86,7 +86,13 @@ class PostTest < MiniTest::Unit::TestCase
       should "return the correct number of pages" do
         Post.stubs(:PER_PAGE).returns(10)
         Post.stubs(:count).returns(20)
-        assert_equal 3, Post.pages
+        assert_equal 2, Post.pages
+      end
+
+      should "return 1 if count is less than PER_PAGE" do
+        Post.stubs(:PER_PAGE).returns(10)
+        Post.stubs(:count).returns(8)
+        assert_equal 1, Post.pages
       end
     end
 
@@ -113,6 +119,11 @@ class PostTest < MiniTest::Unit::TestCase
 
       should "return an empty array if past the last page" do
         assert_equal [], Post.page(2)
+      end
+
+      should "allow me to set per_page" do
+        @spost = create(:post)
+        assert_equal [@npost], Post.page(1, 1)
       end
     end
   end
