@@ -90,6 +90,9 @@
 .width-25 {
   width: 25%; }
 
+.width-49 {
+  width: 49%; }
+
 .width-50 {
   width: 50%; }
 
@@ -419,3 +422,22 @@ body {
     padding-top: 25px; }
   body .robot-logo {
     max-width: 280px; } }
+.paginator .disabled {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #f7f7f7;
+  color: #d9d9d9;
+  padding: 5px; }
+.paginator .button-page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #efefef;
+  padding: 5px;
+  display: block;
+  color: #999999; }
+  .paginator .button-page:hover {
+    background: #999999;
+    color: white;
+    text-decoration: none; }

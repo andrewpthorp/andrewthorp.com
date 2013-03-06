@@ -10,6 +10,26 @@
           - @posts.each do |p|
             %li
               = link_to p.title, "/posts/#{p.slug}"
+
+        .paginator.group
+          - if @per_page == Post::PER_PAGE
+            - url_template = "?page="
+          - else
+            - url_template = "?per_page=#{@per_page}&page="
+
+          - if @page > 1
+            %p.width-49.float-left
+              = link_to "Previous Page", "#{url_template}#{@page-1}", class: "button-page align-center"
+          - else
+            %p.width-49.float-left.disabled.align-center At First Page
+
+          - if @page < @total_pages
+            %p.width-49.float-right
+              = link_to "Next Page", "#{url_template}#{@page+1}", class: "button-page align-center"
+          - else
+            %p.width-49.float-right.disabled.align-center At Last Page
+
+
       - else
         %p.mute.align-center.gutter-top-double.gutter-bottom-double
           %strong
