@@ -103,6 +103,14 @@ class PostTest < MiniTest::Unit::TestCase
         assert_equal [@npost], Post.page
       end
 
+      should "convert nil to page one" do
+        assert_equal [@npost], Post.page(nil)
+      end
+
+      should "convert string to integer" do
+        assert_equal [@npost], Post.page("1")
+      end
+
       should "return an empty array if past the last page" do
         assert_equal [], Post.page(2)
       end

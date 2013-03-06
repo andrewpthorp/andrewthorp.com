@@ -50,6 +50,9 @@ class Post
 
   # Instance Methods
   def self.page(page=1)
+    page = 1 if page.nil?
+    page = page.to_i unless page.is_a? Integer
+
     offset = (page - 1) * PER_PAGE
     all[offset, PER_PAGE]
   end

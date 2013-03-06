@@ -37,11 +37,15 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/posts" do
+    @page = params[:page]
+    @total_pages = Post.pages
+    @per_page = Post::PER_PAGE
+
     if params[:all]
       protected!
-      @posts = Post.all(order: [ :created_at.desc ])
+      @posts = Post.all(order: [ :created_at.desc ]).page(@page)
     else
-      @posts = Post.published.all(order: [ :created_at.desc ])
+      @posts = Post.published.all(order: [ :created_at.desc ]).page(@page)
     end
 
     haml :"posts/index", layout: true
