@@ -43,7 +43,17 @@ class Post
     all(conditions.update(options))
   end
 
+  # Class Methods
+  def self.pages
+    (count / PER_PAGE) + 1
+  end
+
   # Instance Methods
+  def self.page(page=1)
+    offset = (page - 1) * PER_PAGE
+    all[offset, PER_PAGE]
+  end
+
   def tag_list
     @tag_list ||= tags.map do |tag|
       tag.name

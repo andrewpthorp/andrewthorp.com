@@ -81,6 +81,34 @@ class PostTest < MiniTest::Unit::TestCase
     end
   end
 
+  context "#methods" do
+    context "#pages" do
+      should "return the correct number of pages" do
+        Post.stubs(:PER_PAGE).returns(10)
+        Post.stubs(:count).returns(20)
+        assert_equal 3, Post.pages
+      end
+    end
+
+    context "#page" do
+      setup do
+        @npost = create(:post)
+      end
+
+      should "return the right results" do
+        assert_equal [@npost], Post.page(1)
+      end
+
+      should "default to page one" do
+        assert_equal [@npost], Post.page
+      end
+
+      should "return an empty array if past the last page" do
+        assert_equal [], Post.page(2)
+      end
+    end
+  end
+
   context ".methods" do
     context ".set_slug" do
       should "create a valid slug on save" do
