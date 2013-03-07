@@ -187,6 +187,7 @@ DEPENDENCIES
   coderay
   data_mapper
   database_cleaner
+  dm-constraints
   dm-is-sluggable
   dm-postgres-adapter
   dm-sqlite-adapter

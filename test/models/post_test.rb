@@ -53,21 +53,6 @@ class PostTest < MiniTest::Unit::TestCase
       post.expects(:set_slug).with(post.title.to_slug)
       post.save
     end
-
-    should "call taggings.destroy before destroy" do
-      post = create(:post)
-      post.stubs(:taggings).returns(stub(destroy: true))
-      post.taggings.expects(:destroy)
-      post.destroy
-    end
-
-    should "not call taggings.destroy before destroy when !saved" do
-      post = create(:post)
-      post.stubs(:saved?).returns(false)
-      post.stubs(:taggings).returns(stub(destroy: true))
-      post.taggings.expects(:destroy).never
-      post.destroy
-    end
   end
 
   context "#scopes" do

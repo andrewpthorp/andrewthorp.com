@@ -18,16 +18,12 @@ class Post
   is :sluggable
 
   # Associations
-  has n, :taggings
+  has n, :taggings, :constraint => :destroy
   has n, :tags, :through => :taggings
 
   # Hooks
   before :create do
     set_slug(self.title.to_slug)
-  end
-
-  before :destroy do
-    taggings.destroy unless !saved?
   end
 
   # Scopes
