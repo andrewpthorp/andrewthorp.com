@@ -184,6 +184,8 @@
 .gutter-left-double {
   margin-left: 40px; }
 
+/* Keyframes Mixin
+ */
 input[type="text"], input[type="password"], textarea {
   color: #444444;
   padding: 20px 15px;
@@ -207,9 +209,14 @@ form#login input[type="password"] {
   -ms-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   text-align: center;
   font-size: 40px;
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin: 0px auto;
+  display: block;
+  opacity: 0.3; }
   form#login input[type="password"].error {
     color: #de4744;
     background: rgba(222, 71, 68, 0.25);
@@ -217,6 +224,7 @@ form#login input[type="password"] {
     -webkit-box-shadow: 0px 0px 15px rgba(222, 71, 68, 0.5);
     box-shadow: 0px 0px 15px rgba(222, 71, 68, 0.5); }
   form#login input[type="password"].success {
+    opacity: 1;
     color: #109b75;
     background: rgba(16, 155, 117, 0.25);
     border-color: #109b75;
@@ -286,10 +294,6 @@ form#login input[type="password"] {
   font-size: 34px;
   font-size: 3.4rem;
   margin-bottom: 14px; }
-  .posts h1 img.emoji, .post h1 img.emoji {
-    position: relative;
-    top: 1px;
-    max-height: 24px; }
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
@@ -301,10 +305,6 @@ form#login input[type="password"] {
   font-size: 28px;
   font-size: 2.4rem;
   margin-bottom: 14px; }
-  .posts h2 img.emoji, .post h2 img.emoji {
-    position: relative;
-    top: 1px;
-    max-height: 18px; }
   .posts h2.title, .post h2.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 15px;
@@ -316,10 +316,6 @@ form#login input[type="password"] {
   font-size: 22px;
   font-size: 2.2rem;
   margin-bottom: 14px; }
-  .posts h3 img.emoji, .post h3 img.emoji {
-    position: relative;
-    top: 1px;
-    max-height: 12px; }
 .posts footer.padded-footer, .post footer.padded-footer {
   padding-top: 20px; }
 .posts article h1, .posts article h2, .posts article h3, .post article h1, .post article h2, .post article h3 {
@@ -434,6 +430,10 @@ body {
     line-height: 1.6; }
     body p img.emoji, body ol li img.emoji, body ul li img.emoji {
       max-height: 20px; }
+  body h1 img.emoji, body h2 img.emoji, body h3 img.emoji {
+    max-height: 28px;
+    position: relative;
+    top: 1px; }
   body #main {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -475,3 +475,6 @@ body {
     background: #999999;
     color: white;
     text-decoration: none; }
+
+.emoji-sample {
+  padding: 0px 50px; }

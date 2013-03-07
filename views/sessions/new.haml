@@ -2,8 +2,16 @@
   .nine.columns.centered
     %form{name: "login", id: "login", action: "sessions/create", method: "post"}
       %label{for: "password"}
-        %h3.align-center.gutter-bottom-double
+        %h2.align-center.gutter-bottom-double
           Be a gentleman, use a password.
       %input{id: "password", type: "password", name: "password", class: "input_full"}
+
+    .emoji-sample.gutter-top-double.make-block
+      %p.align-center.mute
+        Or, enjoy some random
+        = link_to "emoji from GitHub", "https://github.com/github/gemoji"
+      %h2.align-center
+        - Emoji.names.sample(10).each do |e|
+          = image_tag "/images/emoji/#{e}.png", class: "emoji"
 
 %script{:type => "text/javascript", :src  => "/javascripts/login.js"}

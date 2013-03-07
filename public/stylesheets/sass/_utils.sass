@@ -148,3 +148,16 @@
   margin-left: 0px
 .gutter-left-double
   margin-left: 40px
+
+/*
+ * Keyframes Mixin
+ */
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
