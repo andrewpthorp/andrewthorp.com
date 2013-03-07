@@ -18,6 +18,7 @@ gem 'json'
 gem 'tux'
 gem 'foreman'
 gem 'gemoji'
+gem 'faker'
 
 group :production do
   gem 'dm-postgres-adapter'
@@ -37,5 +38,4 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-context'
   gem 'factory_girl'
-  gem 'faker'
 end
