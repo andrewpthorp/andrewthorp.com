@@ -8,8 +8,8 @@
       %article
         = @post.pretty_body
 
-      %footer
-        %p.uppercase.mute.medium
+      %footer.gutter-bottom
+        %p.uppercase.mute.medium.gutter-bottom-none
           POSTED #{@post.created_at.to_s(:pretty)}
           - @post.tags.each do |t|
             %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
