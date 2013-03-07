@@ -99,8 +99,18 @@
       line-height: 1.4
       display: block
       width: 100%
-      white-space: nowrap
-      overflow: hidden
-      text-overflow: ellipsis
+      margin: 0px
       a
+        +transition(all 0.25s ease-in-out)
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        padding: 10px 0px
+        display: block
         font-weight: normal
+        border-bottom: 1px dashed $light_gray
+        &:hover
+          padding-left: 10px
+          border-color: $black
+          text-decoration: none
+          background: $off_white

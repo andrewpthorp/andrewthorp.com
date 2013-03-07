@@ -1,12 +1,12 @@
 .row
   .nine.columns.centered
     .posts
-      %h1.gutter-bottom.title
+      %h1.gutter-bottom-none.title
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
-        The Enquirer
+        Blog, Journal, Notepad, SEO
 
       - if @posts.any?
-        %ul#post-list
+        %ul#post-list.gutter-bottom
           - @posts.each do |p|
             %li
               = link_to p.title, "/posts/#{p.slug}"

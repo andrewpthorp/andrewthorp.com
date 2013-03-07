@@ -161,7 +161,7 @@
   margin-bottom: 5px; }
 
 .gutter-bottom-none {
-  margin-bottom: 0px; }
+  margin-bottom: 0px !important; }
 
 .gutter-bottom-double {
   margin-bottom: 40px; }
@@ -377,11 +377,25 @@ form#login input[type="password"] {
   line-height: 1.4;
   display: block;
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  margin: 0px; }
   .posts ul#post-list li a {
-    font-weight: normal; }
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 0px;
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px dashed #999999; }
+    .posts ul#post-list li a:hover {
+      padding-left: 10px;
+      border-color: #222222;
+      text-decoration: none;
+      background: #efefef; }
 
 html, body {
   height: 100%; }
