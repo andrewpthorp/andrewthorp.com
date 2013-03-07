@@ -286,6 +286,10 @@ form#login input[type="password"] {
   font-size: 34px;
   font-size: 3.4rem;
   margin-bottom: 14px; }
+  .posts h1 img.emoji, .post h1 img.emoji {
+    position: relative;
+    top: 1px;
+    max-height: 24px; }
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
@@ -298,10 +302,18 @@ form#login input[type="password"] {
   font-size: 28px;
   font-size: 2.4rem;
   margin-bottom: 14px; }
+  .posts h2 img.emoji, .post h2 img.emoji {
+    position: relative;
+    top: 1px;
+    max-height: 18px; }
 .posts h3, .post h3 {
   font-size: 22px;
   font-size: 2.2rem;
   margin-bottom: 14px; }
+  .posts h3 img.emoji, .post h3 img.emoji {
+    position: relative;
+    top: 1px;
+    max-height: 12px; }
 .posts footer.padded-footer, .post footer.padded-footer {
   padding-top: 20px; }
 .posts article h1, .posts article h2, .posts article h3, .post article h1, .post article h2, .post article h3 {
@@ -414,6 +426,8 @@ body {
     font-size: 17px;
     font-size: 1.7rem;
     line-height: 1.6; }
+    body p img.emoji, body ol li img.emoji, body ul li img.emoji {
+      max-height: 20px; }
   body #main {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

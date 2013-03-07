@@ -6,6 +6,7 @@ require "dm-is-sluggable"
 require "dm-constraints"
 require "haml"
 require "json"
+require "emoji"
 
 # Enable "_method" override hack in HTML forms.
 use Rack::MethodOverride

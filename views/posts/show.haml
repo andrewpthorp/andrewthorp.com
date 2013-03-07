@@ -6,7 +6,7 @@
         = @post.title
 
       %article
-        = @post.pretty_body
+        = emojify( @post.pretty_body )
 
       %footer.gutter-bottom
         %p.uppercase.mute.medium.gutter-bottom-none

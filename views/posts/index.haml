@@ -3,7 +3,8 @@
     .posts
       %h1.gutter-bottom-none.title
         = link_to "&#xe04a;", "/", class: "no-underline icomoon"
-        Blog, Journal, Notepad, SEO
+        Journal
+        = image_tag "emoji/neckbeard.png", class: "emoji"
 
       - if @posts.any?
         %ul#post-list.gutter-bottom

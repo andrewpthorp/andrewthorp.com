@@ -17,6 +17,7 @@ gem 'coderay'
 gem 'json'
 gem 'tux'
 gem 'foreman'
+gem 'gemoji'
 
 group :production do
   gem 'dm-postgres-adapter'

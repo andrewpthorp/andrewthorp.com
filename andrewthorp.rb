@@ -4,7 +4,7 @@ require "./lib/helpers"
 
 class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
-  helpers NavigationHelpers, AuthenticationHelpers
+  helpers NavigationHelpers, AuthenticationHelpers, ViewHelpers
   enable :sessions
 
   get "/" do
