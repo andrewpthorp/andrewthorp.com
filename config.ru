@@ -3,6 +3,7 @@ require "bundler/setup"
 require "sinatra"
 require "data_mapper"
 require "dm-is-sluggable"
+require "dm-constraints"
 require "haml"
 require "json"
 
