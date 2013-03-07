@@ -1,10 +1,15 @@
 .row
   .nine.columns.centered
     .posts
-      %h1.gutter-bottom-none.title
-        = link_to "&#xe04a;", "/", class: "no-underline icomoon"
-        Journal
-        = image_tag "emoji/neckbeard.png", class: "emoji"
+      %h1.gutter-bottom.title
+        Blog: sports
+        = image_tag "emoji/baseball.png", class: "emoji"
+        &mdash;
+        dev
+        = image_tag "emoji/computer.png", class: "emoji"
+        &mdash;
+        life
+        = image_tag "emoji/beers.png", class: "emoji"
 
       - if @posts.any?
         %ul#post-list.gutter-bottom

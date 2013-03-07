@@ -293,7 +293,6 @@ form#login input[type="password"] {
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
-    margin-bottom: 14px;
     color: #444444; }
     .posts h1.title a, .post h1.title a {
       text-decoration: none;
@@ -306,6 +305,13 @@ form#login input[type="password"] {
     position: relative;
     top: 1px;
     max-height: 18px; }
+  .posts h2.title, .post h2.title {
+    border-bottom: 1px solid #999999;
+    padding-bottom: 15px;
+    color: #444444; }
+    .posts h2.title a, .post h2.title a {
+      text-decoration: none;
+      color: #999999; }
 .posts h3, .post h3 {
   font-size: 22px;
   font-size: 2.2rem;
