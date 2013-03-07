@@ -1,4 +1,5 @@
 require "redcarpet"
+require "faker"
 require_relative "../lib/at_markdown_renderer"
 
 class Post
@@ -85,6 +86,23 @@ class Post
     }
     markdown_to_html = Redcarpet::Markdown.new(rndr, options)
     markdown_to_html.render(self.body)
+  end
+
+  # Seed Data
+  def self.seed(num=100)
+    return unless development?
+
+    tags = [["the-changelog", "development"],
+            ["sports"], ["the-changelog"], ["development"]]
+
+    1.upto(num) do
+      Post.create(
+        published: true,
+        title: Faker::Lorem.sentence(10),
+        body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
+        tag_list: tags.sample.join(",")
+      )
+    end
   end
 end
 
