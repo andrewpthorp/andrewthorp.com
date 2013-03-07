@@ -1,5 +1,10 @@
 require 'test_helper'
 
+# Stubbint this out for tests
+class Post
+  PER_PAGE = 10
+end
+
 class PostTest < MiniTest::Unit::TestCase
   def setup
     @post = build(:post)
@@ -69,13 +74,11 @@ class PostTest < MiniTest::Unit::TestCase
   context "#methods" do
     context "#pages" do
       should "return the correct number of pages" do
-        Post.stubs(:PER_PAGE).returns(10)
         Post.stubs(:count).returns(20)
         assert_equal 2, Post.pages
       end
 
       should "return 1 if count is less than PER_PAGE" do
-        Post.stubs(:PER_PAGE).returns(10)
         Post.stubs(:count).returns(8)
         assert_equal 1, Post.pages
       end
