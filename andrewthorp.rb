@@ -12,6 +12,7 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/login" do
+    session[:return_to] = session[:return_to] || params[:return_to] || "/"
     haml :"sessions/new", layout: true
   end
 
@@ -20,7 +21,7 @@ class AndrewThorp < Sinatra::Base
 
     if params[:password] == ENV["ADMIN_PASSWORD"]
       session[:current_user] = ENV["ADMIN_USERNAME"]
-      { user: current_user, success: true }.to_json
+      { user: current_user, success: true, return: session.delete(:return_to) }.to_json
     else
       { success: false }.to_json
     end

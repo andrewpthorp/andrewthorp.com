@@ -16,9 +16,7 @@
         return $.post("/sessions/create?" + ($form.serialize()), function(data) {
           if (data.success) {
             $this.addClass("success");
-            return delay(250, function() {
-              return window.location.href = "/";
-            });
+            return window.location.href = data["return"];
           } else {
             return $this.addClass("error");
           }

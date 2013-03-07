@@ -2,9 +2,8 @@
   .nine.columns.centered
     %form{name: "login", id: "login", action: "sessions/create", method: "post"}
       %label{for: "password"}
-        %h2.align-center.gutter-bottom-double Passwords are for gentlemen.
+        %h3.align-center.gutter-bottom-double
+          Be a gentleman, use a password.
       %input{id: "password", type: "password", name: "password", class: "input_full"}
-
-    = link_to "I'm not a gentleman. Get me outta here!", "/", class: "make-block align-center mute normal-size gutter-top-double"
 
 %script{:type => "text/javascript", :src  => "/javascripts/login.js"}

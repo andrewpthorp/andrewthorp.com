@@ -19,7 +19,7 @@ module NavigationHelpers
       elems << content_tag(:li, link_to("", "/posts/new", class: "icon-plus no-underline", title: "New Post"))
       elems << content_tag(:li, link_to("", "/logout", class: "icon-logout no-underline", title: "Logout"), class: "gutter-bottom-none")
     else
-      elems << content_tag(:li, link_to("", "/login", class: "icon-login no-underline", title: "Login"), class: "gutter-bottom-none")
+      elems << content_tag(:li, link_to("", "/login?return_to=#{URI::encode(request.fullpath)}", class: "icon-login no-underline", title: "Login"), class: "gutter-bottom-none")
     end
 
     content_tag :ul, elems.join, id: "site-nav", class: "group #{opts[:class]}"
@@ -48,6 +48,9 @@ module AuthenticationHelpers
   end
 
   def protected!(failure_path="/login")
-    redirect failure_path unless current_user
+    unless current_user
+      session[:return_to] = request.fullpath
+      redirect failure_path
+    end
   end
 end

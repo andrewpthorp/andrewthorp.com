@@ -12,8 +12,7 @@ $ ->
       $.post "/sessions/create?#{$form.serialize()}", (data) =>
         if data.success
           $this.addClass "success"
-          delay 250, ->
-            window.location.href = "/"
+          window.location.href = data.return
         else
           $this.addClass "error"
 
