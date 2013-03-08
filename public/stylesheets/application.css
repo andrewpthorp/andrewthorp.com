@@ -464,6 +464,11 @@ body {
   color: #d9d9d9;
   padding: 5px; }
 .paginator .button-page {
+  -webkit-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out;
+  -moz-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out;
+  -ms-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out;
+  -o-transition: background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out;
+  transition: background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -475,6 +480,9 @@ body {
     background: #999999;
     color: white;
     text-decoration: none; }
+  .paginator .button-page:active {
+    position: relative;
+    top: 2px; }
 
 .emoji-sample {
   padding: 0px 50px; }

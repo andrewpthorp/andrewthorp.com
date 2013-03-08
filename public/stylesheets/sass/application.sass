@@ -78,6 +78,7 @@ body
     color: lighten($light_gray, 25%)
     padding: 5px
   .button-page
+    +transition(background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out)
     +box-sizing(border-box)
     background: $off_white
     padding: 5px
@@ -87,6 +88,9 @@ body
       background: $light_gray
       color: #fff
       text-decoration: none
+    &:active
+      position: relative
+      top: 2px
 
 .emoji-sample
   padding: 0px 50px
