@@ -6,7 +6,7 @@ class Post
   include DataMapper::Resource
 
   # Class Variables
-  PER_PAGE = 20
+  PER_PAGE = 10
 
   # Properties
   property :id, Serial

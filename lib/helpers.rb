@@ -53,4 +53,8 @@ module AuthenticationHelpers
       redirect failure_path
     end
   end
+
+  def production?
+    ENV["RACK_ENV"] == "production"
+  end
 end

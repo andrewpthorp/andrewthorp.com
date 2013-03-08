@@ -12,6 +12,7 @@ require 'shoulda-context'
 require 'factory_girl'
 require 'haml'
 require 'sass'
+require "emoji"
 
 require_relative '../andrewthorp'
 
