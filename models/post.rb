@@ -43,7 +43,7 @@ class Post
   # Class Methods
   def self.pages(per_page = PER_PAGE)
     return 1 if count < per_page
-    (count / per_page)
+    (count.to_f / per_page).ceil
   end
 
   # Instance Methods

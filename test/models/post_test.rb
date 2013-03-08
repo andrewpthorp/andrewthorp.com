@@ -78,6 +78,11 @@ class PostTest < MiniTest::Unit::TestCase
         assert_equal 2, Post.pages
       end
 
+      should "allow count to land between pages" do
+        Post.stubs(:count).returns(12)
+        assert_equal 2, Post.pages
+      end
+
       should "return 1 if count is less than PER_PAGE" do
         Post.stubs(:count).returns(8)
         assert_equal 1, Post.pages
