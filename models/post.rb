@@ -35,6 +35,7 @@ class Post
   end
 
 
+  # Instance
   def pretty_body
     rndr = ATMarkdownRenderer.new(filter_html: true, hard_wrap: true)
     options = {
