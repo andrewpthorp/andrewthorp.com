@@ -4,8 +4,6 @@ require_relative "../lib/at_markdown_renderer"
 
 class Post
   include DataMapper::Resource
-  include Pagination
-  include Taggable
 
   # Class Variables
   PER_PAGE = 10
