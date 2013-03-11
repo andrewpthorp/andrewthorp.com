@@ -40,12 +40,13 @@ class AndrewThorp < Sinatra::Base
   get "/posts" do
     @page = (params[:page] || 1).to_i
     @per_page = (params[:per_page] || Post::PER_PAGE).to_i
-    @total_pages = Post.pages(@per_page)
 
     if params[:all]
       protected!
+      @total_pages = Post.pages(@per_page)
       @posts = Post.all(order: [ :created_at.desc ]).page(@page, @per_page)
     else
+      @total_pages = Post.pages(@per_page, published: true)
       @posts = Post.published.all(order: [ :created_at.desc ]).page(@page, @per_page)
     end
 
@@ -55,16 +56,16 @@ class AndrewThorp < Sinatra::Base
   get "/posts/tagged/:tag" do
     @page = (params[:page] || 1).to_i
     @per_page = (params[:per_page] || Post::PER_PAGE).to_i
-    @total_pages = Post.pages(@per_page)
+    @tag = params[:tag]
 
     if params[:all]
       protected!
-      @posts = Post.tagged_with(params[:tag], order: [ :created_at.desc ]).page(@page, @per_page)
+      @total_pages = Post.pages(@per_page, :query => :tagged_with, :query_args => @tag)
+      @posts = Post.tagged_with(@tag, order: [ :created_at.desc ]).page(@page, @per_page)
     else
-      @posts = Post.published.tagged_with(params[:tag], order: [ :created_at.desc ]).page(@page, @per_page)
+      @total_pages = Post.pages(@per_page, :query => :tagged_with, :query_args => @tag, :published => true)
+      @posts = Post.published.tagged_with(@tag, order: [ :created_at.desc ]).page(@page, @per_page)
     end
-
-    @tag = params[:tag]
 
     haml :"posts/index", layout: true
   end

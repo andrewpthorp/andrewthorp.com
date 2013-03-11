@@ -92,6 +92,27 @@ class PostTest < MiniTest::Unit::TestCase
         Post.stubs(:count).returns(10)
         assert_equal 5, Post.pages(2)
       end
+
+      should "allow me to pass a query in" do
+        create(:post, published: true)
+        create(:post, published: true)
+        create(:post, published: false)
+        assert_equal 2, Post.pages(1, :query => :published)
+      end
+
+      should "allow me to pass query_args in" do
+        create(:post, tag_list: "the-changelog")
+        create(:post, tag_list: "the-changelog")
+        create(:post)
+        assert_equal 2, Post.pages(1, :query => :tagged_with, :query_args => "the-changelog")
+      end
+
+      should "allow me to only ask for published posts" do
+        create(:post, tag_list: "the-changelog")
+        create(:post, tag_list: "the-changelog", published: false)
+        create(:post)
+        assert_equal 1, Post.pages(1, :query => :tagged_with, :query_args => "the-changelog", published: true)
+      end
     end
 
     context "#page" do
