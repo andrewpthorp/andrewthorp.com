@@ -129,6 +129,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
     netrc (0.7.7)
+    newrelic_rpm (3.5.8.72)
     pg (0.14.1)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -208,6 +209,7 @@ DEPENDENCIES
   minitest
   minitest-colorize
   mocha
+  newrelic_rpm
   pg
   rb-fsevent (~> 0.9.1)
   redcarpet

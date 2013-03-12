@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "sinatra"
+require "newrelic_rpm"
 require "data_mapper"
 require "dm-is-sluggable"
 require "dm-constraints"

@@ -19,6 +19,7 @@ gem 'tux'
 gem 'foreman'
 gem 'gemoji'
 gem 'faker'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'dm-postgres-adapter'
