@@ -346,6 +346,9 @@ form#login input[type="password"] {
   text-decoration: underline; }
   .posts article a:hover, .post article a:hover {
     color: #109b75; }
+.posts article .twitter-tweet, .post article .twitter-tweet {
+  margin: 30px auto !important;
+  width: 85% !important; }
 .posts ul#admin li, .posts ul#tag-list li, .post ul#admin li, .post ul#tag-list li {
   display: inline-block; }
   .posts ul#admin li a, .posts ul#tag-list li a, .post ul#admin li a, .post ul#tag-list li a {

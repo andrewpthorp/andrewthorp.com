@@ -95,7 +95,7 @@ class Post
 
   # Get the Markdown/CodeRay rendered body
   def pretty_body
-    rndr = ATMarkdownRenderer.new(filter_html: true, hard_wrap: true)
+    rndr = ATMarkdownRenderer.new(filter_html: false, hard_wrap: true)
     options = {
       fenced_code_blocks: true,
       no_intra_emphasis: true,
@@ -117,7 +117,7 @@ class Post
     1.upto(num) do
       Post.create(
         published: true,
-        title: Faker::Lorem.sentence(10),
+        title: Faker::Lorem.sentence(5),
         body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
         tag_list: tags.sample.join(",")
       )
