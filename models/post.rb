@@ -112,8 +112,7 @@ class Post
   def self.seed(num=100)
     return unless development?
 
-    tags = [["the-changelog", "development"],
-            ["sports"], ["the-changelog"], ["development"]]
+    tags = [["sports"], ["the-changelog"], ["personal"], ["development"]]
 
     1.upto(num) do
       Post.create(
