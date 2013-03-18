@@ -36,6 +36,19 @@ module ViewHelpers
       end
     end
   end
+
+  def classify(post)
+    case post.tags.first.name
+    when 'sports'
+      emoji = ':baseball:'
+    when 'the-changelog', 'development'
+      emoji = ':computer:'
+    when 'personal'
+      emoji = ':beers:'
+    end
+
+    emojify(emoji)
+  end
 end
 
 module AuthenticationHelpers

@@ -15,7 +15,7 @@
         %ul#post-list.gutter-bottom
           - @posts.each do |p|
             %li
-              = link_to p.title, "/posts/#{p.slug}"
+              = link_to "#{classify(p)} #{p.title}", "/posts/#{p.slug}"
 
         .paginator.group.gutter-bottom
           - if @per_page == Post::PER_PAGE

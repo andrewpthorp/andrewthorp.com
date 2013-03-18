@@ -410,6 +410,11 @@ form#login input[type="password"] {
       border-color: #222222;
       text-decoration: none;
       background: #efefef; }
+    .posts ul#post-list li a .emoji {
+      position: relative;
+      top: 4px;
+      margin-right: 5px;
+      margin-left: 2px; }
 
 html, body {
   height: 100%; }
