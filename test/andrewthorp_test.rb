@@ -30,6 +30,10 @@ class AndrewthorpTest < MiniTest::Unit::TestCase
     assert_valid_response "/posts"
   end
 
+  should "respond to GET '/posts/all'" do
+    assert_valid_response "/posts/all"
+  end
+
   should "respond to GET '/posts/tagged/:tag'" do
     tag = create(:tag)
     assert_valid_response "/posts/tagged/#{tag.name}"
