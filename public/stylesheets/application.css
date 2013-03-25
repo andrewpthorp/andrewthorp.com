@@ -324,16 +324,17 @@ form#login input[type="password"] {
   margin-bottom: 14px; }
 .posts article ul, .post article ul {
   list-style-type: disc;
-  list-style-position: inside; }
+  list-style-position: inside;
+  margin-bottom: 14px; }
   .posts article ul li, .post article ul li {
-    margin-bottom: 14px;
+    margin-bottom: 0px;
     font-size: 17px;
     font-size: 1.7rem; }
 .posts article ol, .post article ol {
   margin-left: 0px;
-  list-style-position: inside; }
+  list-style-position: inside;
+  margin-bottom: 14px; }
   .posts article ol li, .post article ol li {
-    margin-bottom: 14px;
     font-size: 17px;
     font-size: 1.7rem; }
 .posts article em, .post article em {
@@ -494,3 +495,12 @@ body {
 
 .emoji-sample {
   padding: 0px 50px; }
+
+.padded-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px; }
+
+.gray-box {
+  background: #efefef; }
