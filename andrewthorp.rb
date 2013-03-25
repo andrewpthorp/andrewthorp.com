@@ -41,16 +41,17 @@ class AndrewThorp < Sinatra::Base
   get "/posts" do
     @page = (params[:page] || 1).to_i
     @per_page = (params[:per_page] || Post::PER_PAGE).to_i
+    @total_pages = Post.pages(@per_page, published: true)
+    @posts = Post.published.all(order: [ :created_at.desc ]).page(@page, @per_page)
+    haml :"posts/index", layout: true
+  end
 
-    if params[:all]
-      protected!
-      @total_pages = Post.pages(@per_page)
-      @posts = Post.all(order: [ :created_at.desc ]).page(@page, @per_page)
-    else
-      @total_pages = Post.pages(@per_page, published: true)
-      @posts = Post.published.all(order: [ :created_at.desc ]).page(@page, @per_page)
-    end
-
+  get "/posts/all" do
+    protected!
+    @page = (params[:page] || 1).to_i
+    @per_page = (params[:per_page] || Post::PER_PAGE).to_i
+    @total_pages = Post.pages(@per_page)
+    @posts = Post.all(order: [ :created_at.desc ]).page(@page, @per_page)
     haml :"posts/index", layout: true
   end
 
