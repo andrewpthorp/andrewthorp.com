@@ -1,39 +1,13 @@
-// Global Variables
-$green: #109B75
-$light_green: #CBF5E9
-$black: #222
-$gray: #444
-$light_gray: #999
-$off_white: #EFEFEF
-$red: #DE4744
-
-$twitter_blue: #2EB8E7
-$github_blue: #286DA3
-$facebook_blue: #5574AD
-
 // Imports
 @import "bourbon/bourbon"
+@import "vars"
 @import "mixins"
 @import "utils"
+@import "pagination"
+@import "fonts"
 @import "forms"
 @import "navigation"
 @import "posts"
-
-@font-face
-  font-family: 'Bitter'
-  src: url('/fonts/Bitter-Regular.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-@font-face
-  font-family: 'Bitter'
-  src: url('/fonts/Bitter-Bold.ttf') format('truetype')
-  font-weight: bold
-  font-style: normal
-@font-face
-  font-family: 'Bitter'
-  src: url('/fonts/Bitter-Italic.ttf') format('truetype')
-  font-weight: normal
-  font-style: italic
 
 html, body
   height: 100%
@@ -71,6 +45,10 @@ body
     .footer_block
       height: 80px
 
+    .emoji-sample
+      padding: 0px 50px
+
+
   #global-footer
     p
       span.icomoon
@@ -79,6 +57,7 @@ body
         font-size: 13px
         font-size: 1.3rem
 
+
 @media only screen and (max-width: 767px)
   body
     #main
@@ -86,34 +65,3 @@ body
 
     .robot-logo
       max-width: 280px
-
-.paginator
-  .disabled
-    +box-sizing(border-box)
-    background: lighten($off_white, 3%)
-    color: lighten($light_gray, 25%)
-    padding: 5px
-  .button-page
-    +transition(background 0.25s ease-in-out, color 0.25s ease-in-out, top 0.1s ease-out)
-    +box-sizing(border-box)
-    background: $off_white
-    padding: 5px
-    display: block
-    color: $light_gray
-    &:hover
-      background: $light_gray
-      color: #fff
-      text-decoration: none
-    &:active
-      position: relative
-      top: 2px
-
-.emoji-sample
-  padding: 0px 50px
-
-.padded-box
-  +box-sizing(border-box)
-  padding: 15px
-
-.gray-box
-  background: $off_white
