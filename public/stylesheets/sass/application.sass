@@ -19,12 +19,28 @@ $facebook_blue: #5574AD
 @import "navigation"
 @import "posts"
 
+@font-face
+  font-family: 'Bitter'
+  src: url('/fonts/Bitter-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'Bitter'
+  src: url('/fonts/Bitter-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+@font-face
+  font-family: 'Bitter'
+  src: url('/fonts/Bitter-Italic.ttf') format('truetype')
+  font-weight: normal
+  font-style: italic
+
 html, body
   height: 100%
 
 body
   background: #fff
-  font-family: 'Bitter', 'Georgia', serif
+  font-family: 'Bitter', Georgia, serif
   color: $gray
   a
     color: $gray
@@ -33,9 +49,9 @@ body
       color: $black
       text-decoration: underline
   p, ol li, ul li
-    font-size: 17px
-    font-size: 1.7rem
-    line-height: 1.6
+    font-size: 16px
+    font-size: 1.6rem
+    line-height: 1.8
     img.emoji
       max-height: 20px
   h1, h2, h3

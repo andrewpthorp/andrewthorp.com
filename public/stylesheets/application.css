@@ -293,7 +293,7 @@ form#login input[type="password"] {
 .posts h1, .post h1 {
   font-size: 34px;
   font-size: 3.4rem;
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
   .posts h1.title, .post h1.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 20px;
@@ -304,7 +304,7 @@ form#login input[type="password"] {
 .posts h2, .post h2 {
   font-size: 28px;
   font-size: 2.4rem;
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
   .posts h2.title, .post h2.title {
     border-bottom: 1px solid #999999;
     padding-bottom: 15px;
@@ -315,17 +315,17 @@ form#login input[type="password"] {
 .posts h3, .post h3 {
   font-size: 22px;
   font-size: 2.2rem;
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
 .posts footer.padded-footer, .post footer.padded-footer {
   padding-top: 20px; }
 .posts article h1, .posts article h2, .posts article h3, .post article h1, .post article h2, .post article h3 {
   margin-top: 0px; }
 .posts article p, .post article p {
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
 .posts article ul, .post article ul {
   list-style-type: disc;
   list-style-position: inside;
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
   .posts article ul li, .post article ul li {
     margin-bottom: 0px;
     font-size: 17px;
@@ -333,7 +333,7 @@ form#login input[type="password"] {
 .posts article ol, .post article ol {
   margin-left: 0px;
   list-style-position: inside;
-  margin-bottom: 14px; }
+  margin-bottom: 20px; }
   .posts article ol li, .post article ol li {
     font-size: 17px;
     font-size: 1.7rem; }
@@ -420,12 +420,30 @@ form#login input[type="password"] {
       margin-right: 5px;
       margin-left: 2px; }
 
+@font-face {
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
 html, body {
   height: 100%; }
 
 body {
   background: white;
-  font-family: "Bitter", "Georgia", serif;
+  font-family: "Bitter", Georgia, serif;
   color: #444444; }
   body a {
     color: #444444;
@@ -434,9 +452,9 @@ body {
       color: #222222;
       text-decoration: underline; }
   body p, body ol li, body ul li {
-    font-size: 17px;
-    font-size: 1.7rem;
-    line-height: 1.6; }
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.8; }
     body p img.emoji, body ol li img.emoji, body ul li img.emoji {
       max-height: 20px; }
   body h1 img.emoji, body h2 img.emoji, body h3 img.emoji {

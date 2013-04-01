@@ -4,13 +4,12 @@
     %meta{:charset => 'utf-8'}
     %meta{"http-equiv" => "X-UI-Compatible", :content => 'IE=edge,chrome=1'}
     %meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}
+    %link{:href => '/favicon.ico', :rel => 'favicon'}
     %title Andrew Thorp
 
     = stylesheet_link_tag "vendor/foundation.css", "vendor/formalize.css", "vendor/icomoon.css", "vendor/coderay-github.css", "application.css"
     = javascript_include_tag "jquery.min.js", "handlebars.js", "partymode.js", "view.js"
 
-    %link{:href => 'http://fonts.googleapis.com/css?family=Bitter:400italic,400,700', :rel => 'stylesheet', :type => 'text/css'}
-    %link{:href => '/favicon.ico', :rel => 'favicon'}
 
   %body
     = site_navigation
