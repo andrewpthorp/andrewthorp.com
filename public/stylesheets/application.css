@@ -130,6 +130,9 @@
 .gutter-top-double {
   margin-top: 40px; }
 
+.gutter-top-negative {
+  margin-top: -20px !important; }
+
 .gutter-right {
   margin-right: 20px; }
 
@@ -147,6 +150,9 @@
 
 .gutter-right-double {
   margin-right: 40px; }
+
+.gutter-right-negative {
+  margin-right: -20px !important; }
 
 .gutter-bottom {
   margin-bottom: 20px; }
@@ -166,6 +172,9 @@
 .gutter-bottom-double {
   margin-bottom: 40px; }
 
+.gutter-bottom-negative {
+  margin-bottom: -20px !important; }
+
 .gutter-left {
   margin-left: 20px; }
 
@@ -183,6 +192,9 @@
 
 .gutter-left-double {
   margin-left: 40px; }
+
+.gutter-left-negative {
+  margin-left: -20px !important; }
 
 /* Boxes
  */
