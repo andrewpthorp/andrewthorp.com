@@ -24,3 +24,10 @@ task :emoji do
     cp src, "#{target}/unicode/"
   end
 end
+
+namespace :db do
+  desc "Pull database from production"
+  task :pull do
+    system "heroku db:pull sqlite://andrewthorp-development.db --confirm andrewthorp"
+  end
+end
