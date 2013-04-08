@@ -140,6 +140,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.0.4)
     rb-fsevent (0.9.3)
     redcarpet (2.2.2)
     rerun (0.8.0)
@@ -211,6 +212,7 @@ DEPENDENCIES
   mocha
   newrelic_rpm
   pg
+  rake
   rb-fsevent (~> 0.9.1)
   redcarpet
   rerun
