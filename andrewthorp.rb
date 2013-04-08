@@ -6,7 +6,7 @@ class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
   helpers NavigationHelpers, AuthenticationHelpers, ViewHelpers
   enable :sessions
-  set :session_secret, ENV["SESSION_SECRET"]
+  set :session_secret, ENV["SESSION_SECRET"] || "abc123"
 
   get "/" do
     haml :index, layout: true
