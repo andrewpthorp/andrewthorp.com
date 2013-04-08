@@ -46,5 +46,13 @@ end
 
 # DatabaseCleaner
 DatabaseCleaner.strategy = :transaction
-MiniTest::Unit::TestCase.add_setup_hook { DatabaseCleaner.start }
-MiniTest::Unit::TestCase.add_teardown_hook { DatabaseCleaner.clean }
+
+class Minitest::Unit::TestCase
+  def before_setup
+    DatabaseCleaner.start
+  end
+
+  def after_teardown
+    DatabaseCleaner.clean
+  end
+end
