@@ -489,6 +489,20 @@ form#login input[type="password"] {
       margin-right: 5px;
       margin-left: 2px; }
 
+.project {
+  border-bottom: 1px dashed rgba(153, 153, 153, 0.5); }
+  .project h3 {
+    text-align: center;
+    margin-bottom: 16px; }
+  .project p {
+    text-align: center;
+    margin-bottom: 13px; }
+    .project p.pullquote {
+      font-style: italic;
+      font-weight: bold; }
+  .project:last-child {
+    border-bottom: 0px none; }
+
 html, body {
   height: 100%; }
 
