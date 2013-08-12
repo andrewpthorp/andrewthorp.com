@@ -19,6 +19,23 @@
 .float-right {
   float: right; }
 
+/* Buttons
+ */
+a.button {
+  font-size: 15px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  background: #efefef;
+  color: #999999; }
+  a.button:hover {
+    background: #999999;
+    color: white;
+    text-decoration: none; }
+  a.button.current {
+    background: #999999;
+    color: white; }
+
 /*  Font Stuff
  */
 .icomoon {
