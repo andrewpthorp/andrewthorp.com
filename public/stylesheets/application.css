@@ -22,6 +22,7 @@
 /* Buttons
  */
 a.button {
+  font-family: Bitter, Georgia, serif;
   font-size: 15px;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -457,6 +458,7 @@ form#login input[type="password"] {
 .posts ul#admin li, .posts ul#tag-list li, .posts ul#actions li, .post ul#admin li, .post ul#tag-list li, .post ul#actions li {
   display: inline-block; }
   .posts ul#admin li a, .posts ul#tag-list li a, .posts ul#actions li a, .post ul#admin li a, .post ul#tag-list li a, .post ul#actions li a {
+    font-family: Bitter, Georgia, serif;
     font-size: 15px;
     font-size: 1.5rem;
     text-transform: uppercase;
