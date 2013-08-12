@@ -2,7 +2,6 @@
   .nine.columns.centered
     .post.show
       %h1.gutter-bottom.title
-        = link_to "&#xe04a;", "/posts", class: "no-underline icomoon"
         = @post.title
 
       %article
@@ -14,8 +13,12 @@
           - @post.tags.each do |t|
             %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
 
-      - if current_user
-        %footer.padded-footer.group.light-border-top
-          %ul#admin.align-right
-            %li= link_to "Edit", "/posts/#{@post.slug}/edit"
-            %li= link_to "Delete", "/posts/#{@post.slug}/delete"
+      %footer.padded-footer.group.light-border-top.row
+        .6.columns
+          %ul#actions
+            %li= link_to "Back", "/posts"
+        .6.columns
+          - if current_user
+            %ul#admin.align-right
+              %li= link_to "Edit", "/posts/#{@post.slug}/edit"
+              %li= link_to "Delete", "/posts/#{@post.slug}/delete"

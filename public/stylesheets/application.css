@@ -62,6 +62,24 @@
   .no-underline:hover {
     text-decoration: none; }
 
+.color-green {
+  color: #109b75; }
+
+a.color-green:hover {
+  color: #095641; }
+
+.color-light-green {
+  color: #cbf5e9; }
+
+a.color-light-green:hover {
+  color: #8be9ce; }
+
+.color-red {
+  color: #de4744; }
+
+a.color-red:hover {
+  color: #b52320; }
+
 /*  Borders
  */
 .dark-border-bottom {
@@ -419,20 +437,20 @@ form#login input[type="password"] {
 .posts article .twitter-tweet, .post article .twitter-tweet {
   margin: 30px auto !important;
   width: 85% !important; }
-.posts ul#admin li, .posts ul#tag-list li, .post ul#admin li, .post ul#tag-list li {
+.posts ul#admin li, .posts ul#tag-list li, .posts ul#actions li, .post ul#admin li, .post ul#tag-list li, .post ul#actions li {
   display: inline-block; }
-  .posts ul#admin li a, .posts ul#tag-list li a, .post ul#admin li a, .post ul#tag-list li a {
+  .posts ul#admin li a, .posts ul#tag-list li a, .posts ul#actions li a, .post ul#admin li a, .post ul#tag-list li a, .post ul#actions li a {
     font-size: 15px;
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 5px 8px;
     background: #efefef;
     color: #999999; }
-    .posts ul#admin li a:hover, .posts ul#tag-list li a:hover, .post ul#admin li a:hover, .post ul#tag-list li a:hover {
+    .posts ul#admin li a:hover, .posts ul#tag-list li a:hover, .posts ul#actions li a:hover, .post ul#admin li a:hover, .post ul#tag-list li a:hover, .post ul#actions li a:hover {
       background: #999999;
       color: white;
       text-decoration: none; }
-    .posts ul#admin li a.current, .posts ul#tag-list li a.current, .post ul#admin li a.current, .post ul#tag-list li a.current {
+    .posts ul#admin li a.current, .posts ul#tag-list li a.current, .posts ul#actions li a.current, .post ul#admin li a.current, .post ul#tag-list li a.current, .post ul#actions li a.current {
       background: #999999;
       color: white; }
 .posts ul#tag-list li, .post ul#tag-list li {
