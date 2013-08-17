@@ -71,26 +71,24 @@ class Post
   end
 
   # Get tag_list for a specific instance.
-  def tag_list
-    @tag_list ||= tags.map do |tag|
-      tag.name
-    end
+  def tag_collection
+    @tag_collection ||= tags.map(&:name)
   end
 
   # Set tag_list on a specific instance.
   def tag_list=(string)
-    @tag_list = string.to_s.split(',').map { |name| name.strip }.uniq.sort
+    @tag_collection = string.to_s.split(',').map { |name| name.strip }.uniq.sort
     update_tags
   end
 
   # Helper for HTML forms.
-  def tag_collection
+  def tag_list
     tags.map { |tag| tag.name }.join(', ')
   end
 
   # This actually sets the tags prior to saving an instance.
   def update_tags
-    self.tags = tag_list.map { |name| Tag.first_or_new(name: name) }
+    self.tags = tag_collection.map { |name| Tag.first_or_new(name: name) }
   end
 
   # Get the Markdown/CodeRay rendered body

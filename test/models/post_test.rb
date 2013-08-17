@@ -169,11 +169,11 @@ class PostTest < MiniTest::Unit::TestCase
       end
     end
 
-    context ".tag_list" do
+    context ".tag_collection" do
       should "return array of tags" do
         @post.save
         @post.tag_list = "some, tags"
-        assert_equal @post.tag_list, ["some", "tags"]
+        assert_equal @post.tag_collection, ["some", "tags"]
       end
     end
 
@@ -181,7 +181,7 @@ class PostTest < MiniTest::Unit::TestCase
       should "set @tag_list" do
         @post.save
         @post.tag_list = "some, tags, cray, yo"
-        assert_equal @post.tag_list, ["cray", "some", "tags", "yo"]
+        assert_equal @post.tag_collection, ["cray", "some", "tags", "yo"]
       end
 
       should "call update_tags" do
@@ -191,18 +191,18 @@ class PostTest < MiniTest::Unit::TestCase
       end
     end
 
-    context ".tag_collection" do
+    context ".tag_list" do
       should "return comma separated tag_list" do
         @post.save
         @post.tag_list = "these, tags, cray"
-        assert_equal @post.tag_collection, "cray, tags, these"
+        assert_equal @post.tag_list, "cray, tags, these"
       end
     end
 
     context ".update_tags" do
       should "set tags" do
         @post.save
-        @post.stubs(:tag_list).returns(["some"])
+        @post.stubs(:tag_collection).returns(["some"])
         tags = [Tag.new(name: "some")]
         @post.expects(:tags=).with(tags)
         @post.update_tags
