@@ -1,4 +1,4 @@
-module NavigationHelpers
+module NavigationHelper
   def social_navigation(opts={})
     elems = []
     elems << content_tag(:li, link_to("&#xe006;", "http://www.twitter.com/andrewpthorp", class: "twitter", target: "_blank"))
@@ -23,51 +23,5 @@ module NavigationHelpers
     end
 
     content_tag :ul, elems.join, id: "site-nav", class: "group #{opts[:class]}"
-  end
-end
-
-module ViewHelpers
-  def emojify(content)
-    content.to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
-      if Emoji.names.include?($1)
-        "<img alt='#{$1}' src='/images/emoji/#{$1}.png' class='emoji' />"
-      else
-        match
-      end
-    end
-  end
-
-  def classify(post)
-    case post.tags.first.name
-    when 'sports'
-      emoji = ':baseball:'
-    when 'the-changelog', 'development'
-      emoji = ':computer:'
-    when 'personal'
-      emoji = ':beers:'
-    end
-
-    emojify(emoji)
-  end
-end
-
-module AuthenticationHelpers
-  def current_user
-    session[:current_user]
-  end
-
-  def user_signed_in?
-    !session[:current_user].nil?
-  end
-
-  def protected!(failure_path="/login")
-    unless current_user
-      session[:return_to] = request.fullpath
-      redirect failure_path
-    end
-  end
-
-  def production?
-    ENV["RACK_ENV"] == "production"
   end
 end

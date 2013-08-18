@@ -1,14 +1,10 @@
 require 'sinatra/base'
 require 'sinatra_more/markup_plugin'
-require_relative 'lib/helpers'
-require_relative 'routes/errors'
-require_relative 'routes/authentication'
-require_relative 'routes/posts'
-require_relative 'routes/projects'
+Dir['lib/**/*.rb'].each { |f| require_relative f }
 
 class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
-  helpers NavigationHelpers, AuthenticationHelpers, ViewHelpers
+  helpers NavigationHelper, AuthenticationHelper, ViewHelper
   enable :sessions
   set :session_secret, ENV["SESSION_SECRET"] || "abc123"
   set :views, "#{File.dirname(__FILE__)}/views"
