@@ -1,4 +1,5 @@
-# TODO: Refactor this so I can handle posts and projects.
+# TODO: This currently is only included in models/post.rb. I want to include
+# this in models/project.rb when I take that off the ground.
 module Seedable
   require 'faker'
 
@@ -14,12 +15,14 @@ module Seedable
       tags = [["sports"], ["the-changelog"], ["personal"], ["development"]]
 
       1.upto(num) do
-        Post.create(
-          published: true,
-          title: Faker::Lorem.sentence(5),
-          body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
-          tag_list: tags.sample.join(",")
-        )
+        case ancestors.first.name
+        when 'Post'
+          Post.create(published: true, title: Faker::Lorem.sentence(5),
+                      body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
+                      tag_list: tags.sample.join(","))
+        when 'Project'
+          puts 'Create projects here.'
+        end
       end
     end
   end

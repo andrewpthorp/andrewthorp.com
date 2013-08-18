@@ -1,3 +1,5 @@
+# TODO: This currently is only included in models/post.rb. I want to include
+# this in models/project.rb when I take that off the ground.
 module Pageable
 
   def self.included(base)
