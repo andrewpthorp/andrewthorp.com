@@ -1,5 +1,10 @@
-# TODO: This currently is only included in models/post.rb. I want to include
-# this in models/project.rb when I take that off the ground.
+# Public: This module allows me to paginate over the model that includes it.
+#
+# Examples
+#
+#   class Post
+#     include Pageable
+#   end
 module Pageable
 
   def self.included(base)
@@ -7,7 +12,20 @@ module Pageable
   end
 
   module ClassMethods
-    # Query for the total number of pages.
+
+    # Public: This method returns the total number of pages that are available
+    # for the model that has included the Pageable module.
+    #
+    # per_page  - The number of instances per page (default: PER_PAGE).
+    # opts      - A Hash used to refine the selection (default: {}).
+    #             :published    - Only include published instances.
+    #             :query        - Refine pages to models matching given query.
+    #             :query_args   - Refine pages to models matching given query.
+    #                             This attribute is required if :query is also
+    #                             included. If only one or the other are
+    #                             included, they are both simply ignored.
+    #
+    # Returns an Integer.
     def pages(per_page = ancestors.first::PER_PAGE, opts={})
       if opts[:published]
         query = ancestors.first.published
@@ -27,7 +45,13 @@ module Pageable
       (c.to_f / per_page).ceil
     end
 
-    # Query for a specific page.
+    # Public: This method returns a page of the model that has included the
+    # Pageable module.
+    #
+    # page      - The page offset to return (default: 1).
+    # per_page  - The amount of models per page to return (default: PER_PAGE).
+    #
+    # Returns a DataMapper::Collection.
     def page(page = 1, per_page = ancestors.first::PER_PAGE)
       page = 1 if page.nil?
       page = page.to_i unless page.is_a? Integer
@@ -35,6 +59,7 @@ module Pageable
       offset = (page - 1) * per_page
       all[offset, per_page]
     end
+
   end
 
 end

@@ -1,5 +1,15 @@
-# TODO: This currently is only included in models/post.rb. I want to include
-# this in models/project.rb when I take that off the ground.
+# Public: This module allows me to seed the database with sample data for the
+# given models.
+#
+# TODO: Figure out if I want to move this into a rake task and get rid of this
+# module altogether. It probably doesn't make sense to have strictly development
+# dependencies anywhere inside of the models.
+#
+# Examples
+#
+#   class Post
+#     include Seedable
+#   end
 module Seedable
   require 'faker'
 
@@ -8,7 +18,13 @@ module Seedable
   end
 
   module ClassMethods
-    # Seed Data
+
+    # Public: Seed the database with development data. This method simply
+    # returns nil if we are not in development.
+    #
+    # num - The number of instances to seed the database with (default: 100).
+    #
+    # Returns nothing.
     def seed(num=100)
       return unless development?
 
