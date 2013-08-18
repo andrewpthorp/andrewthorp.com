@@ -19,14 +19,8 @@ require_relative '../andrewthorp'
 # Setup sqlite3 database
 DataMapper::setup(:default, "sqlite3::memory:")
 
-# Require all models
-Dir["./models/*.rb"].each { |f| require f }
-
-# Require all factories
-Dir["./test/factories/*.rb"].each { |f| require f }
-
-# Require all test libs
-Dir["./test/lib/*.rb"].each { |f| require f }
+# Require all libraries
+Dir["./lib/*.rb", "./models/*.rb", "./test/*.rb", "./test/factories/*.rb"].each { |f| require f }
 
 # Finalize DataMapper
 DataMapper.finalize

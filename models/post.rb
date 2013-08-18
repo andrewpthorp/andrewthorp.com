@@ -1,9 +1,7 @@
-require "redcarpet"
-require "faker"
-require_relative "../lib/at_markdown_renderer"
-
 class Post
   include DataMapper::Resource
+  include Taggable
+  include Seedable
 
   # Class Variables
   PER_PAGE = 25
@@ -30,15 +28,6 @@ class Post
   # Get all published Posts
   def self.published
     all(published: true)
-  end
-
-  # Get all Posts tagged with a string
-  def self.tagged_with(string, options = {})
-    tag = Tag.first(name: string)
-    conditions = {
-      'taggings.tag_id' => tag.kind_of?(Tag) ? tag.id : nil
-    }
-    all(conditions.update(options))
   end
 
   # Query for the total number of pages.
@@ -70,27 +59,6 @@ class Post
     all[offset, per_page]
   end
 
-  # Get tag_list for a specific instance.
-  def tag_collection
-    @tag_collection ||= tags.map(&:name)
-  end
-
-  # Set tag_list on a specific instance.
-  def tag_list=(string)
-    @tag_collection = string.to_s.split(',').map { |name| name.strip }.uniq.sort
-    update_tags
-  end
-
-  # Helper for HTML forms.
-  def tag_list
-    tags.map { |tag| tag.name }.join(', ')
-  end
-
-  # This actually sets the tags prior to saving an instance.
-  def update_tags
-    self.tags = tag_collection.map { |name| Tag.first_or_new(name: name) }
-  end
-
   # Get the Markdown/CodeRay rendered body
   def pretty_body
     rndr = ATMarkdownRenderer.new(filter_html: false, hard_wrap: true)
@@ -106,20 +74,4 @@ class Post
     markdown_to_html.render(self.body)
   end
 
-  # Seed Data
-  def self.seed(num=100)
-    return unless development?
-
-    tags = [["sports"], ["the-changelog"], ["personal"], ["development"]]
-
-    1.upto(num) do
-      Post.create(
-        published: true,
-        title: Faker::Lorem.sentence(5),
-        body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
-        tag_list: tags.sample.join(",")
-      )
-    end
-  end
 end
-
