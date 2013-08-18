@@ -125,6 +125,7 @@ GEM
     minitest (4.6.2)
     minitest-colorize (0.0.5)
       minitest (>= 2.0)
+    minitest-stub-const (0.1)
     mocha (0.13.2)
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
@@ -209,6 +210,7 @@ DEPENDENCIES
   json
   minitest
   minitest-colorize
+  minitest-stub-const
   mocha
   newrelic_rpm
   pg

@@ -2,6 +2,7 @@
 ENV['RACK_ENV'] = 'test'
 require 'minitest/autorun'
 require 'minitest/colorize'
+require 'minitest/stub_const'
 require 'mocha/setup'
 require 'rack/test'
 require 'data_mapper'
