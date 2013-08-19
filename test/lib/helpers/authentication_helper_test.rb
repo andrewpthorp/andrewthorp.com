@@ -18,9 +18,9 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     @helper = MockAuth.new
   end
 
-  context '#current_user=' do
+  context '#set_current_user' do
     should 'set the current user in the session' do
-      @helper.current_user = 'andrew'
+      @helper.set_current_user('andrew')
       assert_equal 'andrew', @helper.session[:current_user]
     end
   end
@@ -93,9 +93,9 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context '#return_to=' do
+  context '#set_return_to' do
     should 'set the return_to in the session' do
-      @helper.return_to = '/some/path'
+      @helper.set_return_to('/some/path')
       assert_equal '/some/path', @helper.session[:return_to]
     end
   end

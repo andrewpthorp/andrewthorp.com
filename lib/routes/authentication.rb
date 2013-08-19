@@ -5,7 +5,7 @@ class AndrewThorp < Sinatra::Base
   # website and perform Admin actions. These include, but are not limited to,
   # creating/editing Posts and Projects.
   get "/login" do
-    return_to = params[:return_to] || '/' if return_to.nil?
+    set_return_to(params[:return_to] || '/') if return_to.nil?
     haml :"sessions/new", layout: true
   end
 

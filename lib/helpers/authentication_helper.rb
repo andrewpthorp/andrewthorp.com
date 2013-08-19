@@ -11,10 +11,12 @@ module AuthenticationHelper
   # Public: Set the current user in the session. This happens after the user
   # has logged in.
   #
+  # TODO: Figure out why :current_user= doesn't work.
+  #
   # username - The username of the person who is logging in.
   #
   # Returns nothing.
-  def current_user=(username)
+  def set_current_user(username)
     session[:current_user] = username
   end
 
@@ -39,7 +41,7 @@ module AuthenticationHelper
   #
   # Returns nothing.
   def auth_user_from_env
-    session[:current_user] = ENV['ADMIN_USERNAME']
+    set_current_user(ENV['ADMIN_USERNAME'])
   end
 
   # Public: Returns the Hash that lets us know if the authentication was
@@ -67,11 +69,13 @@ module AuthenticationHelper
 
   # Public: Set the URL that we will return_to after signing a user in.
   #
+  # TODO: Figure out why :return_to= does not work.
+  #
   # url - The url to that we wnt to redirect the user back to after a succesful
   #       sign in (default: '/').
   #
   # Returns nothing.
-  def return_to=(url='/')
+  def set_return_to(url='/')
     session[:return_to] = url
   end
 
