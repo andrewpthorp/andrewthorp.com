@@ -1,5 +1,9 @@
-# Sinatra website for andrewthorp.com
+# Personal Website
 
-http://www.andrewthorp.com/
+[![Build Status](https://travis-ci.org/[andrewpthorp]/[andrewthorp.com].png)](https://travis-ci.org/[andrewpthorp]/[andrewthorp.com])
 
-Checkout the Gemfile to see what I am using for dependencies.
+This is the personal website for me, you can find it at [andrewthorp.com](http://www.andrewthorp.com).
+
+# Copyright / License
+
+Copyright (c) 2013 Andrew Thorp. See LICENSE for details.
