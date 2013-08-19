@@ -17,6 +17,8 @@ class AndrewThorp < Sinatra::Base
     auth_result_hash.to_json
   end
 
+  # Public: Log the user out of the appliction. If they are not logged in,
+  # it simply redirects them to the root.
   get "/logout" do
     protected!("/")
     session.delete(:current_user)
