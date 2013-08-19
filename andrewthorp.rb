@@ -1,14 +1,20 @@
 require 'sinatra/base'
 require 'sinatra_more/markup_plugin'
+require 'logger'
+
 Dir['lib/**/*.rb'].each { |f| require_relative f }
 
 class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
-  helpers NavigationHelper, AuthenticationHelper, ViewHelper
+  helpers AuthenticationHelper, NavigationHelper, ViewHelper
   enable :sessions
   set :session_secret, ENV["SESSION_SECRET"] || "abc123"
   set :views, "#{File.dirname(__FILE__)}/views"
   set :public_folder, "#{File.dirname(__FILE__)}/public"
+
+  configure :development do
+    enable :logging
+  end
 
   get "/" do
     haml :index, layout: true
