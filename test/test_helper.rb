@@ -14,6 +14,7 @@ require 'factory_girl'
 require 'haml'
 require 'sass'
 require "emoji"
+require 'turn/autorun'
 
 require_relative '../andrewthorp'
 

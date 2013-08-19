@@ -41,4 +41,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-context'
   gem 'factory_girl'
+  gem 'turn'
 end
