@@ -32,7 +32,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'user_signed_in?' do
+  context '#user_signed_in?' do
     context 'when the session includes the key current_user' do
       should 'return true' do
         @helper.session[:current_user] = 'andrew'
@@ -48,7 +48,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'auth_user_from_env' do
+  context '#auth_user_from_env' do
     should 'set the current user from the ENV in the session' do
       ENV['ADMIN_USERNAME'] = 'apthorp'
       @helper.auth_user_from_env
@@ -56,7 +56,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'auth_result_hash' do
+  context '#auth_result_hash' do
     context 'when the user is signed in' do
       should 'return the correct result' do
         @helper.stubs(:user_signed_in?).returns(true)
@@ -75,7 +75,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'valid_password?' do
+  context '#valid_password?' do
     setup do
       ENV['ADMIN_PASSWORD'] = 'password'
     end
@@ -93,14 +93,14 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'return_to=' do
+  context '#return_to=' do
     should 'set the return_to in the session' do
       @helper.return_to = '/some/path'
       assert_equal '/some/path', @helper.session[:return_to]
     end
   end
 
-  context 'return_to' do
+  context '#return_to' do
     setup do
       @helper.session[:return_to] = '/some/path'
     end
@@ -117,7 +117,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'protected!' do
+  context '#protected!' do
     context 'when a user is signed in' do
       setup do
         @helper.stubs(:user_signed_in?).returns(true)
@@ -162,7 +162,7 @@ class AuthenticationHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'prduction?' do
+  context '#prduction?' do
     should 'return true if the RACK_ENV is production' do
       ENV['RACK_ENV'] = 'production'
       assert_equal true, @helper.production?

@@ -9,7 +9,7 @@ class ViewHelperTest < MiniTest::Unit::TestCase
     @helper = MockView.new
   end
 
-  context 'emojify' do
+  context '#emojify' do
     should 'inject images if the emoji exists' do
       assert_match '/images/emoji/beers.png', @helper.emojify('some :beers:')
     end
@@ -19,7 +19,7 @@ class ViewHelperTest < MiniTest::Unit::TestCase
     end
   end
 
-  context 'classify' do
+  context '#classify' do
     [
       { tag: 'sports', emoji: 'baseball' },
       { tag: 'the-changelog', emoji: 'computer' },
