@@ -5,7 +5,7 @@ class AndrewThorp < Sinatra::Base
   # website and perform Admin actions. These include, but are not limited to,
   # creating/editing Posts and Projects.
   get "/login" do
-    session[:return_to] = session[:return_to] || params[:return_to] || "/"
+    return_to = params[:return_to] || '/' if return_to.nil?
     haml :"sessions/new", layout: true
   end
 
@@ -13,13 +13,8 @@ class AndrewThorp < Sinatra::Base
   # and handled in this method.
   post "/sessions/create" do
     content_type :json
-
-    if params[:password] == ENV["ADMIN_PASSWORD"]
-      session[:current_user] = ENV["ADMIN_USERNAME"]
-      { user: current_user, success: true, return: session.delete(:return_to) }.to_json
-    else
-      { success: false }.to_json
-    end
+    auth_user_from_env if valid_password?(params[:password])
+    auth_result_hash.to_json
   end
 
   get "/logout" do
