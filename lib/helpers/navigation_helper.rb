@@ -35,7 +35,7 @@ module NavigationHelper
     elems << content_tag(:li, link_to("<span> Portfolio</span>", "/portfolio", class: "icon-portfolio no-underline", title: "Portfolio"))
     elems << content_tag(:li, link_to("<span> Resume</span>", "/resume", class: "icon-resume no-underline", title: "Resume"))
 
-    if current_user
+    if user_signed_in?
       elems << content_tag(:li, link_to("<span> New Post</span>", "/posts/new", class: "icon-plus no-underline", title: "New Post"))
       elems << content_tag(:li, link_to("<span> Logout</span>", "/logout", class: "icon-logout no-underline", title: "Logout"), class: "gutter-bottom-none")
     else
