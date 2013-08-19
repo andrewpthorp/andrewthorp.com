@@ -6,11 +6,17 @@
   padding: 15px
   +box-sizing(border-box)
   a
+    position: relative
     +transition(all 0.25s ease-in-out)
     font-size: 24px
     font-size: 2.4rem
     line-height: 1.6
     color: $light_gray
+    span
+      position: relative
+      top: -5px
+      margin-left: 8px
+      font-size: 12px
     &:hover
       color: $gray
 
@@ -28,6 +34,8 @@
       a
         font-size: 18px
         font-size: 1.8rem
+        span
+          display: none
 
 #social-nav
   li
