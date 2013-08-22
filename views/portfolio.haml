@@ -3,6 +3,18 @@
 .row
   .eight.columns.centered
     .project.gutter-bottom-double
+      %h3= link_to "RubyGem - ESPN", "http://github.com/andrewpthorp/espn",
+                    target: "_blank"
+      %p.mute Ruby wrapper for the ESPN API
+      %p{style: 'padding-bottom: 25px;'}
+        ESPN has a
+        = link_to "pretty awesome API,", "http://developer.espn.com",
+                  target: "_blank"
+        but I couldn't find a simple way to digest it in a ruby application.
+        I built a RubyGem that wraps the API so you can pull their information
+        into your websites, command line apps, etc.
+
+    .project.gutter-bottom-double
       %h3= link_to "Pure Charity", "https://www.purecharity.com",
                     target: "_blank"
       %p.pullquote &quot;Back non-profit projects you care about.&quot;
