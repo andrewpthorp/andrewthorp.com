@@ -29,17 +29,17 @@ module NavigationHelper
   # Returns a String.
   def site_navigation(opts={})
     elems = []
-    elems << content_tag(:li, link_to("<span> Home</span>", "/", class: "icon-home no-underline", title: "Home"))
-    elems << content_tag(:li, link_to("<span> About</span>", "/about", class: "icon-about no-underline", title: "About Me"))
-    elems << content_tag(:li, link_to("<span> Posts</span>", "/posts", class: "icon-blog no-underline", title: "Blog"))
-    elems << content_tag(:li, link_to("<span> Portfolio</span>", "/portfolio", class: "icon-portfolio no-underline", title: "Portfolio"))
-    elems << content_tag(:li, link_to("<span> Resume</span>", "/resume", class: "icon-resume no-underline", title: "Resume"))
+    elems << content_tag(:li, link_to("", "/", class: "icon-home no-underline", title: "Home"))
+    elems << content_tag(:li, link_to("", "/about", class: "icon-about no-underline", title: "About Me"))
+    elems << content_tag(:li, link_to("", "/posts", class: "icon-blog no-underline", title: "Blog"))
+    elems << content_tag(:li, link_to("", "/portfolio", class: "icon-portfolio no-underline", title: "Portfolio"))
+    elems << content_tag(:li, link_to("", "/resume", class: "icon-resume no-underline", title: "Resume"))
 
     if user_signed_in?
-      elems << content_tag(:li, link_to("<span> New Post</span>", "/posts/new", class: "icon-plus no-underline", title: "New Post"))
-      elems << content_tag(:li, link_to("<span> Logout</span>", "/logout", class: "icon-logout no-underline", title: "Logout"), class: "gutter-bottom-none")
+      elems << content_tag(:li, link_to("", "/posts/new", class: "icon-plus no-underline", title: "New Post"))
+      elems << content_tag(:li, link_to("", "/logout", class: "icon-logout no-underline", title: "Logout"), class: "gutter-bottom-none")
     else
-      elems << content_tag(:li, link_to("<span> Login</span>", "/login?return_to=#{URI::encode(request.fullpath)}", class: "icon-login no-underline", title: "Login"), class: "gutter-bottom-none")
+      elems << content_tag(:li, link_to("", "/login?return_to=#{URI::encode(request.fullpath)}", class: "icon-login no-underline", title: "Login"), class: "gutter-bottom-none")
     end
 
     content_tag :ul, elems.join, id: "site-nav", class: "group #{opts[:class]}"
