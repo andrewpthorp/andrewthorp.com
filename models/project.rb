@@ -6,7 +6,7 @@ class Project
   property :id, Serial
   property :title, String, required: true, length: 255
   property :url, String, required: true
-  property :body, Text, required: true
+  property :body, Text, required: false
   property :image, String
   property :published, Boolean, required: true, default: true
   property :quote, String, length: 255
