@@ -21,4 +21,12 @@ class Project
     all(published: true)
   end
 
+  # Public: Get the URL to an image. All images are stored in the same bucket on
+  # S3, so this method simply prepends the S3 URL to the :image.
+  #
+  # Returns a String.
+  def full_image_url
+    "https://s3.amazonaws.com/andrewthorp-blog-pro/project-images/#{image}"
+  end
+
 end

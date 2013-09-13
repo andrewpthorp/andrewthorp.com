@@ -38,7 +38,17 @@ class ProjectTest < MiniTest::Unit::TestCase
       should 'return published projects' do
         @project.save
         create(:project, published: false)
-        assert Project.published == [@project], 'published scope return unpublished Projects'
+        assert_equal [@project], Project.published
+      end
+    end
+  end
+
+  context '#methods' do
+    context '#full_image_url' do
+      should 'return the right image' do
+        @project.image = 'andrewthorp.png'
+        assert_equal 'https://s3.amazonaws.com/andrewthorp-blog-pro/project-images/andrewthorp.png',
+                      @project.full_image_url
       end
     end
   end
