@@ -16,6 +16,6 @@
         = link_to 'emoji from GitHub.', 'https://github.com/github/gemoji'
       %h2.text-center
         - Emoji.names.sample(10).each do |e|
-          = image_tag "/images/emoji/#{e}.png", class: 'emoji'
+          = image_tag "/images/emoji/#{e}.png", class: 'emoji', title: ":#{e}:"
 
 %script{:type => 'text/javascript', :src  => '/javascripts/login.js'}
