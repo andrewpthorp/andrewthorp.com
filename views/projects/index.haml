@@ -10,4 +10,7 @@
           %p= image_tag project.full_image_url, width: 600
 
         - if user_signed_in?
-          %p= link_to 'Edit', "/projects/#{project.id}/edit", class: 'button secondary small'
+          %ul.inline-list.text-center
+            %li= link_to 'Edit', "/projects/#{project.id}/edit", class: 'button secondary small'
+            %li= link_to 'Delete', "/projects/#{project.id}/delete", class: 'button secondary small'
+

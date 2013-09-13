@@ -5776,52 +5776,60 @@ ul, ol {
   list-style-type: none;
   margin-left: 0px; }
   /* line 5, public/stylesheets/sass/partials/_globals.sass */
-  ul.inline-list li, ol.inline-list li {
-    display: inline-block; }
+  ul.inline-list > li, ol.inline-list > li {
+    display: inline-block;
+    float: none;
+    margin-left: 10px; }
+    /* line 9, public/stylesheets/sass/partials/_globals.sass */
+    ul.inline-list > li:first-child, ol.inline-list > li:first-child {
+      margin-left: 1.375em; }
 
-/* line 8, public/stylesheets/sass/partials/_globals.sass */
+/* line 12, public/stylesheets/sass/partials/_globals.sass */
 a {
   font-weight: bold; }
-  /* line 10, public/stylesheets/sass/partials/_globals.sass */
+  /* line 14, public/stylesheets/sass/partials/_globals.sass */
   a:hover {
     text-decoration: underline; }
+  /* line 16, public/stylesheets/sass/partials/_globals.sass */
+  a.button:hover {
+    text-decoration: none; }
 
-/* line 15, public/stylesheets/sass/partials/_globals.sass */
+/* line 21, public/stylesheets/sass/partials/_globals.sass */
 .tag a:before {
   position: relative;
   top: 1px;
   margin-right: 2px; }
-/* line 19, public/stylesheets/sass/partials/_globals.sass */
+/* line 25, public/stylesheets/sass/partials/_globals.sass */
 .tag a:hover {
   text-decoration: none;
   color: #444444; }
-  /* line 22, public/stylesheets/sass/partials/_globals.sass */
+  /* line 28, public/stylesheets/sass/partials/_globals.sass */
   .tag a:hover:before {
     color: #444444; }
 
-/* line 25, public/stylesheets/sass/partials/_globals.sass */
+/* line 31, public/stylesheets/sass/partials/_globals.sass */
 .emoji, .emoji img {
   max-height: 22px;
   position: relative;
   top: -3px; }
 
-/* line 31, public/stylesheets/sass/partials/_globals.sass */
+/* line 37, public/stylesheets/sass/partials/_globals.sass */
 h1 .emoji, h1 .emoji img, h2 .emoji, h2 .emoji img, h3 .emoji, h3 .emoji img, h4 .emoji, h4 .emoji img, h5 .emoji, h5 .emoji img, h6 .emoji, h6 .emoji img {
   max-height: 30px; }
 
-/* line 34, public/stylesheets/sass/partials/_globals.sass */
+/* line 40, public/stylesheets/sass/partials/_globals.sass */
 section {
   background: #f8f8f8;
   border: 5px solid #c4c4c4;
   border-radius: 8px;
   padding: 25px; }
-  /* line 39, public/stylesheets/sass/partials/_globals.sass */
+  /* line 45, public/stylesheets/sass/partials/_globals.sass */
   section footer {
     margin: 25px -25px -25px;
     background: #c4c4c4;
     padding: 25px 25px 0px; }
 
-/* line 45, public/stylesheets/sass/partials/_globals.sass */
+/* line 51, public/stylesheets/sass/partials/_globals.sass */
 header h1, header h2, header h3, header h4, header h5, header h6 {
   padding-left: 30px; }
 
@@ -5850,15 +5858,15 @@ header h1, header h2, header h3, header h4, header h5, header h6 {
 
 /* line 17, public/stylesheets/sass/partials/_helpers.sass */
 .text-center, .align-center {
-  text-align: center; }
+  text-align: center !important; }
 
 /* line 17, public/stylesheets/sass/partials/_helpers.sass */
 .text-left, .align-left {
-  text-align: left; }
+  text-align: left !important; }
 
 /* line 17, public/stylesheets/sass/partials/_helpers.sass */
 .text-right, .posts article p.caption, .post article p.caption, .align-right {
-  text-align: right; }
+  text-align: right !important; }
 
 /* line 1, public/stylesheets/sass/partials/_chrome.sass */
 html, body {
@@ -6059,38 +6067,6 @@ html, body {
   /* line 50, public/stylesheets/sass/sections/_posts.sass */
   .post footer .actions ul {
     margin-bottom: 0px; }
-    /* line 53, public/stylesheets/sass/sections/_posts.sass */
-    .post footer .actions ul li a {
-      border-style: solid;
-      border-width: 1px;
-      cursor: pointer;
-      font-family: inherit;
-      font-weight: bold;
-      line-height: 1;
-      margin: 0 0 1.25em;
-      position: relative;
-      text-decoration: none;
-      text-align: center;
-      display: inline-block;
-      padding-top: 0.9em;
-      padding-right: 1.8em;
-      padding-bottom: 0.9625em;
-      padding-left: 1.8em;
-      font-size: 0.775em;
-      background-color: #eaeaea;
-      border-color: #d0d0d0;
-      color: #333333;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      color: #6a6a6a !important;
-      text-shadow: 1px 1px 0px white !important;
-      border: 0px none !important; }
-      /* line 122, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
-      .post footer .actions ul li a:hover, .post footer .actions ul li a:focus {
-        background-color: #d0d0d0; }
-      /* line 128, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
-      .post footer .actions ul li a:hover, .post footer .actions ul li a:focus {
-        color: #333333; }
 
 /* line 1, public/stylesheets/sass/sections/_projects.sass */
 .project {
