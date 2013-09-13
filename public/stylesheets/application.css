@@ -6110,6 +6110,31 @@ html, body {
   .project p.pullquote {
     font-style: italic; }
 
+/* line 1, public/stylesheets/sass/sections/_sessions.sass */
+.sample-emoji {
+  margin-top: 25px; }
+  /* line 3, public/stylesheets/sass/sections/_sessions.sass */
+  .sample-emoji p {
+    margin-bottom: 0px; }
+  /* line 5, public/stylesheets/sass/sections/_sessions.sass */
+  .sample-emoji h2 {
+    margin-bottom: 0px; }
+
+/* line 9, public/stylesheets/sass/sections/_sessions.sass */
+form#login input {
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size: 40px;
+  height: 2em; }
+  /* line 14, public/stylesheets/sass/sections/_sessions.sass */
+  form#login input.error {
+    background: rgba(198, 15, 19, 0.25);
+    border-color: #c60f13; }
+  /* line 17, public/stylesheets/sass/sections/_sessions.sass */
+  form#login input.success {
+    background: rgba(19, 168, 99, 0.25);
+    border-color: #13a863; }
+
 /* line 1, public/stylesheets/sass/sections/_welcome.sass */
 p.tagline {
   margin-bottom: 35px; }
