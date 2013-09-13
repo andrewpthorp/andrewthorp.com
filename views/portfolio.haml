@@ -1,12 +1,11 @@
 - root_image_url= "https://s3.amazonaws.com/andrewthorp-blog-pro/project-images"
 
 .row
-  .eight.columns.centered
-    .project.gutter-bottom-double
+  .large-8.large-centered.columns
+    .project
       %h3= link_to "RubyGem - ESPN", "http://github.com/andrewpthorp/espn",
                     target: "_blank"
-      %p.mute Ruby wrapper for the ESPN API
-      %p{style: 'padding-bottom: 25px;'}
+      %p
         ESPN has a
         = link_to "pretty awesome API,", "http://developer.espn.com",
                   target: "_blank"
@@ -14,7 +13,7 @@
         I built a RubyGem that wraps the API so you can pull their information
         into your websites, command line apps, etc.
 
-    .project.gutter-bottom-double
+    .project
       %h3= link_to "Pure Charity", "https://www.purecharity.com",
                     target: "_blank"
       %p.pullquote &quot;Back non-profit projects you care about.&quot;
@@ -22,7 +21,7 @@
       %p= image_tag "#{root_image_url}/purecharity.png",
                     width: 600, class: "make-inline-block"
 
-    .project.gutter-bottom-double
+    .project
       %h3= link_to "Ace of Sales", "https://www.aceofsales.com",
                     target: "_blank"
       %p.pullquote &quot;Wow every customer. Crush every sales goal.&quot;
@@ -30,7 +29,7 @@
       %p= image_tag "#{root_image_url}/aceofsales.png",
                     width: 600, class: "make-inline-block"
 
-    .project.gutter-bottom-double
+    .project
       %h3= link_to "Daniel Keeton's Website", "http://www.danielkeeton.com",
                     target: "_blank"
       %p Rails app with SASS, HAML and CoffeeScript. Using Foundation.
@@ -38,14 +37,14 @@
                     width: 600, class: "make-inline-block"
 
 
-    .project.gutter-bottom-double
+    .project
       %h3= link_to "Wists", "http://wists.andrewthorp.com",
                     target: "_blank"
       %p Rails app with SASS, HAML and CoffeeScript.
       %p= image_tag "#{root_image_url}/wists.png",
                     width: 600, class: "make-inline-block"
 
-    .project.gutter-bottom-double
+    .project
       %h3= link_to "My Personal Website", "/"
       %p Sinatra app with SASS, HTML and CoffeeScript.
       %p= image_tag "#{root_image_url}/andrewthorp.png",

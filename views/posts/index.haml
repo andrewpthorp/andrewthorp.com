@@ -1,52 +1,22 @@
 .row
-  .eight.columns.centered
+  .large-8.large-centered.columns
     .posts
-      %h1.gutter-bottom.title
-        Blog: sports
-        = image_tag "emoji/baseball.png", class: "emoji"
-        &mdash;
-        dev
-        = image_tag "emoji/computer.png", class: "emoji"
-        &mdash;
-        life
-        = image_tag "emoji/beers.png", class: "emoji"
+      %h3
+        Blog: sports, dev, life.
+        = image_tag 'emoji/baseball.png', class: 'emoji'
+        = image_tag 'emoji/computer.png', class: 'emoji'
+        = image_tag 'emoji/beers.png', class: 'emoji'
 
       - if @posts.any?
-        %ul#post-list.gutter-bottom
+        %ul#post-list
           - @posts.each do |p|
             %li
-              = link_to "#{classify(p)} #{p.title}", "/posts/#{p.slug}"
-
-        .paginator.group.gutter-bottom
-          - if @per_page == Post::PER_PAGE
-            - url_template = "?page="
-          - else
-            - url_template = "?per_page=#{@per_page}&page="
-
-          - if @page > 1
-            %p.width-49.float-left.gutter-bottom-none
-              = link_to "Previous Page", "#{url_template}#{@page-1}", class: "button-page align-center"
-          - else
-            %p.width-49.float-left.disabled.align-center.gutter-bottom-none At First Page
-
-          - if @page < @total_pages
-            %p.width-49.float-right.gutter-bottom-none
-              = link_to "Next Page", "#{url_template}#{@page+1}", class: "button-page align-center"
-          - else
-            %p.width-49.float-right.disabled.align-center.gutter-bottom-none At Last Page
-
+              = classify(p)
+              = link_to p.title, "/posts/#{p.slug}"
 
       - else
-        %p.mute.align-center.gutter-top-double.gutter-bottom-double
+        %p.mute.align-center
           %strong
             The Enquirer
           has no gossip on this subject.
-          = link_to "Oh well, take me back.", "/"
-
-      %footer.padded-footer.group.light-border-top
-        %ul#tag-list.float-left
-          - all_tag_class = (@tag.nil? ? 'current' : '' )
-          %li= link_to "All", "/posts", class: "icon-tags make-inline-block #{all_tag_class}"
-          - Tag.all.each do |tag|
-            - tag_class = (@tag && @tag == tag.name) ? 'current' : ''
-            %li= link_to tag.name, "/posts/tagged/#{tag.name}", class: "icon-tags make-inline-block #{tag_class}"
+          = link_to 'Oh well, take me back.', '/'

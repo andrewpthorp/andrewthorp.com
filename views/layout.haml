@@ -2,42 +2,26 @@
 %html{:lang => 'en', 'xmlns:fb' => 'http://www.facebook.com/2008/fbml'}
   %head
     %meta{:charset => 'utf-8'}
-    %meta{"http-equiv" => "X-UI-Compatible", :content => 'IE=edge,chrome=1'}
+    %meta{'http-equiv' => 'X-UI-Compatible', :content => 'IE=edge,chrome=1'}
     %meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}
     %link{:href => '/favicon.ico', :rel => 'favicon'}
     %title Andrew Thorp
 
-    = stylesheet_link_tag "vendor/foundation.css", "vendor/formalize.css", "vendor/icomoon.css", "vendor/coderay-github.css", "application.css"
-    = javascript_include_tag "vendor/jquery.min.js", "vendor/handlebars.js", "vendor/partymode.js", "vendor/view.js"
-
+    = stylesheet_link_tag 'vendor/icomoon.css', 'vendor/coderay-github.css', 'application.css'
+    = javascript_include_tag 'vendor/jquery.min.js', 'vendor/handlebars.js', 'vendor/partymode.js', 'vendor/view.js', 'vendor/modernizr.js', 'vendor/foundation.js'
 
   %body
     = site_navigation
 
-    #main.container
+    #main
       = yield
-      .footer_block.make-block
 
-    .container
-      .row
-        .nine.columns.centered
-          %footer#global-footer
-            .hide-on-phones
-              %p.mute.small.align-center
-                Copyright &copy; 2013 Andrew Thorp.
-                %span.dark.make-inline-block.gutter-left-half.gutter-right-half.icomoon &#xe049;
-                Inspired by
-                = link_to "http://wynn.fm.", "http://wynn.fm", target: "_blank"
-                &mdash;
-                Robot by
-                = link_to "Bryce Hewett", "http://brycehewett.com/", target: "_blank"
-                %span.dark.make-inline-block.gutter-left-half.gutter-right-half.icomoon &#xe049;
-                = link_to "IcoMoon", "http://icomoon.io", target: "_blank"
-                &mdash;
-                = link_to "Entypo", "http://www.entypo.com/", target: "_blank"
-            .hide-on-desktops
-              %p.mute.small.align-center
-                Copyright &copy; 2013 Andrew Thorp.
+    = partial 'partials/global_footer'
+
+    :plain
+      <script>
+        $(document).foundation();
+      </script>
 
 - if production?
   :javascript

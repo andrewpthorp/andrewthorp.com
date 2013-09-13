@@ -1,0 +1,32 @@
+ul, ol
+  list-style-type: none
+  margin-left: 0px
+  &.inline-list
+    li
+      display: inline-block
+
+a
+  font-weight: bold
+  &:hover
+    text-decoration: underline
+
+.tag
+  a
+    &:before
+      position: relative
+      top: 1px
+      margin-right: 2px
+    &:hover
+      text-decoration: none
+      color: $color_gray
+      &:before
+        color: $color_gray
+
+.emoji, .emoji img
+  max-height: 22px
+  position: relative
+  top: -3px
+
+h1, h2, h3, h4, h5, h6
+  .emoji, .emoji img
+    max-height: 30px

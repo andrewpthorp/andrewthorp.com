@@ -1,16 +1,15 @@
 .row
-  .eight.columns.centered
+  .large-8.large-centered.columns
     %form{name: "login", id: "login", action: "sessions/create", method: "post"}
       %label{for: "password"}
-        %h2.align-center.gutter-bottom-double
-          Be a gentleman, use a password.
-      %input{id: "password", type: "password", name: "password", class: "input_full"}
+        %h2.text-center Be a gentleman, use a password.
+      %input{id: "password", type: "password", name: "password", class: "text-center"}
 
-    .emoji-sample.gutter-top-double.make-block
-      %p.align-center.mute
+    .emoji-sample
+      %p.text-center
         Or, enjoy some random
         = link_to "emoji from GitHub", "https://github.com/github/gemoji"
-      %h2.align-center
+      %h2.text-center
         - Emoji.names.sample(10).each do |e|
           = image_tag "/images/emoji/#{e}.png", class: "emoji"
 

@@ -1,10 +1,12 @@
 require 'sinatra/base'
+require 'sinatra/partial'
 require 'sinatra_more/markup_plugin'
 require 'logger'
 
 Dir['lib/**/*.rb'].each { |f| require_relative f }
 
 class AndrewThorp < Sinatra::Base
+  register Sinatra::Partial
   register SinatraMore::MarkupPlugin
   helpers AuthenticationHelper, NavigationHelper, ViewHelper
   enable :sessions

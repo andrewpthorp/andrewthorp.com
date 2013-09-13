@@ -1,0 +1,78 @@
+#site-nav
+  background: $color_gray
+  height: 100%
+  left: 0px
+  padding: 15px
+  position: fixed
+  top: 0px
+  li
+    margin-bottom: 15px
+    a
+      +transition(all 0.15s ease-in-out)
+      color: $color_white
+      display: inline-block
+      font-size: emCalc(24)
+      position: relative
+      text-shadow: 0px 1px 0px $color_black
+      &:hover
+        color: $color_yellow
+        text-decoration: none
+      &:active
+        left: 1px
+        top: 1px
+      &.logout, &.login
+        margin-top: 2px
+        span
+          top: -4px
+          position: relative
+      span
+        display: none
+        font-size: emCalc(12)
+        margin: 0px 5px
+  &:hover
+    li
+      a
+        span
+          display: inline-block
+
+#social-nav
+  margin-bottom: 35px
+  text-align: center
+  li
+    display: inline-block
+    margin-right: $column-gutter
+    a
+      +icomoon
+      color: $color_gray
+      font-size: emCalc(45)
+      &:hover
+        text-decoration: none
+      &.facebook:hover
+        color: $color_facebook
+      &.twitter:hover
+        color: $color_twitter
+      &.github:hover
+        color: $color_github
+    &:last-child
+      margin-right: 0px
+
+@media only screen and (max-width: 768px)
+  #site-nav
+    height: auto
+    left: 0px
+    position: absolute
+    text-align: center
+    top: 0px
+    width: 100%
+    z-index: 100
+    li
+      display: inline-block
+      margin-right: 25px
+      margin-bottom: 0px
+      &:last-child
+        margin-right: 0px
+    &:hover
+      li
+        a
+          span
+            display: none

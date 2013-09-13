@@ -1,68 +1,22 @@
-// Imports
-@import "bourbon/bourbon"
-@import "vars"
-@import "mixins"
-@import "utils"
-@import "pagination"
-@import "fonts"
-@import "forms"
-@import "navigation"
-@import "posts"
-@import "projects"
+// Import Variables First
+@import 'partials/vars'
 
-html, body
-  height: 100%
+// Vendor Imports
+@import 'vendor/bourbon/bourbon'
+@import 'vendor/foundation/foundation'
 
-body
-  background: #fff
-  font-family: 'Bitter', Georgia, serif
-  color: $gray
-  a
-    color: $gray
-    font-weight: bold
-    &:hover
-      color: $black
-      text-decoration: underline
-  p, ol li, ul li
-    font-size: 16px
-    font-size: 1.6rem
-    line-height: 1.8
-    img.emoji
-      max-height: 20px
-  h1, h2, h3
-    img.emoji
-      max-height: 28px
-      position: relative
-      top: 1px
+// Partials
+@import 'partials/fonts'
+@import 'partials/globals'
+@import 'partials/helpers'
+@import 'partials/mixins'
+@import 'partials/chrome'
+@import 'partials/navigation'
+@import 'partials/pagination'
 
-  #main
-    +box-sizing(border-box)
-    padding-top: 75px
-    min-height: 100%
-    height: auto !important
-    height: 100%
-    margin-bottom: -55px
+// Sections
+@import 'sections/about'
+@import 'sections/posts'
+@import 'sections/projects'
+@import 'sections/welcome'
 
-    .footer_block
-      height: 80px
-
-    .emoji-sample
-      padding: 0px 50px
-
-
-  #global-footer
-    p
-      span.icomoon
-        position: relative
-        top: 1px
-        font-size: 13px
-        font-size: 1.3rem
-
-
-@media only screen and (max-width: 767px)
-  body
-    #main
-      padding-top: 25px
-
-    .robot-logo
-      max-width: 280px

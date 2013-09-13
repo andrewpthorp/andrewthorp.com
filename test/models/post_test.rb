@@ -165,10 +165,10 @@ class PostTest < MiniTest::Unit::TestCase
       end
     end
 
-    context ".pretty_body" do
+    context ".markdown_boy" do
       should "render markdown" do
         @post.body = "**strong**"
-        assert_match /<strong>/, @post.pretty_body
+        assert_match /<strong>/, @post.markdown_body
       end
     end
 

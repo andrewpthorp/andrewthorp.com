@@ -1,0 +1,57 @@
+.posts, .post
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6
+    border-bottom: $dashed-border
+    margin-bottom: 12px
+    padding-bottom: 12px
+
+  article
+    p
+      &:first-child
+        img:first-child
+          margin-top: 10px
+      &.caption
+        @extend .mute
+        @extend .small
+        @extend .text-right
+        margin-top: -12px
+        a
+          font-weight: normal
+          text-decoration: underline
+        &:before
+          content: '* '
+          position: relative
+          top: 3px
+    hr
+      margin: 3px 0px 18px
+
+    ul
+      li
+        margin-bottom: 15px
+
+  ul#post-list
+    li
+      margin-bottom: 6px
+      img.emoji
+        margin-right: 15px
+
+.post
+  footer
+    p
+      @extend .mute
+      @extend .medium
+      font-style: italic
+      text-transform: uppercase
+      .tag
+        margin-left: 10px
+
+    .actions
+      border-top: $dashed-border
+      padding-top: 20px
+      ul
+        margin-bottom: 0px
+        li
+          a
+            +button(0.9em, lighten($color_gray, 65%), true)
+            color: lighten($color_gray, 15%) !important
+            text-shadow: 1px 1px 0px $color_white !important
+            border: 0px none !important

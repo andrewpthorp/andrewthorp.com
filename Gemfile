@@ -3,6 +3,7 @@ ruby '1.9.3'
 
 gem 'sinatra'
 gem 'sinatra_more'
+gem 'sinatra-partial'
 gem 'bourbon'
 gem 'sass'
 gem 'haml'

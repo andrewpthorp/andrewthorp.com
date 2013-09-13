@@ -1,24 +1,24 @@
 .row
-  .eight.columns.centered
+  .large-8.large-centered.columns
     .post.show
-      %h1.gutter-bottom.title
-        = @post.title
+      %h2= @post.title
 
       %article
-        = emojify( @post.pretty_body )
+        = emojify @post.markdown_body
 
-      %footer.gutter-bottom
-        %p.uppercase.mute.medium.gutter-bottom-none
+      %footer
+        %p
           POSTED #{@post.created_at.to_s(:pretty)}
           - @post.tags.each do |t|
-            %span.tag.gutter-right-half= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
+            %span.tag= link_to t.name, "/posts/tagged/#{t.name}", class: "icon-tags no-underline"
 
-      %footer.padded-footer.group.light-border-top.row
-        .6.columns
-          %ul#actions
-            %li= link_to "Back", "/posts"
-        .6.columns
-          - if current_user
-            %ul#admin.align-right
-              %li= link_to "Edit", "/posts/#{@post.slug}/edit"
-              %li= link_to "Delete", "/posts/#{@post.slug}/delete"
+        .row
+          .actions
+            .large-6.columns
+              %ul.inline-list
+                %li= link_to "Back", "/posts"
+            .large-6.columns
+              - if current_user
+                %ul.inline-list.right
+                  %li= link_to "Edit", "/posts/#{@post.slug}/edit"
+                  %li= link_to "Delete", "/posts/#{@post.slug}/delete"

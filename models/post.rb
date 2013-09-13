@@ -44,7 +44,7 @@ class Post
   # a Post instance in an HTML friendly format.
   #
   # Returns a String.
-  def pretty_body
+  def markdown_body
     renderer = ATMarkdownRenderer.new(filter_html: false, hard_wrap: true)
     options = { fenced_code_blocks: true, no_intra_emphasis: true,
                 autolink: true, strikethrough: true, lax_html_blocks: true,

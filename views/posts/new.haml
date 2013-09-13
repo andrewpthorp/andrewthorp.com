@@ -1,7 +1,7 @@
 .row
-  .eight.columns.centered
+  .large-8.large-centered.columns
     .post.show
-      %h1.gutter-bottom.title
+      %h1.title
         = link_to "&#xe04a;", "/posts", class: "no-underline icomoon"
         New Post
 
@@ -17,7 +17,7 @@
           = f.text_area :body, class: "input_full", placeholder: "Body", value: preserve(f.object.body)
 
         %p.group
-          = f.check_box :published, class: "float-left gutter-right-half"
+          = f.check_box :published, class: "float-left"
           = f.label :published, class: "float-left", caption: "Publish Post?"
         %p
           = f.submit "Save"
