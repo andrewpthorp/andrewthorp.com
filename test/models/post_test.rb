@@ -61,7 +61,7 @@ class PostTest < MiniTest::Unit::TestCase
         @post.save
         p = build(:post, published: false)
         p.save
-        assert Post.published == [@post], 'published scope return unpublished Posts'
+        assert_equal [@post], Post.published
       end
     end
   end
