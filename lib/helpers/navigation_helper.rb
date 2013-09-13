@@ -18,7 +18,7 @@ module NavigationHelper
     elems << content_tag(:li, link_to('&#xe006;', 'http://www.twitter.com/andrewpthorp', class: 'twitter', target: '_blank'))
     elems << content_tag(:li, link_to('&#xe004;', 'http://www.facebook.com/andrewpthorp', class: 'facebook', target: '_blank'))
     elems << content_tag(:li, link_to('&#xe02b;', 'http://www.github.com/andrewpthorp', class: 'github', target: '_blank'))
-    content_tag :ul, elems.join, id: 'social-nav', class: "group #{opts[:class]}"
+    content_tag :ul, elems.join, id: 'social-nav', class: opts[:class]
   end
 
   # Public: Return the global navigation in an unordered list (ul).
@@ -42,6 +42,6 @@ module NavigationHelper
       elems << content_tag(:li, link_to(' <span>Log in</span>', "/login?return_to=#{URI::encode(request.fullpath)}", class: 'login icon-login', title: 'Login'))
     end
 
-    content_tag :ul, elems.join, id: 'site-nav', class: "group #{opts[:class]}"
+    content_tag :ul, elems.join, id: 'site-nav', class: opts[:class]
   end
 end

@@ -51,7 +51,7 @@ class NavigationHelperTest < MiniTest::Unit::TestCase
 
     context 'when passing a class into the method' do
       should 'put that class on the ul' do
-        assert_match "<ul id='social-nav' class='group foo'",
+        assert_match "<ul id='social-nav' class='foo'",
           @helper.social_navigation(class: 'foo')
       end
     end
@@ -84,7 +84,7 @@ class NavigationHelperTest < MiniTest::Unit::TestCase
 
     context 'when passing a class into the method' do
       should 'put that class on the ul' do
-        assert_match "<ul id='site-nav' class='group foo'",
+        assert_match "<ul id='site-nav' class='foo'",
           @helper.site_navigation(class: 'foo')
       end
     end

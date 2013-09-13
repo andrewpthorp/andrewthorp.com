@@ -5950,7 +5950,7 @@ html, body {
         font-size: 0.75em;
         margin: 0px 5px; }
   /* line 35, public/stylesheets/sass/partials/_navigation.sass */
-  #site-nav:hover li a span {
+  #site-nav:hover li a span, #site-nav.show-labels li a span {
     display: inline-block; }
 
 /* line 38, public/stylesheets/sass/partials/_navigation.sass */
