@@ -6098,12 +6098,15 @@ html, body {
   margin-bottom: 25px;
   padding-bottom: 25px; }
   /* line 5, public/stylesheets/sass/sections/_projects.sass */
+  .project:last-child {
+    border-bottom: none; }
+  /* line 7, public/stylesheets/sass/sections/_projects.sass */
   .project h1, .project h2, .project h3, .project h4, .project h5, .project h6, .project p {
     text-align: center; }
-    /* line 7, public/stylesheets/sass/sections/_projects.sass */
+    /* line 9, public/stylesheets/sass/sections/_projects.sass */
     .project h1:last-child, .project h2:last-child, .project h3:last-child, .project h4:last-child, .project h5:last-child, .project h6:last-child, .project p:last-child {
       margin-bottom: 0px; }
-  /* line 9, public/stylesheets/sass/sections/_projects.sass */
+  /* line 11, public/stylesheets/sass/sections/_projects.sass */
   .project p.pullquote {
     font-style: italic; }
 
