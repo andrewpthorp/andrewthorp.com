@@ -2,51 +2,12 @@
 
 .row
   .large-8.large-centered.columns
-    .project
-      %h3= link_to "RubyGem - ESPN", "http://github.com/andrewpthorp/espn",
-                    target: "_blank"
-      %p
-        ESPN has a
-        = link_to "pretty awesome API,", "http://developer.espn.com",
-                  target: "_blank"
-        but I couldn't find a simple way to digest it in a ruby application.
-        I built a RubyGem that wraps the API so you can pull their information
-        into your websites, command line apps, etc.
 
-    .project
-      %h3= link_to "Pure Charity", "https://www.purecharity.com",
-                    target: "_blank"
-      %p.pullquote &quot;Back non-profit projects you care about.&quot;
-      %p Rails app with SASS, HAML and CoffeeScript.
-      %p= image_tag "#{root_image_url}/purecharity.png",
-                    width: 600, class: "make-inline-block"
-
-    .project
-      %h3= link_to "Ace of Sales", "https://www.aceofsales.com",
-                    target: "_blank"
-      %p.pullquote &quot;Wow every customer. Crush every sales goal.&quot;
-      %p Rails app with CSS, HTML and JavaScript.
-      %p= image_tag "#{root_image_url}/aceofsales.png",
-                    width: 600, class: "make-inline-block"
-
-    .project
-      %h3= link_to "Daniel Keeton's Website", "http://www.danielkeeton.com",
-                    target: "_blank"
-      %p Rails app with SASS, HAML and CoffeeScript. Using Foundation.
-      %p= image_tag "#{root_image_url}/danielkeeton.png",
-                    width: 600, class: "make-inline-block"
-
-
-    .project
-      %h3= link_to "Wists", "http://wists.andrewthorp.com",
-                    target: "_blank"
-      %p Rails app with SASS, HAML and CoffeeScript.
-      %p= image_tag "#{root_image_url}/wists.png",
-                    width: 600, class: "make-inline-block"
-
-    .project
-      %h3= link_to "My Personal Website", "/"
-      %p Sinatra app with SASS, HTML and CoffeeScript.
-      %p= image_tag "#{root_image_url}/andrewthorp.png",
-                    width: 600, class: "make-inline-block"
-
+    - @projects.each do |project|
+      .project
+        %h3= link_to project.title, project.url, target: '_blank'
+        - unless project.quote.blank?
+          %p.pullquote= project.quote
+        %p= project.body
+        - unless project.image.blank?
+          %p= image_tag "#{root_image_url}/#{project.image}", width: 600

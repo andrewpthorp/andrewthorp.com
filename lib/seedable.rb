@@ -37,7 +37,10 @@ module Seedable
                       body: Faker::Lorem.paragraphs(3, true).join("\n\n"),
                       tag_list: tags.sample.join(","))
         when 'Project'
-          puts 'Create projects here.'
+          Project.create(title: Faker::Lorem.sentence(2),
+                         body: Faker::Lorem.paragraph(3),
+                         quote: Faker::Lorem.sentence(4),
+                         url: 'http://google.com', image: 'andrewthorp.png')
         end
       end
     end

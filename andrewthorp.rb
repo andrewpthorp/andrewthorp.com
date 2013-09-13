@@ -27,6 +27,7 @@ class AndrewThorp < Sinatra::Base
   end
 
   get "/portfolio" do
+    @projects = Project.published
     haml :portfolio, layout: true
   end
 

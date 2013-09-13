@@ -5,8 +5,8 @@ class PostTest < MiniTest::Unit::TestCase
     @post = build(:post)
   end
 
-  context "::CLASS_VARS" do
-    should "set PER_PAGE as an Integer" do
+  context '::CLASS_VARS' do
+    should 'set PER_PAGE as an Integer' do
       assert Post::PER_PAGE.is_a?(Integer), "expected Post::PER_PAGE to be an Integer, but it was a #{Post::PER_PAGE.class.to_s}"
     end
   end
@@ -17,196 +17,196 @@ class PostTest < MiniTest::Unit::TestCase
     obj.valid?
   end
 
-  context "#validations" do
-    should "validate presence of title" do
+  context '.validations' do
+    should 'validate presence of title' do
       validate(@post, :title, nil)
       refute_nil @post.errors[:title]
     end
 
-    should "validate presence of body" do
+    should 'validate presence of body' do
       validate(@post, :body, nil)
       refute_nil @post.errors[:body]
     end
 
-    should "validate presence of published" do
+    should 'validate presence of published' do
       validate(@post, :published, nil)
       refute_nil @post.errors[:published]
     end
   end
 
-  context "#associations" do
-    should "have n taggings" do
-      assert Post.relationships["taggings"].is_a? DataMapper::Associations::OneToMany::Relationship
+  context '.associations' do
+    should 'have n taggings' do
+      assert Post.relationships['taggings'].is_a? DataMapper::Associations::OneToMany::Relationship
     end
 
-    should "have n tags through taggings" do
-      rel = Post.relationships["tags"]
+    should 'have n tags through taggings' do
+      rel = Post.relationships['tags']
       assert rel.is_a? DataMapper::Associations::ManyToMany::Relationship
       assert rel.through.is_a? DataMapper::Associations::OneToMany::Relationship
-      assert_equal rel.through.child_model_name, "Tagging"
+      assert_equal rel.through.child_model_name, 'Tagging'
     end
   end
 
-  context "#hooks" do
-    should "call set_slug before create" do
+  context '.hooks' do
+    should 'call set_slug before create' do
       post = build(:post)
       post.expects(:set_slug).with(post.title.to_slug)
       post.save
     end
   end
 
-  context "#scopes" do
-    context "#published" do
-      should "return published posts" do
+  context '.scopes' do
+    context '.published' do
+      should 'return published posts' do
         @post.save
         p = build(:post, published: false)
         p.save
-        assert Post.published == [@post], "published scope return unpublished Posts"
+        assert Post.published == [@post], 'published scope return unpublished Posts'
       end
     end
   end
 
-  context "#methods" do
-    context "#pages" do
-      should "return the correct number of pages" do
+  context '.methods' do
+    context '.pages' do
+      should 'return the correct number of pages' do
         Post.stub_const(:PER_PAGE, 10) do
           Post.stubs(:count).returns(20)
           assert_equal 2, Post.pages
         end
       end
 
-      should "allow count to land between pages" do
+      should 'allow count to land between pages' do
         Post.stub_const(:PER_PAGE, 10) do
           Post.stubs(:count).returns(12)
           assert_equal 2, Post.pages
         end
       end
 
-      should "return 1 if count is less than PER_PAGE" do
+      should 'return 1 if count is less than PER_PAGE' do
         Post.stub_const(:PER_PAGE, 10) do
           Post.stubs(:count).returns(8)
           assert_equal 1, Post.pages
         end
       end
 
-      should "allow me to pass per_page in" do
+      should 'allow me to pass per_page in' do
         Post.stub_const(:PER_PAGE, 10) do
           Post.stubs(:count).returns(10)
           assert_equal 5, Post.pages(2)
         end
       end
 
-      should "allow me to pass a query in" do
+      should 'allow me to pass a query in' do
         create(:post, published: true)
         create(:post, published: true)
         create(:post, published: false)
         assert_equal 2, Post.pages(1, :query => :published)
       end
 
-      should "allow me to pass query_args in" do
-        create(:post, tag_list: "the-changelog")
-        create(:post, tag_list: "the-changelog")
+      should 'allow me to pass query_args in' do
+        create(:post, tag_list: 'the-changelog')
+        create(:post, tag_list: 'the-changelog')
         create(:post)
-        assert_equal 2, Post.pages(1, :query => :tagged_with, :query_args => "the-changelog")
+        assert_equal 2, Post.pages(1, :query => :tagged_with, :query_args => 'the-changelog')
       end
 
-      should "allow me to only ask for published posts" do
-        create(:post, tag_list: "the-changelog")
-        create(:post, tag_list: "the-changelog", published: false)
+      should 'allow me to only ask for published posts' do
+        create(:post, tag_list: 'the-changelog')
+        create(:post, tag_list: 'the-changelog', published: false)
         create(:post)
-        assert_equal 1, Post.pages(1, :query => :tagged_with, :query_args => "the-changelog", published: true)
+        assert_equal 1, Post.pages(1, :query => :tagged_with, :query_args => 'the-changelog', published: true)
       end
     end
 
-    context "#page" do
+    context '.page' do
       setup do
         @npost = create(:post)
       end
 
-      should "return the right results" do
+      should 'return the right results' do
         assert_equal [@npost], Post.page(1)
       end
 
-      should "default to page one" do
+      should 'default to page one' do
         assert_equal [@npost], Post.page
       end
 
-      should "convert nil to page one" do
+      should 'convert nil to page one' do
         assert_equal [@npost], Post.page(nil)
       end
 
-      should "convert string to integer" do
-        assert_equal [@npost], Post.page("1")
+      should 'convert string to integer' do
+        assert_equal [@npost], Post.page('1')
       end
 
-      should "return an empty array if past the last page" do
+      should 'return an empty array if past the last page' do
         assert_equal [], Post.page(2)
       end
 
-      should "allow me to set per_page" do
+      should 'allow me to set per_page' do
         @spost = create(:post)
         assert_equal [@npost], Post.page(1, 1)
       end
     end
   end
 
-  context ".methods" do
-    context ".set_slug" do
-      should "create a valid slug on save" do
+  context '#methods' do
+    context '#set_slug' do
+      should 'create a valid slug on save' do
         @post.set_slug(@post.title.to_slug)
-        assert_equal @post.slug, "foobar-title"
+        assert_equal @post.slug, 'foobar-title'
       end
 
-      should "prevent duplicate slugs" do
+      should 'prevent duplicate slugs' do
         @post.save
         p = build(:post)
         p.set_slug(p.title.to_slug)
-        assert_equal p.slug, "foobar-title-2"
+        assert_equal p.slug, 'foobar-title-2'
       end
     end
 
-    context ".markdown_boy" do
-      should "render markdown" do
-        @post.body = "**strong**"
+    context '#markdown_body' do
+      should 'render markdown' do
+        @post.body = '**strong**'
         assert_match /<strong>/, @post.markdown_body
       end
     end
 
-    context ".tag_collection" do
-      should "return array of tags" do
+    context '#tag_collection' do
+      should 'return array of tags' do
         @post.save
-        @post.tag_list = "some, tags"
-        assert_equal @post.tag_collection, ["some", "tags"]
+        @post.tag_list = 'some, tags'
+        assert_equal @post.tag_collection, ['some', 'tags']
       end
     end
 
-    context ".tag_list=" do
-      should "set @tag_list" do
+    context '#tag_list=' do
+      should 'set @tag_list' do
         @post.save
-        @post.tag_list = "some, tags, cray, yo"
-        assert_equal @post.tag_collection, ["cray", "some", "tags", "yo"]
+        @post.tag_list = 'some, tags, cray, yo'
+        assert_equal @post.tag_collection, ['cray', 'some', 'tags', 'yo']
       end
 
-      should "call update_tags" do
+      should 'call update_tags' do
         @post.save
         @post.expects(:update_tags)
-        @post.tag_list = "some, tags"
+        @post.tag_list = 'some, tags'
       end
     end
 
-    context ".tag_list" do
-      should "return comma separated tag_list" do
+    context '#tag_list' do
+      should 'return comma separated tag_list' do
         @post.save
-        @post.tag_list = "these, tags, cray"
-        assert_equal @post.tag_list, "cray, tags, these"
+        @post.tag_list = 'these, tags, cray'
+        assert_equal @post.tag_list, 'cray, tags, these'
       end
     end
 
-    context ".update_tags" do
-      should "set tags" do
+    context '#update_tags' do
+      should 'set tags' do
         @post.save
-        @post.stubs(:tag_collection).returns(["some"])
-        tags = [Tag.new(name: "some")]
+        @post.stubs(:tag_collection).returns(['some'])
+        tags = [Tag.new(name: 'some')]
         @post.expects(:tags=).with(tags)
         @post.update_tags
       end
