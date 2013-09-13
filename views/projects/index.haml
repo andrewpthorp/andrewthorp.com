@@ -8,3 +8,6 @@
         %p= project.body
         - unless project.image.blank?
           %p= image_tag project.full_image_url, width: 600
+
+        - if user_signed_in?
+          %p= link_to 'Edit', "/projects/#{project.id}/edit", class: 'button secondary small'
