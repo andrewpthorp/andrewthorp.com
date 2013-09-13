@@ -74,8 +74,8 @@ class NavigationHelperTest < MiniTest::Unit::TestCase
       assert_match "href='/posts'", @helper.site_navigation
     end
 
-    should 'have a link to portfolio' do
-      assert_match "href='/portfolio'", @helper.site_navigation
+    should 'have a link to projects' do
+      assert_match "href='/projects'", @helper.site_navigation
     end
 
     should 'have a link to resume' do

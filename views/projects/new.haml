@@ -1,0 +1,9 @@
+.row
+  .large-8.large-centered.columns
+    %header
+      %h3 New Project
+
+.row
+  .large-8.large-centered.columns
+    %section
+      = partial :'projects/form', locals: { project: @project, url: '/projects', method: 'post' }

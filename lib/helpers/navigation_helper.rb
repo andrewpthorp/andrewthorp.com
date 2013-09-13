@@ -32,7 +32,7 @@ module NavigationHelper
     elems << content_tag(:li, link_to(' <span>Home</span>', '/', class: 'icon-home', title: 'Home'))
     elems << content_tag(:li, link_to(' <span>About</span>', '/about', class: 'icon-about', title: 'About Me'))
     elems << content_tag(:li, link_to(' <span>Blog</span>', '/posts', class: 'icon-blog', title: 'Blog'))
-    elems << content_tag(:li, link_to(' <span>Portfolio</span>', '/portfolio', class: 'icon-portfolio', title: 'Portfolio'))
+    elems << content_tag(:li, link_to(' <span>Portfolio</span>', '/projects', class: 'icon-portfolio', title: 'Portfolio'))
     elems << content_tag(:li, link_to(' <span>Resume</span>', '/resume', class: 'icon-resume', title: 'Resume'))
 
     if user_signed_in?

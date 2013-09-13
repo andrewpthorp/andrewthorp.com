@@ -1,0 +1,10 @@
+.row
+  .large-8.large-centered.columns
+    - @projects.each do |project|
+      .project
+        %h3= link_to project.title, project.url, target: '_blank'
+        - unless project.quote.blank?
+          %p.pullquote= project.quote
+        %p= project.body
+        - unless project.image.blank?
+          %p= image_tag project.full_image_url, width: 600

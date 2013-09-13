@@ -10,7 +10,7 @@ class AndrewThorp < Sinatra::Base
   register SinatraMore::MarkupPlugin
   helpers AuthenticationHelper, NavigationHelper, ViewHelper
   enable :sessions
-  set :session_secret, ENV["SESSION_SECRET"] || "abc123"
+  set :session_secret, ENV['SESSION_SECRET'] || 'abc123'
   set :views, "#{File.dirname(__FILE__)}/views"
   set :public_folder, "#{File.dirname(__FILE__)}/public"
 
@@ -18,20 +18,15 @@ class AndrewThorp < Sinatra::Base
     enable :logging
   end
 
-  get "/" do
+  get '/' do
     haml :index, layout: true
   end
 
-  get "/about" do
+  get '/about' do
     haml :about, layout: true
   end
 
-  get "/portfolio" do
-    @projects = Project.published
-    haml :portfolio, layout: true
-  end
-
-  get "/resume" do
+  get '/resume' do
     haml :resume, layout: true
   end
 

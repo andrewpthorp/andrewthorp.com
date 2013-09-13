@@ -71,8 +71,31 @@ class AndrewthorpTest < MiniTest::Unit::TestCase
     assert_valid_response "/posts/#{post.slug}"
   end
 
-  should "respond to GET '/portfolio'" do
-    assert_valid_response "/portfolio"
+  should "respond to GET '/projects'" do
+    assert_valid_response "/projects"
+  end
+
+  should "respond to GET '/projects/new" do
+    assert_valid_response "/projects/new"
+  end
+
+  should "respond to POST '/projects'" do
+    assert_valid_response "/projects", "post"
+  end
+
+  should "respond to GET '/projects/:id/edit'" do
+    project = create(:project)
+    assert_valid_response "/projects/#{project.id}/edit"
+  end
+
+  should "respond to PUT '/projects/:id'" do
+    project = create(:project)
+    assert_valid_response "/projects/#{project.id}", "put"
+  end
+
+  should "respond to GET '/projects/:id/delete'" do
+    project = create(:project)
+    assert_valid_response "/projects/#{project.id}/delete"
   end
 
   should "respond to GET '/resume'" do
