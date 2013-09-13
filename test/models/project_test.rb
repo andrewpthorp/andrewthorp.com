@@ -33,35 +33,12 @@ class ProjectTest < MiniTest::Unit::TestCase
     end
   end
 
-  context '.hooks' do
-    should 'call set_slug before create' do
-      @project.expects(:set_slug).with(@project.title.to_slug)
-      @project.save
-    end
-  end
-
   context '.scopes' do
     context '.published' do
       should 'return published projects' do
         @project.save
         create(:project, published: false)
         assert Project.published == [@project], 'published scope return unpublished Projects'
-      end
-    end
-  end
-
-  context '#methods' do
-    context '#set_slug' do
-      should 'create a valid slug on save' do
-        @project.set_slug('some-slug')
-        assert_equal @project.slug, 'some-slug'
-      end
-
-      should 'prevent duplicate slugs' do
-        @project.save
-        p = build(:project)
-        p.set_slug(p.title.to_slug)
-        assert_equal p.slug, 'foobar-title-2'
       end
     end
   end

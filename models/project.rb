@@ -12,16 +12,6 @@ class Project
   property :quote, String, length: 255
   property :created_at, DateTime
   property :updated_at, DateTime
-  property :slug, String, length: 100
-
-  # Public: Leverages the gem dm-is-sluggable to handle slugs.
-  is :sluggable
-
-  # Internal: Before creating a Project, we want to set the slug to the slugged
-  # version of the title.
-  before :create do
-    set_slug(self.title.to_slug)
-  end
 
   # Public: A scope that returns all Projects that have the Boolean published
   # set to true.
