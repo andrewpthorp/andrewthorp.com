@@ -1,20 +1,28 @@
-/* line 8, public/stylesheets/sass/partials/_vars.sass */
+/* line 10, public/stylesheets/sass/partials/_vars.sass */
 .color-black {
   color: #222222; }
 
-/* line 11, public/stylesheets/sass/partials/_vars.sass */
+/* line 13, public/stylesheets/sass/partials/_vars.sass */
 .color-gray {
   color: #444444; }
 
-/* line 14, public/stylesheets/sass/partials/_vars.sass */
+/* line 16, public/stylesheets/sass/partials/_vars.sass */
+.color-green {
+  color: #13a863; }
+
+/* line 19, public/stylesheets/sass/partials/_vars.sass */
 .color-light-gray {
   color: #c4c4c4; }
 
-/* line 17, public/stylesheets/sass/partials/_vars.sass */
+/* line 22, public/stylesheets/sass/partials/_vars.sass */
+.color-off-white {
+  color: #f8f8f8; }
+
+/* line 25, public/stylesheets/sass/partials/_vars.sass */
 .color-white {
   color: white; }
 
-/* line 20, public/stylesheets/sass/partials/_vars.sass */
+/* line 28, public/stylesheets/sass/partials/_vars.sass */
 .color-yellow {
   color: #f6f321; }
 
@@ -1697,12 +1705,12 @@ button, .button {
       color: #333333; }
   /* line 177, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
   button.success, .button.success {
-    background-color: #5da423;
-    border-color: #457a1a;
+    background-color: #13a863;
+    border-color: #0e7a48;
     color: white; }
     /* line 122, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-      background-color: #457a1a; }
+      background-color: #0e7a48; }
     /* line 133, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: white; }
@@ -1789,8 +1797,8 @@ button, .button {
         background-color: #e9e9e9; }
     /* line 190, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
-      background-color: #5da423;
-      border-color: #457a1a;
+      background-color: #13a863;
+      border-color: #0e7a48;
       color: white;
       cursor: default;
       opacity: 0.6;
@@ -1798,13 +1806,13 @@ button, .button {
       box-shadow: none; }
       /* line 122, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #457a1a; }
+        background-color: #0e7a48; }
       /* line 133, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         color: white; }
       /* line 146, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #5da423; }
+        background-color: #13a863; }
     /* line 191, public/stylesheets/sass/vendor/foundation/components/_buttons.scss */
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: #c60f13;
@@ -1872,16 +1880,16 @@ button, .button {
 /* Standard Forms */
 /* line 258, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
 form {
-  margin: 0 0 1em; }
+  margin: 0 0 1.5625em; }
 
 /* Using forms within rows, we need to set some defaults */
 /* line 67, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
 form .row .row {
-  margin: 0 -0.5em; }
+  margin: 0 -0.78125em; }
   /* line 70, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
   form .row .row .column,
   form .row .row .columns {
-    padding: 0 0.5em; }
+    padding: 0 0.78125em; }
   /* line 73, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
   form .row .row.collapse {
     margin: 0; }
@@ -1894,7 +1902,7 @@ form .row input.column,
 form .row input.columns,
 form .row textarea.column,
 form .row textarea.columns {
-  padding-left: 0.5em; }
+  padding-left: 0.78125em; }
 
 /* Label Styles */
 /* line 264, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
@@ -1912,8 +1920,8 @@ label {
     text-align: right; }
   /* line 266, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
   label.inline {
-    margin: 0 0 1em 0;
-    padding: 0.625em 0; }
+    margin: 0 0 1.5625em 0;
+    padding: 0.90625em 0; }
   /* line 268, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
   label small {
     text-transform: capitalize;
@@ -1934,8 +1942,8 @@ label {
   border-width: 1px;
   overflow: hidden;
   font-size: 0.875em;
-  height: 2.3125em;
-  line-height: 2.3125em; }
+  height: 3.15625em;
+  line-height: 3.15625em; }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 /* line 279, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
@@ -2093,35 +2101,16 @@ textarea {
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875em;
-  margin: 0 0 1em 0;
-  padding: 0.5em;
-  height: 2.3125em;
+  margin: 0 0 1.5625em 0;
+  padding: 0.78125em;
+  height: 3.15625em;
   width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
-  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
-  transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
-  /* line 134, public/stylesheets/sass/vendor/foundation/components/_global.scss */
-  input[type="text"]:focus,
-  input[type="password"]:focus,
-  input[type="date"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="tel"]:focus,
-  input[type="time"]:focus,
-  input[type="url"]:focus,
-  textarea:focus {
-    -webkit-box-shadow: 0 0 5px #999999;
-    -moz-box-shadow: 0 0 5px #999999;
-    box-shadow: 0 0 5px #999999;
-    border-color: #999999; }
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
   /* line 107, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -2163,7 +2152,7 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 1em 0; }
+  margin: 0 0 1.5625em 0; }
 
 /* Normalize file input width */
 /* line 345, public/stylesheets/sass/vendor/foundation/components/_forms.scss */
@@ -2189,8 +2178,8 @@ fieldset {
 [data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
   padding: 0.375em 0.25em;
-  margin-top: -1.3125em;
-  margin-bottom: 1em;
+  margin-top: -1.875em;
+  margin-bottom: 1.5625em;
   font-size: 0.75em;
   font-weight: bold;
   background: #c60f13;
@@ -2204,8 +2193,8 @@ fieldset {
 span.error, small.error {
   display: block;
   padding: 0.375em 0.25em;
-  margin-top: -1.3125em;
-  margin-bottom: 1em;
+  margin-top: -1.875em;
+  margin-bottom: 1.5625em;
   font-size: 0.75em;
   font-weight: bold;
   background: #c60f13;
@@ -2232,8 +2221,8 @@ span.error, small.error {
 .error small.error {
   display: block;
   padding: 0.375em 0.25em;
-  margin-top: -1.3125em;
-  margin-bottom: 1em;
+  margin-top: -1.875em;
+  margin-bottom: 1.5625em;
   font-size: 0.75em;
   font-weight: bold;
   background: #c60f13;
@@ -2490,7 +2479,7 @@ label.error {
     border-left-color: #7f0a0c; }
   /* line 79, public/stylesheets/sass/vendor/foundation/components/_split-buttons.scss */
   .split.button.success span {
-    border-left-color: #396516; }
+    border-left-color: #0b633b; }
   /* line 156, public/stylesheets/sass/vendor/foundation/components/_split-buttons.scss */
   .split.button.tiny {
     padding-right: 3.9375em; }
@@ -3636,10 +3625,10 @@ label.error {
         background: #d0d0d0; }
     /* line 259, public/stylesheets/sass/vendor/foundation/components/_top-bar.scss */
     .top-bar-section ul li > a.button.success {
-      background: #5da423; }
+      background: #13a863; }
       /* line 261, public/stylesheets/sass/vendor/foundation/components/_top-bar.scss */
       .top-bar-section ul li > a.button.success.hover {
-        background: #457a1a; }
+        background: #0e7a48; }
     /* line 265, public/stylesheets/sass/vendor/foundation/components/_top-bar.scss */
     .top-bar-section ul li > a.button.alert {
       background: #c60f13; }
@@ -4636,8 +4625,8 @@ label.error {
     border-radius: 1000px; }
   /* line 102, public/stylesheets/sass/vendor/foundation/components/_alert-boxes.scss */
   .alert-box.success {
-    background-color: #5da423;
-    border-color: #457a1a;
+    background-color: #13a863;
+    border-color: #0e7a48;
     color: white; }
   /* line 103, public/stylesheets/sass/vendor/foundation/components/_alert-boxes.scss */
   .alert-box.alert {
@@ -4775,7 +4764,7 @@ form.custom {
     display: block;
     position: relative;
     top: 0;
-    height: 2.3125em;
+    height: 3.15625em;
     margin-bottom: 1.25em;
     margin-top: 0px;
     padding: 0px;
@@ -4796,19 +4785,19 @@ form.custom {
     form.custom .custom.dropdown .current {
       cursor: default;
       white-space: nowrap;
-      line-height: 2.25em;
+      line-height: 3.09375em;
       color: rgba(0, 0, 0, 0.75);
       text-decoration: none;
       overflow: hidden;
       display: block;
-      margin-left: 0.5em;
-      margin-right: 2.3125em; }
+      margin-left: 0.78125em;
+      margin-right: 3.15625em; }
     /* line 160, public/stylesheets/sass/vendor/foundation/components/_custom-forms.scss */
     form.custom .custom.dropdown .selector {
       cursor: default;
       position: absolute;
-      width: 2.5em;
-      height: 2.3125em;
+      width: 3.90625em;
+      height: 3.15625em;
       display: block;
       right: 0;
       top: 0; }
@@ -4824,7 +4813,7 @@ form.custom {
         border-color: #aaaaaa transparent transparent transparent;
         border-top-style: solid;
         position: absolute;
-        left: 0.9375em;
+        left: 1.64063em;
         top: 50%;
         margin-top: -3px; }
     /* line 181, public/stylesheets/sass/vendor/foundation/components/_custom-forms.scss */
@@ -4990,7 +4979,7 @@ kbd {
     color: white; }
   /* line 81, public/stylesheets/sass/vendor/foundation/components/_labels.scss */
   .label.success {
-    background-color: #5da423;
+    background-color: #13a863;
     color: white; }
   /* line 82, public/stylesheets/sass/vendor/foundation/components/_labels.scss */
   .label.secondary {
@@ -5194,7 +5183,7 @@ ul.pagination {
     display: block; }
   /* line 58, public/stylesheets/sass/vendor/foundation/components/_progress-bars.scss */
   .progress.success .meter {
-    background: #5da423;
+    background: #13a863;
     height: 100%;
     display: block; }
   /* line 59, public/stylesheets/sass/vendor/foundation/components/_progress-bars.scss */
@@ -5393,8 +5382,8 @@ ul.pagination {
       background: -moz-linear-gradient(top, white 0%, #f2f2f2 100%);
       background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
       background: linear, to bottom, white 0%, #f2f2f2 100%;
-      -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
-      box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
+      -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #c2f8df, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
+      box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #c2f8df, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
     /* line 196, public/stylesheets/sass/vendor/foundation/components/_switch.scss */
     div.switch:hover span:last-child, div.switch:focus span:last-child {
       background: white;
@@ -5744,6 +5733,18 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
+/* line 1, public/stylesheets/sass/partials/_forms.sass */
+form {
+  margin-bottom: 0px; }
+
+/* line 4, public/stylesheets/sass/partials/_forms.sass */
+textarea {
+  height: 300px; }
+
+/* line 7, public/stylesheets/sass/partials/_forms.sass */
+input[type=checkbox] + label {
+  margin-left: 10px; }
+
 @font-face {
   font-family: "Bitter";
   src: url("/fonts/Bitter-Regular.ttf") format("truetype");
@@ -5807,6 +5808,22 @@ a {
 /* line 31, public/stylesheets/sass/partials/_globals.sass */
 h1 .emoji, h1 .emoji img, h2 .emoji, h2 .emoji img, h3 .emoji, h3 .emoji img, h4 .emoji, h4 .emoji img, h5 .emoji, h5 .emoji img, h6 .emoji, h6 .emoji img {
   max-height: 30px; }
+
+/* line 34, public/stylesheets/sass/partials/_globals.sass */
+section {
+  background: #f8f8f8;
+  border: 5px solid #c4c4c4;
+  border-radius: 8px;
+  padding: 25px; }
+  /* line 39, public/stylesheets/sass/partials/_globals.sass */
+  section footer {
+    margin: 25px -25px -25px;
+    background: #c4c4c4;
+    padding: 25px 25px 0px; }
+
+/* line 45, public/stylesheets/sass/partials/_globals.sass */
+header h1, header h2, header h3, header h4, header h5, header h6 {
+  padding-left: 30px; }
 
 /* line 1, public/stylesheets/sass/partials/_helpers.sass */
 .mute, .posts article p.caption, .post article p.caption, .post footer p {

@@ -1,23 +1,9 @@
 .row
   .large-8.large-centered.columns
-    .post.show
-      %h1.title
-        = link_to "&#xe04a;", "/posts", class: "no-underline icomoon"
-        New Post
+    %header
+      %h3 New Post
 
-      - form_for(@post, "/posts", method: "post") do |f|
-
-        %p
-          = f.text_field :title, class: "input_full", placeholder: "Title"
-
-        %p
-          = f.text_field :tag_list, class: "input_full", placeholder: "Tags (Comma Separated)", value: f.object.tag_collection
-
-        %p
-          = f.text_area :body, class: "input_full", placeholder: "Body", value: preserve(f.object.body)
-
-        %p.group
-          = f.check_box :published, class: "float-left"
-          = f.label :published, class: "float-left", caption: "Publish Post?"
-        %p
-          = f.submit "Save"
+.row
+  .large-8.large-centered.columns
+    %section
+      = partial :'posts/form', locals: { post: @post, url: '/posts', method: 'post' }

@@ -74,6 +74,7 @@ $primary-color: $color_black;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
+$success-color: $color_green;
 
 // Make sure border radius matches unless we want it different.
 
@@ -284,6 +285,7 @@ $header-font-color: $color_black;
 // We use this to set the base for lots of form spacing and positioning styles
 
 // $form-spacing: emCalc(16);
+$form-spacing: emCalc(25);
 
 // We use these to style the labels in different ways
 
@@ -304,6 +306,7 @@ $header-font-color: $color_black;
 // $input-disabled-bg: #ddd;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 // $input-include-glowing-effect: true;
+$input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.
 

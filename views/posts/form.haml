@@ -1,0 +1,25 @@
+- form_for(post, url, method: method) do |f|
+
+  .row
+    .large-12.columns
+      = f.text_field :title, placeholder: "Title"
+
+  .row
+    .large-12.columns
+      = f.text_area :body, placeholder: "Body", value: preserve(f.object.body)
+
+  .row
+    .large-12.columns
+      = f.text_field :tag_list, placeholder: "Tags (Comma Separated)", value: f.object.tag_list
+
+  .row
+    .large-12.columns
+      = f.check_box :published, class: 'left'
+      = f.label :published, caption: 'Publish Post', class: 'left'
+
+  %footer
+    .row
+      .large-6.columns
+        = link_to 'Cancel', '/posts', class: 'button secondary'
+      .large-6.columns
+        = f.submit 'Save', class: 'button success right'
