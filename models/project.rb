@@ -26,7 +26,11 @@ class Project
   #
   # Returns a String.
   def full_image_url
-    "https://s3.amazonaws.com/andrewthorp-blog-pro/project-images/#{image}"
+    if image.blank?
+      ''
+    else
+      "https://s3.amazonaws.com/andrewthorp-blog-pro/project-images/#{image}"
+    end
   end
 
 end

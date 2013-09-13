@@ -50,6 +50,13 @@ class ProjectTest < MiniTest::Unit::TestCase
         assert_equal 'https://s3.amazonaws.com/andrewthorp-blog-pro/project-images/andrewthorp.png',
                       @project.full_image_url
       end
+
+      context 'when image is blank' do
+        should 'return an empty string' do
+          @project.image = ''
+          assert_equal '', @project.full_image_url
+        end
+      end
     end
   end
 
