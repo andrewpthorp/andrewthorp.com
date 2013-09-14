@@ -5921,55 +5921,55 @@ html, body {
   background: #444444;
   height: 100%;
   left: 0px;
-  padding: 15px;
   position: fixed;
+  padding: 15px 0px;
   top: 0px; }
   /* line 8, public/stylesheets/sass/partials/_navigation.sass */
   #site-nav li {
-    margin-bottom: 15px; }
+    margin-bottom: 0px; }
     /* line 10, public/stylesheets/sass/partials/_navigation.sass */
     #site-nav li a {
       -webkit-transition: all 0.15s ease-in-out;
       -moz-transition: all 0.15s ease-in-out;
       transition: all 0.15s ease-in-out;
+      border-right: 10px solid transparent;
       color: white;
-      display: inline-block;
+      display: block;
       font-size: 1.5em;
+      padding: 5px 10px 5px 15px;
       position: relative;
       text-shadow: 0px 1px 0px #222222; }
-      /* line 17, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 19, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li a:hover {
-        color: #f6f321;
-        text-decoration: none; }
-      /* line 20, public/stylesheets/sass/partials/_navigation.sass */
+        background: #5e5e5e;
+        border-color: #13a863;
+        text-decoration: none;
+        margin-right: -10px; }
+      /* line 24, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li a:active {
         left: 1px;
         top: 1px; }
-      /* line 23, public/stylesheets/sass/partials/_navigation.sass */
-      #site-nav li a.logout, #site-nav li a.login {
-        margin-top: 2px; }
-        /* line 25, public/stylesheets/sass/partials/_navigation.sass */
-        #site-nav li a.logout span, #site-nav li a.login span {
-          top: -4px;
-          position: relative; }
-      /* line 28, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 27, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li a span {
         display: none;
-        font-size: 0.75em;
-        margin: 0px 5px; }
-  /* line 35, public/stylesheets/sass/partials/_navigation.sass */
-  #site-nav:hover li a span, #site-nav.show-labels li a span {
+        font-size: 13px;
+        margin: 0px 5px;
+        position: relative;
+        top: -5px;
+        width: 70px; }
+  /* line 37, public/stylesheets/sass/partials/_navigation.sass */
+  #site-nav:hover li a span {
     display: inline-block; }
 
-/* line 38, public/stylesheets/sass/partials/_navigation.sass */
+/* line 40, public/stylesheets/sass/partials/_navigation.sass */
 #social-nav {
   margin-bottom: 35px;
   text-align: center; }
-  /* line 41, public/stylesheets/sass/partials/_navigation.sass */
+  /* line 43, public/stylesheets/sass/partials/_navigation.sass */
   #social-nav li {
     display: inline-block;
     margin-right: 1.875em; }
-    /* line 44, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 46, public/stylesheets/sass/partials/_navigation.sass */
     #social-nav li a {
       font-family: "icomoon";
       speak: none;
@@ -5979,24 +5979,24 @@ html, body {
       -webkit-font-smoothing: antialiased;
       color: #444444;
       font-size: 2.8125em; }
-      /* line 48, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 50, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a:hover {
         text-decoration: none; }
-      /* line 50, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 52, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.facebook:hover {
         color: #5574ad; }
-      /* line 52, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 54, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.twitter:hover {
         color: #2eb8e7; }
-      /* line 54, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 56, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.github:hover {
         color: #286da3; }
-    /* line 56, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 58, public/stylesheets/sass/partials/_navigation.sass */
     #social-nav li:last-child {
       margin-right: 0px; }
 
 @media only screen and (max-width: 768px) {
-  /* line 60, public/stylesheets/sass/partials/_navigation.sass */
+  /* line 62, public/stylesheets/sass/partials/_navigation.sass */
   #site-nav {
     height: auto;
     left: 0px;
@@ -6005,15 +6005,18 @@ html, body {
     top: 0px;
     width: 100%;
     z-index: 100; }
-    /* line 68, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 70, public/stylesheets/sass/partials/_navigation.sass */
     #site-nav li {
       display: inline-block;
-      margin-right: 25px;
+      margin-right: 15px;
       margin-bottom: 0px; }
-      /* line 72, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 74, public/stylesheets/sass/partials/_navigation.sass */
+      #site-nav li a {
+        border: 0px none; }
+      /* line 76, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li:last-child {
         margin-right: 0px; }
-    /* line 77, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 81, public/stylesheets/sass/partials/_navigation.sass */
     #site-nav:hover li a span {
       display: none; } }
 /* line 1, public/stylesheets/sass/sections/_about.sass */
