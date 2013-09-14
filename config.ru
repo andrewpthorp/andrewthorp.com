@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'data_mapper'
+require 'dm-is-sluggable'
+require 'emoji'
 
 # Enable '_method' override hack in HTML forms.
 use Rack::MethodOverride

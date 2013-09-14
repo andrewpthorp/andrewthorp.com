@@ -4,6 +4,7 @@ require 'sinatra_more/markup_plugin'
 require 'logger'
 
 Dir['lib/**/*.rb'].each { |f| require_relative f }
+Dir['app/**/*.rb'].each { |f| require_relative f }
 
 class AndrewThorp < Sinatra::Base
   register Sinatra::Partial
