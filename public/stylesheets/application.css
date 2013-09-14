@@ -5936,7 +5936,7 @@ html, body {
       color: white;
       display: block;
       font-size: 1.5em;
-      padding: 5px 10px 5px 15px;
+      padding: 5px 10px 5px 23px;
       position: relative;
       text-shadow: 0px 1px 0px #222222; }
       /* line 19, public/stylesheets/sass/partials/_navigation.sass */
@@ -5951,25 +5951,33 @@ html, body {
         top: 1px; }
       /* line 27, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li a span {
-        display: none;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        display: inline-block;
+        visibility: hidden;
         font-size: 13px;
-        margin: 0px 5px;
+        overflow: hidden;
         position: relative;
+        text-overflow: hidden;
         top: -5px;
-        width: 70px; }
-  /* line 37, public/stylesheets/sass/partials/_navigation.sass */
+        white-space: nowrap;
+        width: 0px; }
+  /* line 41, public/stylesheets/sass/partials/_navigation.sass */
   #site-nav:hover li a span {
-    display: inline-block; }
+    margin-left: 10px;
+    visibility: visible;
+    width: 75px; }
 
-/* line 40, public/stylesheets/sass/partials/_navigation.sass */
+/* line 46, public/stylesheets/sass/partials/_navigation.sass */
 #social-nav {
   margin-bottom: 35px;
   text-align: center; }
-  /* line 43, public/stylesheets/sass/partials/_navigation.sass */
+  /* line 49, public/stylesheets/sass/partials/_navigation.sass */
   #social-nav li {
     display: inline-block;
     margin-right: 1.875em; }
-    /* line 46, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 52, public/stylesheets/sass/partials/_navigation.sass */
     #social-nav li a {
       font-family: "icomoon";
       speak: none;
@@ -5979,24 +5987,24 @@ html, body {
       -webkit-font-smoothing: antialiased;
       color: #444444;
       font-size: 2.8125em; }
-      /* line 50, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 56, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a:hover {
         text-decoration: none; }
-      /* line 52, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 58, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.facebook:hover {
         color: #5574ad; }
-      /* line 54, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 60, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.twitter:hover {
         color: #2eb8e7; }
-      /* line 56, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 62, public/stylesheets/sass/partials/_navigation.sass */
       #social-nav li a.github:hover {
         color: #286da3; }
-    /* line 58, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 64, public/stylesheets/sass/partials/_navigation.sass */
     #social-nav li:last-child {
       margin-right: 0px; }
 
 @media only screen and (max-width: 768px) {
-  /* line 62, public/stylesheets/sass/partials/_navigation.sass */
+  /* line 68, public/stylesheets/sass/partials/_navigation.sass */
   #site-nav {
     height: auto;
     left: 0px;
@@ -6005,18 +6013,27 @@ html, body {
     top: 0px;
     width: 100%;
     z-index: 100; }
-    /* line 70, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 76, public/stylesheets/sass/partials/_navigation.sass */
     #site-nav li {
       display: inline-block;
-      margin-right: 15px;
+      margin-right: 10px;
       margin-bottom: 0px; }
-      /* line 74, public/stylesheets/sass/partials/_navigation.sass */
+      /* line 80, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li a {
-        border: 0px none; }
-      /* line 76, public/stylesheets/sass/partials/_navigation.sass */
+        border: 0px none;
+        border-radius: 5px;
+        margin: 0px;
+        padding: 5px 8px; }
+        /* line 85, public/stylesheets/sass/partials/_navigation.sass */
+        #site-nav li a:hover {
+          margin: 0px; }
+        /* line 87, public/stylesheets/sass/partials/_navigation.sass */
+        #site-nav li a span {
+          display: none; }
+      /* line 89, public/stylesheets/sass/partials/_navigation.sass */
       #site-nav li:last-child {
         margin-right: 0px; }
-    /* line 81, public/stylesheets/sass/partials/_navigation.sass */
+    /* line 94, public/stylesheets/sass/partials/_navigation.sass */
     #site-nav:hover li a span {
       display: none; } }
 /* line 1, public/stylesheets/sass/sections/_about.sass */
