@@ -1,0 +1,24 @@
+.row
+  .large-8.large-centered.columns
+    .post.show
+      %h2= @post.title
+
+      %article
+        = emojify @post.markdown_body
+
+      %footer
+        %p
+          POSTED #{@post.created_at.to_s(:pretty)}
+          - @post.tags.each do |t|
+            %span.tag= link_to t.name, "/posts/tagged/#{t.name}", class: 'icon-tags'
+
+        .row
+          .actions
+            .large-6.columns
+              %ul.inline-list
+                %li= link_to 'Back', '/posts', class: 'button secondary small'
+            .large-6.columns
+              - if current_user
+                %ul.inline-list.right
+                  %li= link_to 'Edit', "/posts/#{@post.slug}/edit", class: 'button secondary small'
+                  %li= link_to 'Delete', "/posts/#{@post.slug}/delete", class: 'button secondary small'

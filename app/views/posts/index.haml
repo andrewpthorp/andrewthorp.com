@@ -1,0 +1,22 @@
+.row
+  .large-8.large-centered.columns
+    .posts
+      %h3
+        Blog: sports, dev, life.
+        = image_tag 'emoji/baseball.png', class: 'emoji'
+        = image_tag 'emoji/computer.png', class: 'emoji'
+        = image_tag 'emoji/beers.png', class: 'emoji'
+
+      - if @posts.any?
+        %ul#post-list
+          - @posts.each do |p|
+            %li
+              = classify(p)
+              = link_to p.title, "/posts/#{p.slug}"
+
+      - else
+        %p.mute.align-center
+          %strong
+            The Enquirer
+          has no gossip on this subject.
+          = link_to 'Oh well, take me back.', '/'

@@ -1,28 +1,15 @@
-require "rubygems"
-require "bundler/setup"
-require "sinatra"
-require "newrelic_rpm"
-require "data_mapper"
-require "dm-is-sluggable"
-require "dm-constraints"
-require "haml"
-require "json"
-require "emoji"
+require 'rubygems'
+require 'bundler/setup'
+require 'data_mapper'
 
-# Enable "_method" override hack in HTML forms.
+# Enable '_method' override hack in HTML forms.
 use Rack::MethodOverride
-
-# Require all lib
-Dir["./lib/*.rb"].each { |f| require f }
 
 # Setup DataMapper Logger
 DataMapper::Logger.new($stdout, :debug)
 
 # Setup sqlite3 database
-DataMapper::setup(:default, ENV["DATABASE_URL"] || "sqlite3://#{Dir.pwd}/andrewthorp-development.db")
-
-# Require all models
-Dir["./models/*.rb"].each { |f| require f }
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/andrewthorp-development.db")
 
 # Finalize DataMapper
 DataMapper.finalize
@@ -31,5 +18,5 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 # Require and run!
-require "./andrewthorp"
+require './andrewthorp'
 run AndrewThorp

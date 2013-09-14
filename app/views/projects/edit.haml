@@ -1,0 +1,9 @@
+.row
+  .large-8.large-centered.columns
+    %header
+      %h3 Edit Project
+
+.row
+  .large-8.large-centered.columns
+    %section
+      = partial :'projects/form', locals: { project: @project, url: "/projects/#{@project.id}", method: 'put' }
