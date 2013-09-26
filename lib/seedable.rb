@@ -56,6 +56,10 @@ module Seedable
             image: 'aceofsales.png', body: 'Rails app with SASS, ERB, and CoffeeScript.'
           },
           {
+            title: 'Tushies &amp; Tantrums', url: 'http://tushi.es',
+            image: 'tushies.jpg', body: 'Rails app with SASS, HAML, and CoffeeScript. Using Foundation and Stripe.'
+          },
+          {
             title: "Daniel Keeton's Website", url: 'http://danielkeeton.com',
             image: 'danielkeeton.png', body: 'Rails app with SASS, HAML, and CoffeeScript. Using Foundation.'
           },
