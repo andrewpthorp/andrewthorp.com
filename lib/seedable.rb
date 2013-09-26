@@ -43,11 +43,6 @@ module Seedable
             image: '', body: "ESPN has a pretty awesome API, but I couldn't find a simple way to digest it in a ruby application. I built a RubyGem that wraps the API so you can pull their information into your websites, command line apps, etc."
           },
           {
-            title: 'Tushies &amp; Tantrums', url: 'http://tushiesandtantrums.com',
-            image: 'tushiesandtantrums.png', body: 'Rails app with SASS, HAML, and Coffeescript. Using Foundation.',
-            published: false
-          },
-          {
             title: 'Pure Charity', url: 'http://purecharity.com',
             image: 'purecharity.png', body: 'Rails app with SASS, HAML, and CoffeeSCript.'
           },
