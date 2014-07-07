@@ -10,5 +10,9 @@ class AndrewThorp < Sinatra::Base
     slim :index
   end
 
+  get '/pgp' do
+    slim :pgp
+  end
+
   run! if app_file == $0
 end

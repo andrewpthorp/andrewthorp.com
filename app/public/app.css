@@ -7160,10 +7160,38 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 /*# sourceMappingURL=foundation.css.map */
-/* line 3, app/assets/sass/app.sass */
+/* line 9, app/assets/sass/app.sass */
 body {
-  background: white;
+  background: #f2f2ef;
   margin: 25px auto 75px; }
-  /* line 7, app/assets/sass/app.sass */
-  body h1.logo {
-    margin-bottom: 25px; }
+
+/* line 13, app/assets/sass/app.sass */
+h1, h2, h3, h4, h5, h6, p, ul li, ol li {
+  color: #403833;
+  font-family: "Droid Sans", sans-serif; }
+  /* line 16, app/assets/sass/app.sass */
+  h1#global-header, h2#global-header, h3#global-header, h4#global-header, h5#global-header, h6#global-header, p#global-header, ul li#global-header, ol li#global-header {
+    margin: 0px 0px 25px; }
+
+/* line 19, app/assets/sass/app.sass */
+ul {
+  list-style-type: none;
+  margin-left: 0px; }
+
+/* line 23, app/assets/sass/app.sass */
+a {
+  background: #deded8;
+  color: #13a3a5;
+  padding: 0px 2px; }
+  /* line 27, app/assets/sass/app.sass */
+  a:hover {
+    background: #403833;
+    color: #f2f2ef; }
+
+/* line 31, app/assets/sass/app.sass */
+pre.pgp {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
