@@ -1,7 +1,3 @@
-guard 'coffeescript', input: 'public/javascripts/coffee', output: 'public/javascripts'
-guard 'sass', input: 'public/stylesheets/sass', output: 'public/stylesheets', line_numbers: true
-
-guard 'livereload' do
-  watch(%r{public/stylesheets/.+\.css})
-  watch(%r{.+\.html})
-end
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+guard 'sass', input: 'app/assets/sass', output: 'app/public', line_numbers: true

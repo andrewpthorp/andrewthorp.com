@@ -1,9 +1,0 @@
-.row
-  .large-8.large-centered.columns
-    %header
-      %h3 New Post
-
-.row
-  .large-8.large-centered.columns
-    %section
-      = partial :'posts/form', locals: { post: @post, url: '/posts', method: 'post' }
