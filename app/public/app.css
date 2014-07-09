@@ -7160,38 +7160,45 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 /*# sourceMappingURL=foundation.css.map */
-/* line 9, app/assets/sass/app.sass */
+/* line 8, app/assets/sass/app.sass */
 body {
-  background: #f2f2ef;
-  margin: 25px auto 75px; }
+  background: #f2ede4; }
 
-/* line 13, app/assets/sass/app.sass */
+/* line 11, app/assets/sass/app.sass */
+hr {
+  border-color: #e2dccb; }
+
+/* line 14, app/assets/sass/app.sass */
 h1, h2, h3, h4, h5, h6, p, ul li, ol li {
-  color: #403833;
+  color: #4d4d4d;
   font-family: "Droid Sans", sans-serif; }
-  /* line 16, app/assets/sass/app.sass */
+  /* line 17, app/assets/sass/app.sass */
   h1#global-header, h2#global-header, h3#global-header, h4#global-header, h5#global-header, h6#global-header, p#global-header, ul li#global-header, ol li#global-header {
-    margin: 0px 0px 25px; }
+    font-size: 1.75em;
+    font-size: 1.75rem;
+    margin: 25px 0px 25px; }
 
-/* line 19, app/assets/sass/app.sass */
-ul {
-  list-style-type: none;
-  margin-left: 0px; }
-
-/* line 23, app/assets/sass/app.sass */
-a {
-  background: #deded8;
-  color: #13a3a5;
-  padding: 0px 2px; }
+/* line 22, app/assets/sass/app.sass */
+div#content {
+  border: 1px solid #e2dccb;
+  border-width: 1px 0px 0px 1px;
+  padding: 15px 0px 15px 25px; }
   /* line 27, app/assets/sass/app.sass */
-  a:hover {
-    background: #403833;
-    color: #f2f2ef; }
-
-/* line 31, app/assets/sass/app.sass */
-pre.pgp {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word; }
+  div#content ul {
+    list-style-type: none;
+    margin-left: 0px; }
+  /* line 31, app/assets/sass/app.sass */
+  div#content a {
+    background: #e2dccb;
+    color: #059e9a;
+    padding: 0px 2px; }
+    /* line 35, app/assets/sass/app.sass */
+    div#content a:hover {
+      background: #059e9a;
+      color: white; }
+    /* line 38, app/assets/sass/app.sass */
+    div#content a.gpg {
+      margin-left: 8px; }
+  /* line 42, app/assets/sass/app.sass */
+  div#content footer p {
+    margin-bottom: 0px; }

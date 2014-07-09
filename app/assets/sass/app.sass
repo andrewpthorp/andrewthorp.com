@@ -1,37 +1,43 @@
 @import '../bower/foundation/css/foundation'
 
-$black: #403833
-$blue: #13A3A5
-$gray: #deded8
-$red: #E54E45
-$white: #F2F2EF
+$body: #F2EDE4
+$font: #4D4D4D
+$linkColor: #059E9A
+$linkBackground: #E2DCCB
 
 body
-  background: $white
-  margin: 25px auto 75px
+  background: $body
+
+hr
+  border-color: $linkBackground
 
 h1, h2, h3, h4, h5, h6, p, ul li, ol li
-  color: $black
+  color: $font
   font-family: 'Droid Sans', sans-serif
   &#global-header
-    margin: 0px 0px 25px
+    font-size: 1.75em
+    font-size: 1.75rem
+    margin: 25px 0px 25px
 
-ul
-  list-style-type: none
-  margin-left: 0px
+div#content
+  border: 1px solid $linkBackground
+  border-width: 1px 0px 0px 1px
+  padding: 15px 0px 15px 25px
 
-a
-  background: $gray
-  color: $blue
-  padding: 0px 2px
-  &:hover
-    background: $black
-    color: $white
+  ul
+    list-style-type: none
+    margin-left: 0px
 
-pre.pgp
-  white-space: pre-wrap
-  white-space: -moz-pre-wrap
-  white-space: -pre-wrap
-  white-space: -o-pre-wrap
-  word-wrap: break-word
+  a
+    background: $linkBackground
+    color: $linkColor
+    padding: 0px 2px
+    &:hover
+      background: $linkColor
+      color: white
+    &.gpg
+      margin-left: 8px
 
+  footer
+    p
+      margin-bottom: 0px
