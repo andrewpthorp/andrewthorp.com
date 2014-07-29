@@ -7160,45 +7160,48 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 /*# sourceMappingURL=foundation.css.map */
-/* line 8, app/assets/sass/app.sass */
+/* line 8, app/assets/sass/app.scss */
 body {
-  background: #f2ede4; }
+  background: white; }
 
-/* line 11, app/assets/sass/app.sass */
+/* line 12, app/assets/sass/app.scss */
 hr {
-  border-color: #e2dccb; }
+  border-color: #cc342d; }
 
-/* line 14, app/assets/sass/app.sass */
+/* line 16, app/assets/sass/app.scss */
 h1, h2, h3, h4, h5, h6, p, ul li, ol li {
-  color: #4d4d4d;
-  font-family: "Droid Sans", sans-serif; }
-  /* line 17, app/assets/sass/app.sass */
+  color: #222222;
+  font-family: 'Droid Sans', sans-serif; }
+  /* line 19, app/assets/sass/app.scss */
   h1#global-header, h2#global-header, h3#global-header, h4#global-header, h5#global-header, h6#global-header, p#global-header, ul li#global-header, ol li#global-header {
     font-size: 1.75em;
     font-size: 1.75rem;
-    margin: 25px 0px 25px; }
+    margin: 45px 0px 25px; }
 
-/* line 22, app/assets/sass/app.sass */
-div#content {
-  border: 1px solid #e2dccb;
-  border-width: 1px 0px 0px 1px;
-  padding: 15px 0px 15px 25px; }
-  /* line 27, app/assets/sass/app.sass */
-  div#content ul {
-    list-style-type: none;
-    margin-left: 0px; }
-  /* line 31, app/assets/sass/app.sass */
-  div#content a {
-    background: #e2dccb;
-    color: #059e9a;
-    padding: 0px 2px; }
-    /* line 35, app/assets/sass/app.sass */
-    div#content a:hover {
-      background: #059e9a;
-      color: white; }
-    /* line 38, app/assets/sass/app.sass */
-    div#content a.pgp {
-      margin-left: 8px; }
-  /* line 42, app/assets/sass/app.sass */
-  div#content footer p {
-    margin-bottom: 0px; }
+/* line 27, app/assets/sass/app.scss */
+div#content ul {
+  list-style-type: none;
+  margin-left: 0px; }
+  /* line 30, app/assets/sass/app.scss */
+  div#content ul li {
+    margin-bottom: 4px; }
+/* line 35, app/assets/sass/app.scss */
+div#content a {
+  background: #cc342d;
+  border: 3px solid #8d241f;
+  border-width: 0px 0px 3px;
+  color: white;
+  padding: 1px 4px 0px; }
+  /* line 41, app/assets/sass/app.scss */
+  div#content a:hover {
+    background: white;
+    color: #cc342d; }
+  /* line 45, app/assets/sass/app.scss */
+  div#content a:active {
+    border-color: white; }
+  /* line 48, app/assets/sass/app.scss */
+  div#content a.pgp {
+    margin-left: 8px; }
+/* line 54, app/assets/sass/app.scss */
+div#content footer p {
+  margin-bottom: 0px; }

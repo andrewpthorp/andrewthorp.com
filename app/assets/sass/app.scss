@@ -1,0 +1,58 @@
+@import '../bower/foundation/css/foundation';
+
+$body: #FFF;
+$font: #222;
+$linkColor: #FFF;
+$linkBackground: #CC342D;
+
+body {
+  background: $body;
+}
+
+hr {
+  border-color: $linkBackground;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul li, ol li {
+  color: $font;
+  font-family: 'Droid Sans', sans-serif;
+  &#global-header {
+    font-size: 1.75em;
+    font-size: 1.75rem;
+    margin: 45px 0px 25px;
+  }
+}
+
+div#content {
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    li {
+      margin-bottom: 4px;
+    }
+  }
+
+  a {
+    background: $linkBackground;
+    border: 3px solid darken($linkBackground, 15%);
+    border-width: 0px 0px 3px;
+    color: $linkColor;
+    padding: 1px 4px 0px;
+    &:hover {
+      background: $linkColor;
+      color: $linkBackground;
+    }
+    &:active {
+      border-color: $linkColor;
+    }
+    &.pgp {
+      margin-left: 8px;
+    }
+  }
+
+  footer {
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
