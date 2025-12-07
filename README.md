@@ -1,17 +1,17 @@
 # andrewthorp.com
 
-My personal website, built with a terminal-inspired interface.
+My personal website, built with a modern, colorful block-based design.
 
 ## About
 
-A simple, interactive terminal-style website that tells my story. Built with vanilla JavaScript, no frameworks needed.
+A clean, animated personal site with personality. Built with vanilla HTML/CSS, no frameworks or JavaScript needed.
 
 ## Features
 
-- Interactive terminal interface with command history
-- Responsive design (works great on mobile and desktop)
-- Easter eggs for Philly sports fans
-- Zero dependencies on the frontend
+- Colorful block-based layout with gradient backgrounds
+- Smooth animations and hover effects
+- Fully responsive (works great on mobile and desktop)
+- Zero JavaScript - pure HTML/CSS
 - Lightweight and fast
 
 ## Local Development
@@ -21,11 +21,11 @@ npm install
 npm start
 ```
 
-Visit `http://localhost:3000`
+Visit `http://localhost:3000` (or use `PORT=8080 npm start` for a different port)
 
 ## Deployment
 
-This site is designed to deploy easily to fly.io:
+This site is deployed to fly.io:
 
 ```bash
 # Install flyctl if you haven't already
@@ -41,21 +41,18 @@ fly launch
 fly deploy
 ```
 
-## Commands
+## Sections
 
-Try these commands on the site:
-- `help` - See all available commands
-- `about` - Learn about me
-- `work` - My professional journey
-- `sports` - Go Birds!
-- `projects` - Side projects
-- `contact` - Get in touch
+- **Work** - Current role at Meter, previous experience at Stripe
+- **Side Projects** - checkins.dev
+- **Interests** - Philly sports, family, cigars, food, learning, video games
+- **Links** - GitHub and Twitter
 
 ## Tech Stack
 
 - Node.js + Express
-- Vanilla JavaScript
-- CSS with gradients and animations
+- Pure HTML/CSS (no JavaScript)
+- CSS animations and gradients
 - Deployed on fly.io
 
 ## License

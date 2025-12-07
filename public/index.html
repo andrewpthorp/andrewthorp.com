@@ -8,26 +8,68 @@
 </head>
 <body>
     <div class="container">
-        <div class="terminal">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="btn close"></span>
-                    <span class="btn minimize"></span>
-                    <span class="btn maximize"></span>
+        <header class="header">
+            <h1>Andrew Thorp</h1>
+            <p class="location">Nashville, TN</p>
+            <p class="tagline-text">Software engineer building things on the internet</p>
+        </header>
+
+        <main class="main">
+            <section class="block block-work">
+                <div class="block-inner">
+                    <h2>💼 Work</h2>
+                    <div class="job">
+                        <h3>Meter</h3>
+                        <p class="year">Now</p>
+                        <p>Building internet infrastructure</p>
+                    </div>
+                    <div class="job">
+                        <h3>Stripe</h3>
+                        <p class="year">2012-2020</p>
+                        <p>Built payment infrastructure for millions of businesses worldwide</p>
+                    </div>
                 </div>
-                <div class="terminal-title">andrewthorp ~ % </div>
-            </div>
-            <div class="terminal-body" id="terminal">
-                <div class="output" id="output"></div>
-                <div class="input-line">
-                    <span class="prompt">andrewthorp ~ %</span>
-                    <input type="text" id="commandInput" class="command-input" autofocus autocomplete="off" spellcheck="false">
-                    <span class="cursor"></span>
+            </section>
+
+            <section class="block block-projects">
+                <div class="block-inner">
+                    <h2>🚀 Side projects</h2>
+                    <a href="https://checkins.dev" target="_blank" class="project">
+                        <span class="project-name">checkins.dev</span>
+                        <span class="project-desc">AI powered micro blogging for
+                          emotional well-being. Reach out if you want to try it!</span>
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="mobile-hint">Type 'help' to get started or just explore</div>
+            </section>
+
+            <section class="block block-interests">
+                <div class="block-inner">
+                    <h2>✨ Interests</h2>
+                    <div class="interests">
+                        <span>Philly sports (Go Birds)</span>
+                        <span>Spending time with my family</span>
+                        <span>Relaxing with a cigar</span>
+                        <span>F O O D</span>
+                        <span>Learning new things</span>
+                        <span>Video games (spent decades playing <a
+                            href="https://www.darkageofcamelot.com"
+                            target="_blank">DAoC</a>)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block block-contact">
+                <div class="block-inner">
+                    <h2>🔗 Links</h2>
+                    <a href="https://github.com/andrewppthorp" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/andrewpthorp" target="_blank">Twitter</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Built with care in Nashville • 2025</p>
+        </footer>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
