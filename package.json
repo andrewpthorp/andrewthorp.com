@@ -1,0 +1,19 @@
+{
+  "name": "andrewthorp.com",
+  "version": "2.0.0",
+  "description": "Andrew Thorp's personal website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["personal", "website"],
+  "author": "Andrew Thorp",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

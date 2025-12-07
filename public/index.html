@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Thorp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn close"></span>
+                    <span class="btn minimize"></span>
+                    <span class="btn maximize"></span>
+                </div>
+                <div class="terminal-title">andrewthorp ~ % </div>
+            </div>
+            <div class="terminal-body" id="terminal">
+                <div class="output" id="output"></div>
+                <div class="input-line">
+                    <span class="prompt">andrewthorp ~ %</span>
+                    <input type="text" id="commandInput" class="command-input" autofocus autocomplete="off" spellcheck="false">
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-hint">Type 'help' to get started or just explore</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

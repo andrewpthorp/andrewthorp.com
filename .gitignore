@@ -1,6 +1,5 @@
-.bundle
+node_modules/
+npm-debug.log
 .DS_Store
-.sass-cache/
-.rspec
 .env
-*.db
+*.log
