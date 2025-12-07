@@ -47,7 +47,6 @@ Try these commands on the site:
 - `help` - See all available commands
 - `about` - Learn about me
 - `work` - My professional journey
-- `family` - Personal life
 - `sports` - Go Birds!
 - `projects` - Side projects
 - `contact` - Get in touch
