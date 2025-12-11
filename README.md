@@ -44,7 +44,7 @@ fly deploy
 ## Sections
 
 - **Work** - Current role at Meter, previous experience at Stripe
-- **Side Projects** - checkins.dev
+- **Side Projects** - tryground.io
 - **Interests** - Philly sports, family, cigars, food, learning, video games
 - **Links** - GitHub and Twitter
 
