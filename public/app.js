@@ -499,11 +499,13 @@
     input.focus({ preventScroll: true });
   }
 
-  // click anywhere on the screen focuses the input (except on real links)
-  screen.addEventListener("mousedown", (e) => {
+  // Tap/click anywhere in the terminal focuses the input (except on links,
+  // chips, or while selecting text). Using `click` and focusing *synchronously*
+  // inside the gesture is what lets the mobile soft keyboard open.
+  screen.addEventListener("click", (e) => {
     if (e.target.closest("a") || e.target.closest(".chip")) return;
     if (window.getSelection().toString()) return; // allow text selection
-    setTimeout(focusInput, 0);
+    focusInput();
   });
 
   input.addEventListener("input", syncCaret);
@@ -516,6 +518,13 @@
     "position:absolute;visibility:hidden;white-space:pre;font:inherit;";
   function syncCaret() {
     caret.style.opacity = "";
+    // match the input's real font so the caret lines up even when the
+    // input is sized differently (e.g. 16px on mobile to avoid zoom).
+    const cs = getComputedStyle(input);
+    measurer.style.fontSize = cs.fontSize;
+    measurer.style.fontFamily = cs.fontFamily;
+    measurer.style.fontWeight = cs.fontWeight;
+    measurer.style.letterSpacing = cs.letterSpacing;
     input.parentElement.appendChild(measurer);
     measurer.textContent = input.value.slice(
       0,

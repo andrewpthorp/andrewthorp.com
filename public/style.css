@@ -230,6 +230,8 @@ a:hover, .link:hover {
 @media (max-width: 560px) {
   body { padding: 0; place-items: stretch; }
   .window { height: 100dvh; border-radius: 0; border-left: none; border-right: none; }
+  /* 16px keeps iOS Safari from auto-zooming when the input is focused */
+  #cmd { font-size: 16px; }
 }
 
 /* fireworks overlay ----------------------------------------------------- */
