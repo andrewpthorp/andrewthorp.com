@@ -3,73 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Thorp</title>
+    <title>Andrew Thorp — ~/</title>
+    <meta name="description" content="Andrew Thorp — software engineer building things on the internet. Type a command to look around.">
+    <meta name="color-scheme" content="dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▮</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Andrew Thorp</h1>
-            <p class="location">Nashville, TN</p>
-            <p class="tagline-text">Software engineer building things on the internet</p>
-        </header>
+    <div class="window" role="application" aria-label="Interactive terminal">
+        <div class="titlebar">
+            <div class="lights" aria-hidden="true">
+                <span class="light red"></span>
+                <span class="light yellow"></span>
+                <span class="light green"></span>
+            </div>
+            <div class="title">andrewthorp@ — ~</div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">◐</button>
+        </div>
 
-        <main class="main">
-            <section class="block block-work">
-                <div class="block-inner">
-                    <h2>💼 Work</h2>
-                    <div class="job">
-                        <h3><a href="https://meter.com" target="_blank">Meter <span class="external-icon">↗</span></a></h3>
-                        <p class="year">Now</p>
-                        <p>Building internet infrastructure</p>
-                    </div>
-                    <div class="job">
-                        <h3><a href="https://stripe.com" target="_blank">Stripe <span class="external-icon">↗</span></a></h3>
-                        <p class="year">2012-2020</p>
-                        <p>Built payment infrastructure for millions of businesses worldwide</p>
-                    </div>
-                </div>
-            </section>
+        <div class="screen" id="screen" tabindex="0">
+            <div class="output" id="output"></div>
 
-            <section class="block block-projects">
-                <div class="block-inner">
-                    <h2>🚀 Side projects</h2>
-                    <a href="https://tryground.io" target="_blank" class="project">
-                        <span class="project-name">tryground.io</span>
-                        <span class="project-desc">AI powered micro journaling for
-                          emotional well-being. Reach out if you want to try it!</span>
-                    </a>
-                </div>
-            </section>
+            <div class="prompt-line" id="prompt-line" hidden>
+                <span class="prompt" aria-hidden="true"><span class="p-user">andrewthorp@</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-tip">$</span></span>
+                <span class="input-wrap">
+                    <input id="cmd" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Command input" />
+                    <span class="fakecaret" id="fakecaret"></span>
+                </span>
+            </div>
 
-            <section class="block block-interests">
-                <div class="block-inner">
-                    <h2>✨ Interests</h2>
-                    <div class="interests">
-                        <span>Philly sports (Go Birds)</span>
-                        <span>Spending time with my family</span>
-                        <span>Relaxing with a cigar</span>
-                        <span>F O O D</span>
-                        <span>Learning new things</span>
-                        <span>Video games (spent decades playing <a
-                            href="https://www.darkageofcamelot.com"
-                            target="_blank">DAoC</a>)</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="block block-contact">
-                <div class="block-inner">
-                    <h2>🔗 Links</h2>
-                    <a href="https://github.com/andrewppthorp" target="_blank">GitHub</a>
-                    <a href="https://twitter.com/andrewpthorp" target="_blank">Twitter</a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>Built with care in Nashville • 2025</p>
-        </footer>
+            <div class="chips" id="chips" hidden aria-label="Suggested commands"></div>
+        </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

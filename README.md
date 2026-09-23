@@ -1,18 +1,29 @@
 # andrewthorp.com
 
-My personal website, built with a modern, colorful block-based design.
+My personal website — reimagined as an interactive terminal. Type a command to look around.
 
 ## About
 
-A clean, animated personal site with personality. Built with vanilla HTML/CSS, no frameworks or JavaScript needed.
+Instead of a static page, the site boots like a shell: a typed welcome, a `neofetch`-style
+info card, and a live prompt. Visitors explore by running commands (`work`, `projects`,
+`interests`, `links`) — with command history, tab-completion, a light/dark toggle, tappable
+suggestion chips for mobile, and a couple of easter eggs. Pure vanilla HTML/CSS/JS, no frameworks.
 
-## Features
+## Commands
 
-- Colorful block-based layout with gradient backgrounds
-- Smooth animations and hover effects
-- Fully responsive (works great on mobile and desktop)
-- Zero JavaScript - pure HTML/CSS
-- Lightweight and fast
+- `help` — list everything you can do
+- `whoami` — the short intro
+- `work` — Meter (now), Stripe (2012–2020)
+- `projects` — tryground.io
+- `interests` — family, Philly sports, DAoC, building things, outdoors, systems
+- `links` — GitHub, X, Instagram
+- `neofetch` — the little system-info flex
+- `fireworks` — set off fireworks from the bottom of the screen
+- `simplify` — strip the UI down to a bare, full-pane terminal (run again to restore)
+- `clear` — wipe the screen
+- ...and a few hidden ones. Poke around.
+
+Keyboard: `Tab` completes · `↑`/`↓` walk history · `Ctrl/⌘+L` clears.
 
 ## Local Development
 
@@ -21,40 +32,27 @@ npm install
 npm start
 ```
 
-Visit `http://localhost:3000` (or use `PORT=8080 npm start` for a different port)
+Visit `http://localhost:3000` (or `PORT=8080 npm start` for a different port).
+
+It's a static site — Express (`server.js`) just serves the `public/` folder. You can also
+open `public/index.html` directly, or serve it with any static file server.
 
 ## Deployment
 
-This site is deployed to fly.io:
+Deployed to fly.io. CI (`.github/workflows/fly-deploy.yml`) deploys on push to `master`.
 
 ```bash
-# Install flyctl if you haven't already
-# https://fly.io/docs/getting-started/installing-flyctl/
-
-# Login to fly.io
+# https://fly.io/docs/flyctl/install/
 fly auth login
-
-# Launch the app (first time only)
-fly launch
-
-# Deploy updates
-fly deploy
+fly deploy        # first time: fly launch
 ```
-
-## Sections
-
-- **Work** - Current role at Meter, previous experience at Stripe
-- **Side Projects** - tryground.io
-- **Interests** - Philly sports, family, cigars, food, learning, video games
-- **Links** - GitHub and Twitter
 
 ## Tech Stack
 
-- Node.js + Express
-- Pure HTML/CSS (no JavaScript)
-- CSS animations and gradients
+- Vanilla HTML / CSS / JavaScript — no frameworks, no build step
+- Node.js + Express (static file server only)
 - Deployed on fly.io
 
 ## License
 
-MIT License - Copyright (c) 2025 Andrew Thorp
+MIT License — Copyright (c) 2025 Andrew Thorp
